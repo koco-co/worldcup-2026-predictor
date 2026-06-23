@@ -1,4 +1,12 @@
+# 系统垃圾与缓存
 .DS_Store
-.claude/
 __pycache__/
 *.pyc
+
+# .claude/skills(分析方法论)随仓库公开；以下本地工具/配置不入库
+.claude/launch.json
+.claude/settings.local.json
+
+# Codex 旧镜像（.claude/skills 的过时副本，路径已失效）
+.agents/
+AGENTS.md

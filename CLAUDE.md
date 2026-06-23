@@ -4,7 +4,7 @@
 
 ## 分析方法(必须)
 
-- 所有**赛前预测、赛后复盘、回测**一律走 `football-match-analysis` skill(位于 `.claude/skills/`,本地私有、**不入公开仓库**)。
+- 所有**赛前预测、赛后复盘、回测**一律走 `football-match-analysis` skill(位于 `.claude/skills/`,**随仓库公开**,方法论开源)。
 - 不要绕过 skill 自行临时分析;规则与口径以 SKILL.md 为准。
 
 ## 目录规范
@@ -21,5 +21,6 @@
 ## 发布约定(公开仓库)
 
 - 仓库:https://github.com/koco-co/worldcup-2026-predictor
-- **只公开** `赛前预测/` 与 `赛后复盘/`;`.claude/`(方法论实现)**永不入库**(见 `.gitignore`)。
-- 提交 / 推送前务必核验 `.claude/` 未被暂存。
+- **公开**:`赛前预测/`、`赛后复盘/` 与 `.claude/skills/`(分析方法论开源)。
+- **不入库**(见 `.gitignore`):本地工具/配置(`.claude/launch.json`、`settings.local.json`)、Codex 旧镜像(`.agents/`、`AGENTS.md`)、系统垃圾(`.DS_Store`/`__pycache__`)。
+- 仓库内**不得含任何密钥/凭据**;个人战绩台账(`betting-ledger.json`)与渲染结果均为用户自愿公示——提交前核验无敏感信息。
