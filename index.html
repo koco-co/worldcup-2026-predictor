@@ -38,7 +38,7 @@ window.WORLDCUP_DATA = {
  "matches": 104,
  "final_venue_zh": "大都会人寿球场",
  "opening_venue_zh": "阿兹特克体育场",
- "updated": "2026-06-23",
+ "updated": "2026-06-24",
  "source": "维基百科 2026 FIFA World Cup（逐组 + 淘汰赛），赛果随赛事推进更新",
  "venues": [
   {
@@ -1222,9 +1222,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "葡萄牙",
    "away_en": "Uzbekistan",
    "away_zh": "乌兹别克斯坦",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 5,
+   "away_score": 0,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -1239,9 +1239,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "哥伦比亚",
    "away_en": "DR Congo",
    "away_zh": "刚果(金)",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 1,
+   "away_score": 0,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -1324,9 +1324,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "英格兰",
    "away_en": "Ghana",
    "away_zh": "加纳",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 0,
+   "away_score": 0,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -1341,9 +1341,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "巴拿马",
    "away_en": "Croatia",
    "away_zh": "克罗地亚",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 0,
+   "away_score": 1,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -1931,7 +1931,7 @@ window.WORLDCUP_DATA = {
 window.WORLDCUP_LEDGER = {
  "title": "本届世界杯战绩",
  "currency": "¥",
- "updated": "2026-06-23",
+ "updated": "2026-06-24",
  "note": "6.16–6.22 仅留每日投入/收入金额，具体票面未留存；6.23 起留存完整投注明细。净盈亏 = 已兑奖收入 − 总投入；待开奖日按收入 0 计入，开奖后回填。",
  "days": [
   {
@@ -2144,9 +2144,9 @@ window.WORLDCUP_LEDGER = {
   {
    "date": "2026-06-24",
    "stake": 144,
-   "payout": null,
-   "status": "pending",
-   "note": "推荐 3 卡（124）+ 额外自购 4串1（20）。K/L 组凌晨 4 场，待开奖。",
+   "payout": 0,
+   "status": "settled",
+   "note": "实际赛果:葡5-0乌、英0-0加、巴0-1克、哥1-0刚。3 场胜负方向对(葡/克/哥)但精确比分全未命中,推荐3卡+自购4串1全灭 → 收 0、当日净 -144。",
    "tickets": [
     {
      "name": "保底层 · 比分复式 2串1",
@@ -2445,7 +2445,7 @@ window.WORLDCUP_PREDICTIONS = [
   var GROUPS = 'ABCDEFGHIJKL'.split('');
 
   var DATA = null, FLAGS = {}, OFF = {}, PRED = [], LEDGER = { days: [] };
-  var state = { tab:'bracket', lastSync:0, syncing:false, ready:false, exp:{} };
+  var state = { tab:'bracket', brView:'group', stView:'overall', lastSync:0, syncing:false, ready:false, exp:{} };
   var now = Date.now();
   var lastSig = null;
   var app = document.getElementById('app');
@@ -2779,7 +2779,7 @@ window.WORLDCUP_PREDICTIONS = [
 
     // 每日盈亏走势（真源台账，替代示例赔率）
     var ledgerDays = ledgerDayList();
-    var plDays = ledgerDays.slice().sort(function(a,b){ return a.date.localeCompare(b.date); });
+    var plDays = ledgerDays.slice().sort(function(a,b){ return b.date.localeCompare(a.date); }); // 降序：最近日期在上
     var maxAbs = 1;
     plDays.forEach(function(d){ if(d.status==='settled'){ var n=Math.abs((d.payout||0)-(d.stake||0)); if(n>maxAbs) maxAbs=n; } });
     var dailyPL = plDays.map(function(d){
@@ -2826,6 +2826,7 @@ window.WORLDCUP_PREDICTIONS = [
     return Object.assign({}, base, {
       ready:true, loading:false,
       isBracket: st.tab==='bracket', isStandings: st.tab==='standings', isData: st.tab==='data', isPredict: st.tab==='predict',
+      brView: st.brView, stView: st.stView,
       predictions: preds, todayPred:todayPred, hasTodayPred: !!todayPred,
       record:record, hasRecord: record.settledDays>0,
       hasBanner: banner.length>0, banner:banner, groups:groups, bracket:bracket, overall:overall, stats:stats, firepower:firepower, dailyPL:dailyPL,
@@ -2911,6 +2912,19 @@ window.WORLDCUP_PREDICTIONS = [
     '</div>';
   }
 
+  // 段落内的子视图切换控件（如 总积分榜 / 分组积分榜、小组赛 / 淘汰赛）。attr 为 data-* 属性名，items[i]={key,label,count?,active}
+  function subTabs(attr, items){
+    return '<div style="display:inline-flex;gap:4px;padding:4px;background:#EAE3D6;border:1px solid #E0D8C8;border-radius:12px;">'+
+      each(items, function(it){
+        var on = it.active;
+        return '<button '+attr+'="'+esc(it.key)+'" style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border:0;border-radius:9px;background:'+(on?'#2A2622':'transparent')+';color:'+(on?'#F4F1EA':'#8C8478')+';font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;transition:all .15s;">'+
+          esc(it.label)+
+          (it.count?('<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;font-weight:500;'+(on?'opacity:.75;':'color:#a89f90;')+'">'+esc(it.count)+'</span>'):'')+
+        '</button>';
+      })+
+    '</div>';
+  }
+
   function vLoading(){
     return '<div style="max-width:1340px;margin:60px auto;padding:0 24px;display:flex;flex-direction:column;align-items:center;gap:14px;color:#8C8478;">'+
       '<span style="width:34px;height:34px;border-radius:50%;border:3px solid #E4DECF;border-top-color:#C0613B;animation:wcspin .9s linear infinite;"></span>'+
@@ -2952,16 +2966,24 @@ window.WORLDCUP_PREDICTIONS = [
       '</a>';
     }
 
-    // group stage
-    out += '<div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:8px 0 16px;">'+
-      '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:0;letter-spacing:-.3px;">小组赛 · 12 组</h2>'+
-      '<div style="display:flex;align-items:center;gap:16px;font-size:11.5px;color:#8C8478;">'+
-        '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#3F7A4E;"></span>小组前二 · 直接出线</span>'+
-        '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#B5862E;"></span>小组第三 · 争最佳第三</span>'+
-        '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#D8D2C5;"></span>淘汰</span>'+
-      '</div>'+
+    // 小组赛 / 淘汰赛 子视图切换（点击切换，二选一展示）
+    var isGroup = vm.brView !== 'knockout';
+    out += '<div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:6px 0 18px;">'+
+      subTabs('data-brview', [
+        { key:'group', label:'小组赛', count:'12 组', active:isGroup },
+        { key:'knockout', label:'淘汰赛', count:'对阵树', active:!isGroup }
+      ])+
+      ( isGroup
+        ? '<div style="display:flex;align-items:center;gap:16px;font-size:11.5px;color:#8C8478;flex-wrap:wrap;">'+
+            '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#3F7A4E;"></span>小组前二 · 直接出线</span>'+
+            '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#B5862E;"></span>小组第三 · 争最佳第三</span>'+
+            '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#D8D2C5;"></span>淘汰</span>'+
+          '</div>'
+        : '<span style="font-size:11.5px;color:#8C8478;">横向滑动查看完整晋级路线 →</span>'
+      )+
     '</div>';
 
+    if(isGroup){
     out += '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(390px,1fr));gap:16px;">'+
       each(vm.groups, function(g){
         return '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
@@ -3004,12 +3026,10 @@ window.WORLDCUP_PREDICTIONS = [
         '</div>';
       })+
     '</div>';
+    }
 
     // knockout bracket
-    out += '<div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:40px 0 6px;">'+
-      '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:0;letter-spacing:-.3px;">淘汰赛对阵树</h2>'+
-      '<span style="font-size:11.5px;color:#8C8478;">横向滑动查看完整晋级路线 →</span>'+
-    '</div>';
+    if(!isGroup){
     out += '<div style="border:1px solid #E8E2D4;border-radius:15px;background:#FBFAF5;overflow-x:auto;padding:18px;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
       '<div style="display:flex;gap:30px;min-width:max-content;align-items:stretch;">'+
         each(vm.bracket, function(rd){
@@ -3035,15 +3055,25 @@ window.WORLDCUP_PREDICTIONS = [
         })+
       '</div>'+
     '</div>';
+    }
 
     out += '</div>';
     return out;
   }
 
   function vStandings(vm){
+    // 总积分榜（默认，左）/ 分组积分榜（右）子视图切换，二选一展示
+    var isOverall = vm.stView !== 'group';
     var out = '<div style="max-width:1340px;margin:0 auto;padding:14px 24px 60px;">'+
-      '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:8px 0 16px;letter-spacing:-.3px;">分组积分榜</h2>'+
-      '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(370px,1fr));gap:16px;">'+
+      '<div style="margin:6px 0 18px;">'+
+        subTabs('data-stview', [
+          { key:'overall', label:'总积分榜', count:'48 队', active:isOverall },
+          { key:'group', label:'分组积分榜', count:'12 组', active:!isOverall }
+        ])+
+      '</div>';
+
+    if(!isOverall){
+    out += '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(370px,1fr));gap:16px;">'+
         each(vm.groups, function(g){
           return '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
             '<div style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid #EFEADD;">'+
@@ -3070,9 +3100,10 @@ window.WORLDCUP_PREDICTIONS = [
           '</div>';
         })+
       '</div>';
+    }
 
-    out += '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:40px 0 16px;letter-spacing:-.3px;">总积分榜 · 全部 48 队</h2>'+
-      '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
+    if(isOverall){
+    out += '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
         '<div style="display:grid;grid-template-columns:42px 1fr 56px 42px 42px 42px 42px 50px 52px;gap:0;align-items:center;padding:11px 16px;background:#F1ECDF;font-size:11px;color:#8C8478;font-weight:600;letter-spacing:.3px;">'+
           '<span>排名</span><span>球队</span><span style="text-align:center;">小组</span><span style="text-align:center;">场</span><span style="text-align:center;">胜</span><span style="text-align:center;">平</span><span style="text-align:center;">负</span><span style="text-align:center;">净球</span><span style="text-align:right;">积分</span>'+
         '</div>'+
@@ -3089,8 +3120,10 @@ window.WORLDCUP_PREDICTIONS = [
             '<span style="text-align:right;font-family:\'Spline Sans Mono\',monospace;font-size:15px;font-weight:700;">'+o.Pts+'</span>'+
           '</div>';
         })+
-      '</div>'+
-    '</div>';
+      '</div>';
+    }
+
+    out += '</div>';
     return out;
   }
 
@@ -3451,6 +3484,10 @@ window.WORLDCUP_PREDICTIONS = [
     if(report){ e.preventDefault(); var u = report.getAttribute('data-report'); history.pushState({ wcReport:u }, ''); openReport(u); return; }
     var tabBtn = e.target.closest('[data-tab]');
     if(tabBtn){ state.tab = tabBtn.getAttribute('data-tab'); render(); return; }
+    var brBtn = e.target.closest('[data-brview]');
+    if(brBtn){ state.brView = brBtn.getAttribute('data-brview'); render(); return; }
+    var stBtn = e.target.closest('[data-stview]');
+    if(stBtn){ state.stView = stBtn.getAttribute('data-stview'); render(); return; }
     var refresh = e.target.closest('[data-action="refresh"]');
     if(refresh){ sync(); return; }
     var toggle = e.target.closest('[data-toggle]');

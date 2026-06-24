@@ -13,7 +13,7 @@
  "matches": 104,
  "final_venue_zh": "大都会人寿球场",
  "opening_venue_zh": "阿兹特克体育场",
- "updated": "2026-06-23",
+ "updated": "2026-06-24",
  "source": "维基百科 2026 FIFA World Cup（逐组 + 淘汰赛），赛果随赛事推进更新",
  "venues": [
   {
@@ -1197,9 +1197,9 @@
    "home_zh": "葡萄牙",
    "away_en": "Uzbekistan",
    "away_zh": "乌兹别克斯坦",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 5,
+   "away_score": 0,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -1214,9 +1214,9 @@
    "home_zh": "哥伦比亚",
    "away_en": "DR Congo",
    "away_zh": "刚果(金)",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 1,
+   "away_score": 0,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -1299,9 +1299,9 @@
    "home_zh": "英格兰",
    "away_en": "Ghana",
    "away_zh": "加纳",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 0,
+   "away_score": 0,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -1316,9 +1316,9 @@
    "home_zh": "巴拿马",
    "away_en": "Croatia",
    "away_zh": "克罗地亚",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 0,
+   "away_score": 1,
+   "status": "played"
   },
   {
    "stage": "group",

@@ -7,6 +7,16 @@
 - 所有**赛前预测、赛后复盘、回测**一律走 `football-match-analysis` skill(位于 `.claude/skills/`,**随仓库公开**,方法论开源)。
 - 不要绕过 skill 自行临时分析;规则与口径以 SKILL.md 为准。
 
+## 预测前置闭环纪律(必须)
+
+用户每次要求预测**下一天 / 下一批**比赛时,先过 SKILL.md「第零步:预测前置闸门」三道检查,**全过才能开新预测**:
+
+1. **真源最新**:上一批真实赛果已录入 `tournament.json`(`status="played"` + 比分)、上一批台账已结算 `betting-ledger.json`(`payout` 回填 + `status="settled"`),并跑过 `./init.sh` 刷新平台。
+2. **上一批已复盘**:`reviews/<上一批日期>/` 已有赛后复盘文档。
+3. **优化已闭环**:复盘新规则已写回 SKILL.md / references(必要时跑 `scripts/dc_backtest.py` 验证)。
+
+顺序固定:**录入赛果 → 结算+刷新 → 复盘 → 回写规则(回测)→ 才预测新一批**。不得拿过时数据、不得跳过复盘直接押下一批。
+
 ## 目录结构
 
 ```
