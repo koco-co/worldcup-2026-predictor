@@ -17,9 +17,9 @@
 │   └── worldcup-data.js      # 数据契约。DATA/LEDGER 自动生成;FLAGS/OFFSET/PREDICTIONS 手工维护
 ├── scripts/
 │   └── build_worldcup_data.py# 从真源生成 worldcup-data.js 并内联进 index.html
-├── 赛前预测/<YYYY-MM-DD>/      # 每场一个 .md 深度分析 + index.html 可视化卡片(被首页链接)
-├── 赛后复盘/<YYYY-MM-DD>/      # 该批次赛后复盘
-├── 赛后复盘/回测/             # 跨批次回测报告(.md)与 dc 输入(.json)
+├── predictions/<YYYY-MM-DD>/      # 每场一个 .md 深度分析 + index.html 可视化卡片(被首页链接)
+├── reviews/<YYYY-MM-DD>/      # 该批次赛后复盘
+├── reviews/backtests/             # 跨批次回测报告(.md)与 dc 输入(.json)
 └── .claude/skills/football-match-analysis/   # 方法论 skill + 数据真源
     └── assets/
         ├── tournament.json   # 真源①:赛程 / 赛果(48 队 · 104 场)
@@ -37,11 +37,11 @@
 ## 量化回测
 
 - 跨批次验证新规则准不准:`python3 .claude/skills/football-match-analysis/scripts/dc_backtest.py <批次json>`
-- 输入 json 放 `赛后复盘/回测/<日期>-dc输入.json`,含每场 `actual` / `old` λ / `new` λ。
+- 输入 json 放 `reviews/backtests/<日期>-dc输入.json`,含每场 `actual` / `old` λ / `new` λ。
 
 ## 发布约定(公开仓库)
 
 - 仓库:https://github.com/koco-co/worldcup-2026-predictor
-- **公开**:`index.html`、`data/`、`scripts/`、`init.sh`、`赛前预测/`、`赛后复盘/` 与 `.claude/skills/`(分析方法论开源)。
+- **公开**:`index.html`、`data/`、`scripts/`、`init.sh`、`predictions/`、`reviews/` 与 `.claude/skills/`(分析方法论开源)。
 - **不入库**(见 `.gitignore`):本地工具/配置(`.claude/launch.json`、`settings.local.json`)、Codex 旧镜像(`.agents/`、`AGENTS.md`)、设计稿 handoff 包(`*-handoff.zip`)、系统垃圾(`.DS_Store`/`__pycache__`)。
 - 仓库内**不得含任何密钥/凭据**;个人战绩台账(`betting-ledger.json`)与渲染结果均为用户自愿公示——提交前核验无敏感信息。

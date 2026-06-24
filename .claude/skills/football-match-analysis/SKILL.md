@@ -190,18 +190,18 @@ argument-hint: "[主队] vs [客队] [赛事] [时间] [押注金额]"
 报告写完后，按下面方式交付：
 
 1. **写入文件**：把完整 md 报告写到
-   `赛前预测/<比赛日期 YYYY-MM-DD>/<主队>-vs-<客队>.md`
+   `predictions/<比赛日期 YYYY-MM-DD>/<主队>-vs-<客队>.md`
    —— 日期作为一级子目录便于归档；目录不存在就创建。
-   - **比赛日期用该场比赛的日期，不是当天**（如比赛在 2026-06-21 04:00，目录就是 `赛前预测/2026-06-21/`）。
-   - 文件名里的队名去掉空格与特殊字符，例：`赛前预测/2026-06-21/德国-vs-科特迪瓦.md`。
-   - **多场 / 串关**：写到同日目录下 `串关-<简述>.md`，例：`赛前预测/2026-06-21/串关-周六3场.md`。
-   - **赛后复盘 / 回测分开存到 `赛后复盘/`，不要混进 `赛前预测/`**（`赛前预测/` 只放赛前预测，否则 `build_html_report.py` 会把复盘当比赛卡渲染）：单批赛后复盘写 `赛后复盘/<比赛日期>/复盘-<简述>.md`（如 `赛后复盘/2026-06-23/复盘-周二4场.md`）；**跨批次**的策略回测写 `赛后复盘/回测/回测-<简述>.md`。`赛后复盘/` 下的文档**不跑** `build_html_report.py`（该脚本只对 `赛前预测/<日期>/` 用）。
-   - **量化回测工具**：跨批次验证新规则准不准时，用 `scripts/dc_backtest.py`——对一批已结束比赛跑 Dixon-Coles 比分矩阵、对照 OLD(旧 λ) vs NEW(新框架纪律 λ)，看实际比分(尤其 0-0、大比分尾部)的矩阵概率/排名是否被托高（量化版回测，与 `赛后复盘/回测/` 下的文档回测互补）。输入批次数据 JSON 放 `赛后复盘/回测/<日期>-dc输入.json`，跑 `python3 <skill>/scripts/dc_backtest.py 赛后复盘/回测/<日期>-dc输入.json`。
+   - **比赛日期用该场比赛的日期，不是当天**（如比赛在 2026-06-21 04:00，目录就是 `predictions/2026-06-21/`）。
+   - 文件名里的队名去掉空格与特殊字符，例：`predictions/2026-06-21/德国-vs-科特迪瓦.md`。
+   - **多场 / 串关**：写到同日目录下 `串关-<简述>.md`，例：`predictions/2026-06-21/串关-周六3场.md`。
+   - **赛后复盘 / 回测分开存到 `reviews/`，不要混进 `predictions/`**（`predictions/` 只放赛前预测，否则 `build_html_report.py` 会把复盘当比赛卡渲染）：单批赛后复盘写 `reviews/<比赛日期>/复盘-<简述>.md`（如 `reviews/2026-06-23/复盘-周二4场.md`）；**跨批次**的策略回测写 `reviews/backtests/回测-<简述>.md`。`reviews/` 下的文档**不跑** `build_html_report.py`（该脚本只对 `predictions/<日期>/` 用）。
+   - **量化回测工具**：跨批次验证新规则准不准时，用 `scripts/dc_backtest.py`——对一批已结束比赛跑 Dixon-Coles 比分矩阵、对照 OLD(旧 λ) vs NEW(新框架纪律 λ)，看实际比分(尤其 0-0、大比分尾部)的矩阵概率/排名是否被托高（量化版回测，与 `reviews/backtests/` 下的文档回测互补）。输入批次数据 JSON 放 `reviews/backtests/<日期>-dc输入.json`，跑 `python3 <skill>/scripts/dc_backtest.py reviews/backtests/<日期>-dc输入.json`。
    - 比赛日期拿不到时，先追问或暂用当天日期，并在报告里注明。
    - **嵌入图表数据块**：每篇 md **末尾追加一段 `FB-DATA` JSON 数据块**（胜平负定性 + 赔率隐含、预期进球、Top 比分、总进球分布、让球倾向、押注方案），HTML 卡片**展开后顶部**据此画图表（折叠态只留标题 + 摘要 chip）；串关综合报告写 `type:"combo"` 块（生成顶部置顶卡）。格式见 [references/report-data.md](references/report-data.md)。没有数据块也能跑（退化成纯文本卡）。
 2. **生成 HTML 报告**：md 写完后，运行本 skill 的脚本，把当天目录重建成**一个** Claude 风格的 `index.html`（每个日期目录唯一一个，聚合当天所有场次为可展开卡片，含亮/暗主题与动画）：
    ```
-   python3 <本 skill 基础目录>/scripts/build_html_report.py 赛前预测/<比赛日期>/
+   python3 <本 skill 基础目录>/scripts/build_html_report.py predictions/<比赛日期>/
    ```
    （`<本 skill 基础目录>` 即加载本 skill 时提示的 Base directory；脚本会扫描该日期目录下所有 `*.md` 重建 `index.html`。）
    - 卡片摘要 chip（胜负 / 置信度 / 首选比分 / 推荐方案 / 赛事）由脚本**自动从「最终结论汇总表」提取**（或 md 顶部可选 frontmatter，或 `FB-DATA` 数据块顶层字段）；**展开后的图表、Typora 式大纲与可折叠正文**则来自 md 末尾的 `FB-DATA` 数据块（[references/report-data.md](references/report-data.md)），没有数据块就只显纯文本卡。

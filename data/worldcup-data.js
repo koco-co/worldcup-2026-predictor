@@ -3,7 +3,7 @@
  *   WORLDCUP_DATA          赛事元信息 + 104 场赛程（自动生成，勿手改）
  *   WORLDCUP_FLAGS         球队 → 国旗 emoji（手工维护）
  *   WORLDCUP_VENUE_OFFSET  球场 → UTC 时区偏移（手工维护，缺省 -5）
- *   WORLDCUP_PREDICTIONS   每日赛前预测/复盘报告登记 + 押注票面（手工维护）
+ *   WORLDCUP_PREDICTIONS   每日 预测/复盘 报告链接登记（手工维护）
  *
  * WORLDCUP_DATA 的唯一真源是
  *   .claude/skills/football-match-analysis/assets/tournament.json
@@ -2329,8 +2329,8 @@ window.WORLDCUP_VENUE_OFFSET = {"Estadio Azteca":-6,"Estadio Akron":-6,"Estadio 
 
 // ---- 每日赛前预测报告清单（编辑此处登记你的报告；url 相对平台文件路径）----
 window.WORLDCUP_PREDICTIONS = [
- { date:'2026-06-24', url:'赛前预测/2026-06-24/index.html' },
- { date:'2026-06-23', url:'赛前预测/2026-06-23/index.html', reviewUrl:'赛后复盘/2026-06-23/复盘-周二4场.md',
+ { date:'2026-06-24', url:'predictions/2026-06-24/index.html' },
+ { date:'2026-06-23', url:'predictions/2026-06-23/index.html', reviewUrl:'reviews/2026-06-23/复盘-周二4场.md',
    // picks: 单场预测(算命中率)；score 比分、wdl 胜平负(主胜/平/客胜)。
    // picks: 单场预测；score/wdl 算命中率；an = 该场分析图表(信心/推荐/胜平负/xG/Top比分/总进球/让球/方案)。概率为分析师定性估计或赔率去水，示例值。
    picks:[
@@ -2397,6 +2397,6 @@ window.WORLDCUP_PREDICTIONS = [
        { no:4, home:'约旦',   away:'阿尔及利亚', scores:[{s:'0:1',o:5.6}] }
       ] }
    ] },
- { date:'2026-06-22', url:'赛前预测/2026-06-22/index.html' },
- { date:'2026-06-21', url:'赛前预测/2026-06-21/index.html' }
+ { date:'2026-06-22', url:'predictions/2026-06-22/index.html' },
+ { date:'2026-06-21', url:'predictions/2026-06-21/index.html' }
 ];

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-把某一天 赛前预测/<日期>/ 目录下所有 md 赛前分析报告，注入固定的 Claude 风格模板，
+把某一天 predictions/<日期>/ 目录下所有 md 赛前分析报告，注入固定的 Claude 风格模板，
 生成该目录下唯一的 index.html（自包含单文件：md 文本 + marked 渲染器 + CSS 全内联）。
 
 用法：
-    python3 build_html_report.py 赛前预测/2026-06-21        # 重建该日的 index.html
-    python3 build_html_report.py 赛前预测/2026-06-21/德国-vs-科特迪瓦.md  # 传 md 也行，取其父目录
-    python3 build_html_report.py                            # 扫描 赛前预测/*/ 全部重建
+    python3 build_html_report.py predictions/2026-06-21        # 重建该日的 index.html
+    python3 build_html_report.py predictions/2026-06-21/德国-vs-科特迪瓦.md  # 传 md 也行，取其父目录
+    python3 build_html_report.py                            # 扫描 predictions/*/ 全部重建
 
 每篇 md 顶部可带一小段 frontmatter（用于卡片摘要 chip），缺了也能跑：
     ---
@@ -218,13 +218,13 @@ def main(argv):
         ok = build_dir(target)
         sys.exit(0 if ok else 1)
 
-    # 无参数：扫描 赛前预测/*/ 全部重建
-    base = "赛前预测"
+    # 无参数：扫描 predictions/*/ 全部重建
+    base = "predictions"
     if not os.path.isdir(base):
-        sys.exit("未找到 赛前预测/ 目录；请在项目根运行，或传入具体日期目录。")
+        sys.exit("未找到 predictions/ 目录；请在项目根运行，或传入具体日期目录。")
     dirs = sorted(d for d in glob.glob(os.path.join(base, "*")) if os.path.isdir(d))
     if not dirs:
-        sys.exit("赛前预测/ 下没有日期子目录。")
+        sys.exit("predictions/ 下没有日期子目录。")
     print("重建 %d 个日期目录：" % len(dirs))
     built = sum(build_dir(d) for d in dirs)
     print("完成：%d 个 index.html。" % built)
