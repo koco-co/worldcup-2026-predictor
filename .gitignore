@@ -10,3 +10,6 @@ __pycache__/
 # Codex 旧镜像（.claude/skills 的过时副本，路径已失效）
 .agents/
 AGENTS.md
+
+# 设计稿 handoff 包(本地参考，不入库)
+*-handoff.zip

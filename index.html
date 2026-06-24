@@ -1,0 +1,3494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 世界杯 · 对阵全景</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Spline+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- WC_INLINE_DATA:BEGIN — 由 scripts/build_worldcup_data.py 注入(data/worldcup-data.js 的内联副本，勿手改) -->
+<script id="wc-data">
+/* worldcup-data.js — 2026 世界杯 · 对阵全景平台数据契约
+ *
+ *   WORLDCUP_DATA          赛事元信息 + 104 场赛程（自动生成，勿手改）
+ *   WORLDCUP_FLAGS         球队 → 国旗 emoji（手工维护）
+ *   WORLDCUP_VENUE_OFFSET  球场 → UTC 时区偏移（手工维护，缺省 -5）
+ *   WORLDCUP_PREDICTIONS   每日赛前预测/复盘报告登记 + 押注票面（手工维护）
+ *
+ * WORLDCUP_DATA 的唯一真源是
+ *   .claude/skills/football-match-analysis/assets/tournament.json
+ * 改了赛果/赛程后重新生成下方区块：
+ *   python3 scripts/build_worldcup_data.py
+ */
+
+/* === WORLDCUP_DATA:BEGIN (auto-generated — 勿手改) === */
+window.WORLDCUP_DATA = {
+ "name_en": "2026 FIFA World Cup",
+ "name_zh": "2026年美加墨世界杯",
+ "name_full_zh": "2026年国际足联世界杯",
+ "hosts": [
+  "美国",
+  "加拿大",
+  "墨西哥"
+ ],
+ "start": "2026-06-11",
+ "end": "2026-07-19",
+ "teams": 48,
+ "matches": 104,
+ "final_venue_zh": "大都会人寿球场",
+ "opening_venue_zh": "阿兹特克体育场",
+ "updated": "2026-06-23",
+ "source": "维基百科 2026 FIFA World Cup（逐组 + 淘汰赛），赛果随赛事推进更新",
+ "venues": [
+  {
+   "stadium_en": "Estadio Azteca",
+   "stadium_zh": "阿兹特克体育场",
+   "city": "Mexico City",
+   "city_zh": "墨西哥城",
+   "country": "墨西哥"
+  },
+  {
+   "stadium_en": "Estadio Akron",
+   "stadium_zh": "阿克伦体育场",
+   "city": "Guadalajara",
+   "city_zh": "瓜达拉哈拉",
+   "country": "墨西哥"
+  },
+  {
+   "stadium_en": "Estadio BBVA",
+   "stadium_zh": "BBVA体育场",
+   "city": "Monterrey",
+   "city_zh": "蒙特雷",
+   "country": "墨西哥"
+  },
+  {
+   "stadium_en": "BC Place",
+   "stadium_zh": "卑诗体育馆",
+   "city": "Vancouver",
+   "city_zh": "温哥华",
+   "country": "加拿大"
+  },
+  {
+   "stadium_en": "BMO Field",
+   "stadium_zh": "BMO球场",
+   "city": "Toronto",
+   "city_zh": "多伦多",
+   "country": "加拿大"
+  },
+  {
+   "stadium_en": "MetLife Stadium",
+   "stadium_zh": "大都会人寿球场",
+   "city": "East Rutherford",
+   "city_zh": "东卢瑟福",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "AT&T Stadium",
+   "stadium_zh": "AT&T体育场",
+   "city": "Arlington",
+   "city_zh": "阿灵顿",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "SoFi Stadium",
+   "stadium_zh": "SoFi体育场",
+   "city": "Inglewood",
+   "city_zh": "英格尔伍德",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "Arrowhead Stadium",
+   "stadium_zh": "箭头体育场",
+   "city": "Kansas City",
+   "city_zh": "堪萨斯城",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "Levi's Stadium",
+   "stadium_zh": "李维斯球场",
+   "city": "Santa Clara",
+   "city_zh": "圣克拉拉",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "NRG Stadium",
+   "stadium_zh": "NRG体育场",
+   "city": "Houston",
+   "city_zh": "休斯顿",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "Lincoln Financial Field",
+   "stadium_zh": "林肯金融球场",
+   "city": "Philadelphia",
+   "city_zh": "费城",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "Mercedes-Benz Stadium",
+   "stadium_zh": "梅赛德斯-奔驰体育场",
+   "city": "Atlanta",
+   "city_zh": "亚特兰大",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "Lumen Field",
+   "stadium_zh": "卢门球场",
+   "city": "Seattle",
+   "city_zh": "西雅图",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "Hard Rock Stadium",
+   "stadium_zh": "硬石体育场",
+   "city": "Miami Gardens",
+   "city_zh": "迈阿密花园",
+   "country": "美国"
+  },
+  {
+   "stadium_en": "Gillette Stadium",
+   "stadium_zh": "吉列体育场",
+   "city": "Foxborough",
+   "city_zh": "福克斯堡",
+   "country": "美国"
+  }
+ ],
+ "schedule": [
+  {
+   "stage": "group",
+   "group": "A",
+   "date": "2026-06-11",
+   "time_local": "13:00",
+   "round": 1,
+   "venue_en": "Estadio Azteca",
+   "city": "Mexico City",
+   "country": "Mexico",
+   "home_en": "Mexico",
+   "home_zh": "墨西哥",
+   "away_en": "South Africa",
+   "away_zh": "南非",
+   "home_score": 2,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "A",
+   "date": "2026-06-11",
+   "time_local": "20:00",
+   "round": 1,
+   "venue_en": "Estadio Akron",
+   "city": "Zapopan",
+   "country": "Mexico",
+   "home_en": "South Korea",
+   "home_zh": "韩国",
+   "away_en": "Czech Republic",
+   "away_zh": "捷克",
+   "home_score": 2,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "A",
+   "date": "2026-06-18",
+   "time_local": "12:00",
+   "round": 2,
+   "venue_en": "Mercedes-Benz Stadium",
+   "city": "Atlanta",
+   "country": "USA",
+   "home_en": "Czech Republic",
+   "home_zh": "捷克",
+   "away_en": "South Africa",
+   "away_zh": "南非",
+   "home_score": 1,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "A",
+   "date": "2026-06-18",
+   "time_local": "19:00",
+   "round": 2,
+   "venue_en": "Estadio Akron",
+   "city": "Zapopan",
+   "country": "Mexico",
+   "home_en": "Mexico",
+   "home_zh": "墨西哥",
+   "away_en": "South Korea",
+   "away_zh": "韩国",
+   "home_score": 1,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "A",
+   "date": "2026-06-24",
+   "time_local": "19:00",
+   "round": 3,
+   "venue_en": "Estadio Azteca",
+   "city": "Mexico City",
+   "country": "Mexico",
+   "home_en": "Czech Republic",
+   "home_zh": "捷克",
+   "away_en": "Mexico",
+   "away_zh": "墨西哥",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "A",
+   "date": "2026-06-24",
+   "time_local": "19:00",
+   "round": 3,
+   "venue_en": "Estadio BBVA",
+   "city": "Guadalupe",
+   "country": "Mexico",
+   "home_en": "South Africa",
+   "home_zh": "南非",
+   "away_en": "South Korea",
+   "away_zh": "韩国",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "B",
+   "date": "2026-06-12",
+   "time_local": "15:00",
+   "round": 1,
+   "venue_en": "BMO Field",
+   "city": "Toronto",
+   "country": "Canada",
+   "home_en": "Canada",
+   "home_zh": "加拿大",
+   "away_en": "Bosnia and Herzegovina",
+   "away_zh": "波斯尼亚和黑塞哥维那",
+   "home_score": 1,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "B",
+   "date": "2026-06-13",
+   "time_local": "12:00",
+   "round": 1,
+   "venue_en": "Levi's Stadium",
+   "city": "Santa Clara",
+   "country": "USA",
+   "home_en": "Qatar",
+   "home_zh": "卡塔尔",
+   "away_en": "Switzerland",
+   "away_zh": "瑞士",
+   "home_score": 1,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "B",
+   "date": "2026-06-18",
+   "time_local": "12:00",
+   "round": 2,
+   "venue_en": "SoFi Stadium",
+   "city": "Inglewood",
+   "country": "USA",
+   "home_en": "Switzerland",
+   "home_zh": "瑞士",
+   "away_en": "Bosnia and Herzegovina",
+   "away_zh": "波斯尼亚和黑塞哥维那",
+   "home_score": 4,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "B",
+   "date": "2026-06-18",
+   "time_local": "15:00",
+   "round": 2,
+   "venue_en": "BC Place",
+   "city": "Vancouver",
+   "country": "Canada",
+   "home_en": "Canada",
+   "home_zh": "加拿大",
+   "away_en": "Qatar",
+   "away_zh": "卡塔尔",
+   "home_score": 6,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "B",
+   "date": "2026-06-24",
+   "time_local": "12:00",
+   "round": 3,
+   "venue_en": "BC Place",
+   "city": "Vancouver",
+   "country": "Canada",
+   "home_en": "Switzerland",
+   "home_zh": "瑞士",
+   "away_en": "Canada",
+   "away_zh": "加拿大",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "B",
+   "date": "2026-06-24",
+   "time_local": "12:00",
+   "round": 3,
+   "venue_en": "Lumen Field",
+   "city": "Seattle",
+   "country": "USA",
+   "home_en": "Bosnia and Herzegovina",
+   "home_zh": "波斯尼亚和黑塞哥维那",
+   "away_en": "Qatar",
+   "away_zh": "卡塔尔",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "C",
+   "date": "2026-06-13",
+   "time_local": "18:00",
+   "round": 1,
+   "venue_en": "MetLife Stadium",
+   "city": "East Rutherford",
+   "country": "USA",
+   "home_en": "Brazil",
+   "home_zh": "巴西",
+   "away_en": "Morocco",
+   "away_zh": "摩洛哥",
+   "home_score": 1,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "C",
+   "date": "2026-06-13",
+   "time_local": "21:00",
+   "round": 1,
+   "venue_en": "Gillette Stadium",
+   "city": "Foxborough",
+   "country": "USA",
+   "home_en": "Haiti",
+   "home_zh": "海地",
+   "away_en": "Scotland",
+   "away_zh": "苏格兰",
+   "home_score": 0,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "C",
+   "date": "2026-06-19",
+   "time_local": "18:00",
+   "round": 2,
+   "venue_en": "Gillette Stadium",
+   "city": "Foxborough",
+   "country": "USA",
+   "home_en": "Scotland",
+   "home_zh": "苏格兰",
+   "away_en": "Morocco",
+   "away_zh": "摩洛哥",
+   "home_score": 0,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "C",
+   "date": "2026-06-19",
+   "time_local": "20:30",
+   "round": 2,
+   "venue_en": "Lincoln Financial Field",
+   "city": "Philadelphia",
+   "country": "USA",
+   "home_en": "Brazil",
+   "home_zh": "巴西",
+   "away_en": "Haiti",
+   "away_zh": "海地",
+   "home_score": 3,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "C",
+   "date": "2026-06-24",
+   "time_local": "18:00",
+   "round": 3,
+   "venue_en": "Hard Rock Stadium",
+   "city": "Miami Gardens",
+   "country": "USA",
+   "home_en": "Scotland",
+   "home_zh": "苏格兰",
+   "away_en": "Brazil",
+   "away_zh": "巴西",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "C",
+   "date": "2026-06-24",
+   "time_local": "18:00",
+   "round": 3,
+   "venue_en": "Mercedes-Benz Stadium",
+   "city": "Atlanta",
+   "country": "USA",
+   "home_en": "Morocco",
+   "home_zh": "摩洛哥",
+   "away_en": "Haiti",
+   "away_zh": "海地",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "D",
+   "date": "2026-06-12",
+   "time_local": "18:00",
+   "round": 1,
+   "venue_en": "SoFi Stadium",
+   "city": "Inglewood",
+   "country": "USA",
+   "home_en": "United States",
+   "home_zh": "美国",
+   "away_en": "Paraguay",
+   "away_zh": "巴拉圭",
+   "home_score": 4,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "D",
+   "date": "2026-06-13",
+   "time_local": "21:00",
+   "round": 1,
+   "venue_en": "BC Place",
+   "city": "Vancouver",
+   "country": "Canada",
+   "home_en": "Australia",
+   "home_zh": "澳大利亚",
+   "away_en": "Turkey",
+   "away_zh": "土耳其",
+   "home_score": 2,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "D",
+   "date": "2026-06-19",
+   "time_local": "12:00",
+   "round": 2,
+   "venue_en": "Lumen Field",
+   "city": "Seattle",
+   "country": "USA",
+   "home_en": "United States",
+   "home_zh": "美国",
+   "away_en": "Australia",
+   "away_zh": "澳大利亚",
+   "home_score": 2,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "D",
+   "date": "2026-06-19",
+   "time_local": "20:00",
+   "round": 2,
+   "venue_en": "Levi's Stadium",
+   "city": "Santa Clara",
+   "country": "USA",
+   "home_en": "Turkey",
+   "home_zh": "土耳其",
+   "away_en": "Paraguay",
+   "away_zh": "巴拉圭",
+   "home_score": 0,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "D",
+   "date": "2026-06-25",
+   "time_local": "19:00",
+   "round": 3,
+   "venue_en": "SoFi Stadium",
+   "city": "Inglewood",
+   "country": "USA",
+   "home_en": "Turkey",
+   "home_zh": "土耳其",
+   "away_en": "United States",
+   "away_zh": "美国",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "D",
+   "date": "2026-06-25",
+   "time_local": "19:00",
+   "round": 3,
+   "venue_en": "Levi's Stadium",
+   "city": "Santa Clara",
+   "country": "USA",
+   "home_en": "Paraguay",
+   "home_zh": "巴拉圭",
+   "away_en": "Australia",
+   "away_zh": "澳大利亚",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "E",
+   "date": "2026-06-14",
+   "time_local": "12:00",
+   "round": 1,
+   "venue_en": "NRG Stadium",
+   "city": "Houston",
+   "country": "USA",
+   "home_en": "Germany",
+   "home_zh": "德国",
+   "away_en": "Curaçao",
+   "away_zh": "库拉索",
+   "home_score": 7,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "E",
+   "date": "2026-06-14",
+   "time_local": "19:00",
+   "round": 1,
+   "venue_en": "Lincoln Financial Field",
+   "city": "Philadelphia",
+   "country": "USA",
+   "home_en": "Côte d'Ivoire",
+   "home_zh": "科特迪瓦",
+   "away_en": "Ecuador",
+   "away_zh": "厄瓜多尔",
+   "home_score": 1,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "E",
+   "date": "2026-06-20",
+   "time_local": "16:00",
+   "round": 2,
+   "venue_en": "BMO Field",
+   "city": "Toronto",
+   "country": "Canada",
+   "home_en": "Germany",
+   "home_zh": "德国",
+   "away_en": "Côte d'Ivoire",
+   "away_zh": "科特迪瓦",
+   "home_score": 2,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "E",
+   "date": "2026-06-20",
+   "time_local": "19:00",
+   "round": 2,
+   "venue_en": "Arrowhead Stadium",
+   "city": "Kansas City",
+   "country": "USA",
+   "home_en": "Ecuador",
+   "home_zh": "厄瓜多尔",
+   "away_en": "Curaçao",
+   "away_zh": "库拉索",
+   "home_score": 0,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "E",
+   "date": "2026-06-25",
+   "time_local": "16:00",
+   "round": 3,
+   "venue_en": "Lincoln Financial Field",
+   "city": "Philadelphia",
+   "country": "USA",
+   "home_en": "Curaçao",
+   "home_zh": "库拉索",
+   "away_en": "Côte d'Ivoire",
+   "away_zh": "科特迪瓦",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "E",
+   "date": "2026-06-25",
+   "time_local": "16:00",
+   "round": 3,
+   "venue_en": "MetLife Stadium",
+   "city": "East Rutherford",
+   "country": "USA",
+   "home_en": "Ecuador",
+   "home_zh": "厄瓜多尔",
+   "away_en": "Germany",
+   "away_zh": "德国",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "F",
+   "date": "2026-06-14",
+   "time_local": "15:00",
+   "round": 1,
+   "venue_en": "AT&T Stadium",
+   "city": "Arlington",
+   "country": "USA",
+   "home_en": "Netherlands",
+   "home_zh": "荷兰",
+   "away_en": "Japan",
+   "away_zh": "日本",
+   "home_score": 2,
+   "away_score": 2,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "F",
+   "date": "2026-06-14",
+   "time_local": "20:00",
+   "round": 1,
+   "venue_en": "Estadio BBVA",
+   "city": "Guadalupe",
+   "country": "Mexico",
+   "home_en": "Sweden",
+   "home_zh": "瑞典",
+   "away_en": "Tunisia",
+   "away_zh": "突尼斯",
+   "home_score": 5,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "F",
+   "date": "2026-06-20",
+   "time_local": "12:00",
+   "round": 2,
+   "venue_en": "NRG Stadium",
+   "city": "Houston",
+   "country": "USA",
+   "home_en": "Netherlands",
+   "home_zh": "荷兰",
+   "away_en": "Sweden",
+   "away_zh": "瑞典",
+   "home_score": 5,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "F",
+   "date": "2026-06-20",
+   "time_local": "22:00",
+   "round": 2,
+   "venue_en": "Estadio BBVA",
+   "city": "Guadalupe",
+   "country": "Mexico",
+   "home_en": "Tunisia",
+   "home_zh": "突尼斯",
+   "away_en": "Japan",
+   "away_zh": "日本",
+   "home_score": 0,
+   "away_score": 4,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "F",
+   "date": "2026-06-25",
+   "time_local": "18:00",
+   "round": 3,
+   "venue_en": "AT&T Stadium",
+   "city": "Arlington",
+   "country": "USA",
+   "home_en": "Japan",
+   "home_zh": "日本",
+   "away_en": "Sweden",
+   "away_zh": "瑞典",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "F",
+   "date": "2026-06-25",
+   "time_local": "18:00",
+   "round": 3,
+   "venue_en": "Arrowhead Stadium",
+   "city": "Kansas City",
+   "country": "USA",
+   "home_en": "Tunisia",
+   "home_zh": "突尼斯",
+   "away_en": "Netherlands",
+   "away_zh": "荷兰",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "G",
+   "date": "2026-06-15",
+   "time_local": "12:00",
+   "round": 1,
+   "venue_en": "Lumen Field",
+   "city": "Seattle",
+   "country": "USA",
+   "home_en": "Belgium",
+   "home_zh": "比利时",
+   "away_en": "Egypt",
+   "away_zh": "埃及",
+   "home_score": 1,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "G",
+   "date": "2026-06-15",
+   "time_local": "18:00",
+   "round": 1,
+   "venue_en": "SoFi Stadium",
+   "city": "Inglewood",
+   "country": "USA",
+   "home_en": "Iran",
+   "home_zh": "伊朗",
+   "away_en": "New Zealand",
+   "away_zh": "新西兰",
+   "home_score": 2,
+   "away_score": 2,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "G",
+   "date": "2026-06-21",
+   "time_local": "12:00",
+   "round": 2,
+   "venue_en": "SoFi Stadium",
+   "city": "Inglewood",
+   "country": "USA",
+   "home_en": "Belgium",
+   "home_zh": "比利时",
+   "away_en": "Iran",
+   "away_zh": "伊朗",
+   "home_score": 0,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "G",
+   "date": "2026-06-21",
+   "time_local": "18:00",
+   "round": 2,
+   "venue_en": "BC Place",
+   "city": "Vancouver",
+   "country": "Canada",
+   "home_en": "New Zealand",
+   "home_zh": "新西兰",
+   "away_en": "Egypt",
+   "away_zh": "埃及",
+   "home_score": 1,
+   "away_score": 3,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "G",
+   "date": "2026-06-26",
+   "time_local": "20:00",
+   "round": 3,
+   "venue_en": "Lumen Field",
+   "city": "Seattle",
+   "country": "USA",
+   "home_en": "Egypt",
+   "home_zh": "埃及",
+   "away_en": "Iran",
+   "away_zh": "伊朗",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "G",
+   "date": "2026-06-26",
+   "time_local": "20:00",
+   "round": 3,
+   "venue_en": "BC Place",
+   "city": "Vancouver",
+   "country": "Canada",
+   "home_en": "New Zealand",
+   "home_zh": "新西兰",
+   "away_en": "Belgium",
+   "away_zh": "比利时",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "H",
+   "date": "2026-06-15",
+   "time_local": "12:00",
+   "round": 1,
+   "venue_en": "Mercedes-Benz Stadium",
+   "city": "Atlanta",
+   "country": "USA",
+   "home_en": "Spain",
+   "home_zh": "西班牙",
+   "away_en": "Cape Verde",
+   "away_zh": "佛得角",
+   "home_score": 0,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "H",
+   "date": "2026-06-15",
+   "time_local": "18:00",
+   "round": 1,
+   "venue_en": "Hard Rock Stadium",
+   "city": "Miami Gardens",
+   "country": "USA",
+   "home_en": "Saudi Arabia",
+   "home_zh": "沙特阿拉伯",
+   "away_en": "Uruguay",
+   "away_zh": "乌拉圭",
+   "home_score": 1,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "H",
+   "date": "2026-06-21",
+   "time_local": "12:00",
+   "round": 2,
+   "venue_en": "Mercedes-Benz Stadium",
+   "city": "Atlanta",
+   "country": "USA",
+   "home_en": "Spain",
+   "home_zh": "西班牙",
+   "away_en": "Saudi Arabia",
+   "away_zh": "沙特阿拉伯",
+   "home_score": 4,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "H",
+   "date": "2026-06-21",
+   "time_local": "18:00",
+   "round": 2,
+   "venue_en": "Hard Rock Stadium",
+   "city": "Miami Gardens",
+   "country": "USA",
+   "home_en": "Uruguay",
+   "home_zh": "乌拉圭",
+   "away_en": "Cape Verde",
+   "away_zh": "佛得角",
+   "home_score": 2,
+   "away_score": 2,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "H",
+   "date": "2026-06-26",
+   "time_local": "19:00",
+   "round": 3,
+   "venue_en": "NRG Stadium",
+   "city": "Houston",
+   "country": "USA",
+   "home_en": "Cape Verde",
+   "home_zh": "佛得角",
+   "away_en": "Saudi Arabia",
+   "away_zh": "沙特阿拉伯",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "H",
+   "date": "2026-06-26",
+   "time_local": "18:00",
+   "round": 3,
+   "venue_en": "Estadio Akron",
+   "city": "Zapopan",
+   "country": "Mexico",
+   "home_en": "Uruguay",
+   "home_zh": "乌拉圭",
+   "away_en": "Spain",
+   "away_zh": "西班牙",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "I",
+   "date": "2026-06-16",
+   "time_local": "15:00",
+   "round": 1,
+   "venue_en": "MetLife Stadium",
+   "city": "East Rutherford",
+   "country": "USA",
+   "home_en": "France",
+   "home_zh": "法国",
+   "away_en": "Senegal",
+   "away_zh": "塞内加尔",
+   "home_score": 3,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "I",
+   "date": "2026-06-16",
+   "time_local": "18:00",
+   "round": 1,
+   "venue_en": "Gillette Stadium",
+   "city": "Foxborough",
+   "country": "USA",
+   "home_en": "Iraq",
+   "home_zh": "伊拉克",
+   "away_en": "Norway",
+   "away_zh": "挪威",
+   "home_score": 1,
+   "away_score": 4,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "I",
+   "date": "2026-06-22",
+   "time_local": "17:00",
+   "round": 2,
+   "venue_en": "Lincoln Financial Field",
+   "city": "Philadelphia",
+   "country": "USA",
+   "home_en": "France",
+   "home_zh": "法国",
+   "away_en": "Iraq",
+   "away_zh": "伊拉克",
+   "home_score": 3,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "I",
+   "date": "2026-06-22",
+   "time_local": "20:00",
+   "round": 2,
+   "venue_en": "MetLife Stadium",
+   "city": "East Rutherford",
+   "country": "USA",
+   "home_en": "Norway",
+   "home_zh": "挪威",
+   "away_en": "Senegal",
+   "away_zh": "塞内加尔",
+   "home_score": 3,
+   "away_score": 2,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "I",
+   "date": "2026-06-26",
+   "time_local": "15:00",
+   "round": 3,
+   "venue_en": "Gillette Stadium",
+   "city": "Foxborough",
+   "country": "USA",
+   "home_en": "Norway",
+   "home_zh": "挪威",
+   "away_en": "France",
+   "away_zh": "法国",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "I",
+   "date": "2026-06-26",
+   "time_local": "15:00",
+   "round": 3,
+   "venue_en": "BMO Field",
+   "city": "Toronto",
+   "country": "Canada",
+   "home_en": "Senegal",
+   "home_zh": "塞内加尔",
+   "away_en": "Iraq",
+   "away_zh": "伊拉克",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "J",
+   "date": "2026-06-16",
+   "time_local": "20:00",
+   "round": 1,
+   "venue_en": "Arrowhead Stadium",
+   "city": "Kansas City",
+   "country": "USA",
+   "home_en": "Argentina",
+   "home_zh": "阿根廷",
+   "away_en": "Algeria",
+   "away_zh": "阿尔及利亚",
+   "home_score": 3,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "J",
+   "date": "2026-06-16",
+   "time_local": "21:00",
+   "round": 1,
+   "venue_en": "Levi's Stadium",
+   "city": "Santa Clara",
+   "country": "USA",
+   "home_en": "Austria",
+   "home_zh": "奥地利",
+   "away_en": "Jordan",
+   "away_zh": "约旦",
+   "home_score": 3,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "J",
+   "date": "2026-06-22",
+   "time_local": "12:00",
+   "round": 2,
+   "venue_en": "AT&T Stadium",
+   "city": "Arlington",
+   "country": "USA",
+   "home_en": "Argentina",
+   "home_zh": "阿根廷",
+   "away_en": "Austria",
+   "away_zh": "奥地利",
+   "home_score": 2,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "J",
+   "date": "2026-06-22",
+   "time_local": "20:00",
+   "round": 2,
+   "venue_en": "Levi's Stadium",
+   "city": "Santa Clara",
+   "country": "USA",
+   "home_en": "Jordan",
+   "home_zh": "约旦",
+   "away_en": "Algeria",
+   "away_zh": "阿尔及利亚",
+   "home_score": 1,
+   "away_score": 2,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "J",
+   "date": "2026-06-27",
+   "time_local": "21:00",
+   "round": 3,
+   "venue_en": "Arrowhead Stadium",
+   "city": "Kansas City",
+   "country": "USA",
+   "home_en": "Algeria",
+   "home_zh": "阿尔及利亚",
+   "away_en": "Austria",
+   "away_zh": "奥地利",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "J",
+   "date": "2026-06-27",
+   "time_local": "21:00",
+   "round": 3,
+   "venue_en": "AT&T Stadium",
+   "city": "Arlington",
+   "country": "USA",
+   "home_en": "Jordan",
+   "home_zh": "约旦",
+   "away_en": "Argentina",
+   "away_zh": "阿根廷",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "K",
+   "date": "2026-06-17",
+   "time_local": "12:00",
+   "round": 1,
+   "venue_en": "NRG Stadium",
+   "city": "Houston",
+   "country": "USA",
+   "home_en": "Portugal",
+   "home_zh": "葡萄牙",
+   "away_en": "DR Congo",
+   "away_zh": "刚果(金)",
+   "home_score": 1,
+   "away_score": 1,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "K",
+   "date": "2026-06-17",
+   "time_local": "20:00",
+   "round": 1,
+   "venue_en": "Estadio Azteca",
+   "city": "Mexico City",
+   "country": "Mexico",
+   "home_en": "Uzbekistan",
+   "home_zh": "乌兹别克斯坦",
+   "away_en": "Colombia",
+   "away_zh": "哥伦比亚",
+   "home_score": 1,
+   "away_score": 3,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "K",
+   "date": "2026-06-23",
+   "time_local": "12:00",
+   "round": 2,
+   "venue_en": "NRG Stadium",
+   "city": "Houston",
+   "country": "USA",
+   "home_en": "Portugal",
+   "home_zh": "葡萄牙",
+   "away_en": "Uzbekistan",
+   "away_zh": "乌兹别克斯坦",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "K",
+   "date": "2026-06-23",
+   "time_local": "20:00",
+   "round": 2,
+   "venue_en": "Estadio Akron",
+   "city": "Zapopan",
+   "country": "Mexico",
+   "home_en": "Colombia",
+   "home_zh": "哥伦比亚",
+   "away_en": "DR Congo",
+   "away_zh": "刚果(金)",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "K",
+   "date": "2026-06-27",
+   "time_local": "19:30",
+   "round": 3,
+   "venue_en": "Hard Rock Stadium",
+   "city": "Miami Gardens",
+   "country": "USA",
+   "home_en": "Colombia",
+   "home_zh": "哥伦比亚",
+   "away_en": "Portugal",
+   "away_zh": "葡萄牙",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "K",
+   "date": "2026-06-27",
+   "time_local": "19:30",
+   "round": 3,
+   "venue_en": "Mercedes-Benz Stadium",
+   "city": "Atlanta",
+   "country": "USA",
+   "home_en": "DR Congo",
+   "home_zh": "刚果(金)",
+   "away_en": "Uzbekistan",
+   "away_zh": "乌兹别克斯坦",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "L",
+   "date": "2026-06-17",
+   "time_local": "15:00",
+   "round": 1,
+   "venue_en": "AT&T Stadium",
+   "city": "Arlington",
+   "country": "USA",
+   "home_en": "England",
+   "home_zh": "英格兰",
+   "away_en": "Croatia",
+   "away_zh": "克罗地亚",
+   "home_score": 4,
+   "away_score": 2,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "L",
+   "date": "2026-06-17",
+   "time_local": "19:00",
+   "round": 1,
+   "venue_en": "BMO Field",
+   "city": "Toronto",
+   "country": "Canada",
+   "home_en": "Ghana",
+   "home_zh": "加纳",
+   "away_en": "Panama",
+   "away_zh": "巴拿马",
+   "home_score": 1,
+   "away_score": 0,
+   "status": "played"
+  },
+  {
+   "stage": "group",
+   "group": "L",
+   "date": "2026-06-23",
+   "time_local": "16:00",
+   "round": 2,
+   "venue_en": "Gillette Stadium",
+   "city": "Foxborough",
+   "country": "USA",
+   "home_en": "England",
+   "home_zh": "英格兰",
+   "away_en": "Ghana",
+   "away_zh": "加纳",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "L",
+   "date": "2026-06-23",
+   "time_local": "19:00",
+   "round": 2,
+   "venue_en": "BMO Field",
+   "city": "Toronto",
+   "country": "Canada",
+   "home_en": "Panama",
+   "home_zh": "巴拿马",
+   "away_en": "Croatia",
+   "away_zh": "克罗地亚",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "L",
+   "date": "2026-06-27",
+   "time_local": "17:00",
+   "round": 3,
+   "venue_en": "MetLife Stadium",
+   "city": "East Rutherford",
+   "country": "USA",
+   "home_en": "Panama",
+   "home_zh": "巴拿马",
+   "away_en": "England",
+   "away_zh": "英格兰",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "stage": "group",
+   "group": "L",
+   "date": "2026-06-27",
+   "time_local": "17:00",
+   "round": 3,
+   "venue_en": "Lincoln Financial Field",
+   "city": "Philadelphia",
+   "country": "USA",
+   "home_en": "Croatia",
+   "home_zh": "克罗地亚",
+   "away_en": "Ghana",
+   "away_zh": "加纳",
+   "home_score": null,
+   "away_score": null,
+   "status": "upcoming"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-06-28",
+   "time_local": "12:00 PT",
+   "venue_en": "SoFi Stadium",
+   "city": "Inglewood",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-06-29",
+   "time_local": "16:30 ET",
+   "venue_en": "Gillette Stadium",
+   "city": "Foxborough",
+   "country": "USA",
+   "home_en": "Germany",
+   "home_zh": "德国",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-06-29",
+   "time_local": "19:00 CT",
+   "venue_en": "Estadio BBVA",
+   "city": "Guadalupe",
+   "country": "Mexico",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-06-29",
+   "time_local": "12:00 CT",
+   "venue_en": "NRG Stadium",
+   "city": "Houston",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-06-30",
+   "time_local": "17:00 ET",
+   "venue_en": "MetLife Stadium",
+   "city": "East Rutherford",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-06-30",
+   "time_local": "12:00 ET",
+   "venue_en": "AT&T Stadium",
+   "city": "Arlington",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-06-30",
+   "time_local": "19:00 CT",
+   "venue_en": "Estadio Azteca",
+   "city": "Mexico City",
+   "country": "Mexico",
+   "home_en": "Mexico",
+   "home_zh": "墨西哥",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-07-01",
+   "time_local": "12:00 ET",
+   "venue_en": "Mercedes-Benz Stadium",
+   "city": "Atlanta",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-07-01",
+   "time_local": "17:00 PT",
+   "venue_en": "Levi's Stadium",
+   "city": "Santa Clara",
+   "country": "USA",
+   "home_en": "United States",
+   "home_zh": "美国",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-07-01",
+   "time_local": "13:00 PT",
+   "venue_en": "Lumen Field",
+   "city": "Seattle",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-07-02",
+   "time_local": "19:00 ET",
+   "venue_en": "BMO Field",
+   "city": "Toronto",
+   "country": "Canada",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-07-02",
+   "time_local": "12:00 PT",
+   "venue_en": "SoFi Stadium",
+   "city": "Inglewood",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-07-02",
+   "time_local": "20:00 PT",
+   "venue_en": "BC Place",
+   "city": "Vancouver",
+   "country": "Canada",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-07-03",
+   "time_local": "18:00 ET",
+   "venue_en": "Hard Rock Stadium",
+   "city": "Miami Gardens",
+   "country": "USA",
+   "home_en": "Argentina",
+   "home_zh": "阿根廷",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-07-03",
+   "time_local": "20:30 ET",
+   "venue_en": "Arrowhead Stadium",
+   "city": "Kansas City",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r32",
+   "date": "2026-07-03",
+   "time_local": "13:00 ET",
+   "venue_en": "AT&T Stadium",
+   "city": "Arlington",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r16",
+   "date": "2026-07-04",
+   "time_local": "17:00 ET",
+   "venue_en": "Lincoln Financial Field",
+   "city": "Philadelphia",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r16",
+   "date": "2026-07-04",
+   "time_local": "12:00 ET",
+   "venue_en": "NRG Stadium",
+   "city": "Houston",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r16",
+   "date": "2026-07-05",
+   "time_local": "16:00 ET",
+   "venue_en": "MetLife Stadium",
+   "city": "East Rutherford",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r16",
+   "date": "2026-07-05",
+   "time_local": "18:00 CT",
+   "venue_en": "Estadio Azteca",
+   "city": "Mexico City",
+   "country": "Mexico",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r16",
+   "date": "2026-07-06",
+   "time_local": "14:00 ET",
+   "venue_en": "AT&T Stadium",
+   "city": "Arlington",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r16",
+   "date": "2026-07-06",
+   "time_local": "17:00 PT",
+   "venue_en": "Lumen Field",
+   "city": "Seattle",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r16",
+   "date": "2026-07-07",
+   "time_local": "12:00 ET",
+   "venue_en": "Mercedes-Benz Stadium",
+   "city": "Atlanta",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "r16",
+   "date": "2026-07-07",
+   "time_local": "13:00 PT",
+   "venue_en": "BC Place",
+   "city": "Vancouver",
+   "country": "Canada",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "qf",
+   "date": "2026-07-09",
+   "time_local": "16:00 ET",
+   "venue_en": "Gillette Stadium",
+   "city": "Foxborough",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "qf",
+   "date": "2026-07-10",
+   "time_local": "12:00 PT",
+   "venue_en": "SoFi Stadium",
+   "city": "Inglewood",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "qf",
+   "date": "2026-07-11",
+   "time_local": "17:00 ET",
+   "venue_en": "Hard Rock Stadium",
+   "city": "Miami Gardens",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "qf",
+   "date": "2026-07-11",
+   "time_local": "20:00 ET",
+   "venue_en": "Arrowhead Stadium",
+   "city": "Kansas City",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "sf",
+   "date": "2026-07-14",
+   "time_local": "14:00 ET",
+   "venue_en": "AT&T Stadium",
+   "city": "Arlington",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "sf",
+   "date": "2026-07-15",
+   "time_local": "15:00 ET",
+   "venue_en": "Mercedes-Benz Stadium",
+   "city": "Atlanta",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "third",
+   "date": "2026-07-18",
+   "time_local": "17:00 ET",
+   "venue_en": "Hard Rock Stadium",
+   "city": "Miami Gardens",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  },
+  {
+   "group": null,
+   "round": null,
+   "stage": "final",
+   "date": "2026-07-19",
+   "time_local": "15:00 ET",
+   "venue_en": "MetLife Stadium",
+   "city": "East Rutherford",
+   "country": "USA",
+   "home_en": "TBD",
+   "home_zh": "待定",
+   "away_en": "TBD",
+   "away_zh": "待定",
+   "home_score": null,
+   "away_score": null,
+   "status": "未赛"
+  }
+ ]
+};
+/* === WORLDCUP_DATA:END === */
+
+/* === WORLDCUP_LEDGER:BEGIN (auto-generated — 勿手改) === */
+window.WORLDCUP_LEDGER = {
+ "title": "本届世界杯战绩",
+ "currency": "¥",
+ "updated": "2026-06-23",
+ "note": "6.16–6.22 仅留每日投入/收入金额，具体票面未留存；6.23 起留存完整投注明细。净盈亏 = 已兑奖收入 − 总投入；待开奖日按收入 0 计入，开奖后回填。",
+ "days": [
+  {
+   "date": "2026-06-16",
+   "stake": 100,
+   "payout": 0,
+   "status": "settled",
+   "tickets": []
+  },
+  {
+   "date": "2026-06-17",
+   "stake": 144,
+   "payout": 0,
+   "status": "settled",
+   "tickets": []
+  },
+  {
+   "date": "2026-06-18",
+   "stake": 50,
+   "payout": 0,
+   "status": "settled",
+   "tickets": []
+  },
+  {
+   "date": "2026-06-19",
+   "stake": 80,
+   "payout": 0,
+   "status": "settled",
+   "tickets": []
+  },
+  {
+   "date": "2026-06-20",
+   "stake": 0,
+   "payout": 0,
+   "status": "nobet",
+   "tickets": []
+  },
+  {
+   "date": "2026-06-21",
+   "stake": 92,
+   "payout": 0,
+   "status": "settled",
+   "tickets": []
+  },
+  {
+   "date": "2026-06-22",
+   "stake": 92,
+   "payout": 0,
+   "status": "settled",
+   "tickets": []
+  },
+  {
+   "date": "2026-06-23",
+   "stake": 124,
+   "payout": 244.8,
+   "status": "settled",
+   "note": "按当日推荐 3 卡比分金字塔下注（I/J 组凌晨 4 场）。",
+   "tickets": [
+    {
+     "name": "保底层 · 比分复式 2串1",
+     "way": "2串1",
+     "mult": 4,
+     "bets": 9,
+     "stake": 72,
+     "max": 740,
+     "rec": true,
+     "legs": [
+      {
+       "home": "阿根廷",
+       "away": "奥地利",
+       "scores": [
+        {
+         "s": "2:0",
+         "o": 6.0
+        },
+        {
+         "s": "2:1",
+         "o": 6.5
+        },
+        {
+         "s": "3:1",
+         "o": 9.25
+        }
+       ]
+      },
+      {
+       "home": "法国",
+       "away": "伊拉克",
+       "scores": [
+        {
+         "s": "3:0",
+         "o": 5.1
+        },
+        {
+         "s": "3:1",
+         "o": 10.0
+        },
+        {
+         "s": "4:0",
+         "o": 6.0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "中层 · 比分复式 3串1",
+     "way": "3串1",
+     "mult": 2,
+     "bets": 8,
+     "stake": 32,
+     "max": 1820,
+     "legs": [
+      {
+       "home": "阿根廷",
+       "away": "奥地利",
+       "scores": [
+        {
+         "s": "2:0",
+         "o": 6.0
+        },
+        {
+         "s": "2:1",
+         "o": 6.5
+        }
+       ]
+      },
+      {
+       "home": "法国",
+       "away": "伊拉克",
+       "scores": [
+        {
+         "s": "3:1",
+         "o": 10.0
+        },
+        {
+         "s": "3:0",
+         "o": 5.1
+        }
+       ]
+      },
+      {
+       "home": "挪威",
+       "away": "塞内加尔",
+       "scores": [
+        {
+         "s": "2:1",
+         "o": 6.75
+        },
+        {
+         "s": "2:0",
+         "o": 7.0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "封顶层 · 比分单式 4串1",
+     "way": "4串1",
+     "mult": 10,
+     "bets": 1,
+     "stake": 20,
+     "max": 23133.6,
+     "legs": [
+      {
+       "home": "阿根廷",
+       "away": "奥地利",
+       "scores": [
+        {
+         "s": "2:0",
+         "o": 6.0
+        }
+       ]
+      },
+      {
+       "home": "法国",
+       "away": "伊拉克",
+       "scores": [
+        {
+         "s": "3:0",
+         "o": 5.1
+        }
+       ]
+      },
+      {
+       "home": "挪威",
+       "away": "塞内加尔",
+       "scores": [
+        {
+         "s": "2:1",
+         "o": 6.75
+        }
+       ]
+      },
+      {
+       "home": "约旦",
+       "away": "阿尔及利亚",
+       "scores": [
+        {
+         "s": "0:1",
+         "o": 5.6
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "stake": 144,
+   "payout": null,
+   "status": "pending",
+   "note": "推荐 3 卡（124）+ 额外自购 4串1（20）。K/L 组凌晨 4 场，待开奖。",
+   "tickets": [
+    {
+     "name": "保底层 · 比分复式 2串1",
+     "way": "2串1",
+     "mult": 4,
+     "bets": 9,
+     "stake": 72,
+     "max": 752.4,
+     "rec": true,
+     "legs": [
+      {
+       "home": "葡萄牙",
+       "away": "乌兹别克斯坦",
+       "scores": [
+        {
+         "s": "2:1",
+         "o": 7.0
+        },
+        {
+         "s": "3:1",
+         "o": 9.5
+        },
+        {
+         "s": "2:0",
+         "o": 8.0
+        }
+       ]
+      },
+      {
+       "home": "英格兰",
+       "away": "加纳",
+       "scores": [
+        {
+         "s": "2:1",
+         "o": 7.9
+        },
+        {
+         "s": "3:1",
+         "o": 9.9
+        },
+        {
+         "s": "2:0",
+         "o": 6.9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "中层 · 比分复式 3串1",
+     "way": "3串1",
+     "mult": 2,
+     "bets": 8,
+     "stake": 32,
+     "max": 3009.6,
+     "legs": [
+      {
+       "home": "葡萄牙",
+       "away": "乌兹别克斯坦",
+       "scores": [
+        {
+         "s": "2:1",
+         "o": 7.0
+        },
+        {
+         "s": "3:1",
+         "o": 9.5
+        }
+       ]
+      },
+      {
+       "home": "英格兰",
+       "away": "加纳",
+       "scores": [
+        {
+         "s": "2:1",
+         "o": 7.9
+        },
+        {
+         "s": "3:1",
+         "o": 9.9
+        }
+       ]
+      },
+      {
+       "home": "巴拿马",
+       "away": "克罗地亚",
+       "scores": [
+        {
+         "s": "1:2",
+         "o": 6.5
+        },
+        {
+         "s": "0:2",
+         "o": 8.0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "封顶层 · 比分单式 4串1",
+     "way": "4串1",
+     "mult": 10,
+     "bets": 1,
+     "stake": 20,
+     "max": 50323,
+     "legs": [
+      {
+       "home": "葡萄牙",
+       "away": "乌兹别克斯坦",
+       "scores": [
+        {
+         "s": "2:1",
+         "o": 7.0
+        }
+       ]
+      },
+      {
+       "home": "英格兰",
+       "away": "加纳",
+       "scores": [
+        {
+         "s": "2:1",
+         "o": 7.9
+        }
+       ]
+      },
+      {
+       "home": "巴拿马",
+       "away": "克罗地亚",
+       "scores": [
+        {
+         "s": "1:2",
+         "o": 6.5
+        }
+       ]
+      },
+      {
+       "home": "哥伦比亚",
+       "away": "刚果(金)",
+       "scores": [
+        {
+         "s": "2:1",
+         "o": 7.0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "额外自购 · 4串1",
+     "way": "4串1",
+     "mult": null,
+     "bets": 1,
+     "stake": 20,
+     "max": null,
+     "self": true,
+     "note": "前两场让球负、后两场打平。",
+     "legs": [
+      {
+       "home": "葡萄牙",
+       "away": "乌兹别克斯坦",
+       "play": "让球负"
+      },
+      {
+       "home": "英格兰",
+       "away": "加纳",
+       "play": "让球负"
+      },
+      {
+       "home": "巴拿马",
+       "away": "克罗地亚",
+       "play": "平"
+      },
+      {
+       "home": "哥伦比亚",
+       "away": "刚果(金)",
+       "play": "平"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+};
+/* === WORLDCUP_LEDGER:END === */
+
+window.WORLDCUP_FLAGS = {"墨西哥":"🇲🇽","南非":"🇿🇦","韩国":"🇰🇷","捷克":"🇨🇿","加拿大":"🇨🇦","波斯尼亚和黑塞哥维那":"🇧🇦","卡塔尔":"🇶🇦","瑞士":"🇨🇭","巴西":"🇧🇷","摩洛哥":"🇲🇦","海地":"🇭🇹","苏格兰":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","美国":"🇺🇸","巴拉圭":"🇵🇾","澳大利亚":"🇦🇺","土耳其":"🇹🇷","德国":"🇩🇪","库拉索":"🇨🇼","科特迪瓦":"🇨🇮","厄瓜多尔":"🇪🇨","荷兰":"🇳🇱","日本":"🇯🇵","瑞典":"🇸🇪","突尼斯":"🇹🇳","比利时":"🇧🇪","埃及":"🇪🇬","伊朗":"🇮🇷","新西兰":"🇳🇿","西班牙":"🇪🇸","佛得角":"🇨🇻","沙特阿拉伯":"🇸🇦","乌拉圭":"🇺🇾","法国":"🇫🇷","塞内加尔":"🇸🇳","伊拉克":"🇮🇶","挪威":"🇳🇴","阿根廷":"🇦🇷","阿尔及利亚":"🇩🇿","奥地利":"🇦🇹","约旦":"🇯🇴","葡萄牙":"🇵🇹","刚果(金)":"🇨🇩","乌兹别克斯坦":"🇺🇿","哥伦比亚":"🇨🇴","英格兰":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","克罗地亚":"🇭🇷","加纳":"🇬🇭","巴拿马":"🇵🇦","待定":"⚪"};
+window.WORLDCUP_VENUE_OFFSET = {"Estadio Azteca":-6,"Estadio Akron":-6,"Estadio BBVA":-6,"BC Place":-7,"SoFi Stadium":-7,"Levi's Stadium":-7,"Lumen Field":-7,"BMO Field":-4,"MetLife Stadium":-4,"Lincoln Financial Field":-4,"Mercedes-Benz Stadium":-4,"Hard Rock Stadium":-4,"Gillette Stadium":-4,"AT&T Stadium":-5,"NRG Stadium":-5,"Arrowhead Stadium":-5};
+
+// ---- 每日赛前预测报告清单（编辑此处登记你的报告；url 相对平台文件路径）----
+window.WORLDCUP_PREDICTIONS = [
+ { date:'2026-06-24', url:'赛前预测/2026-06-24/index.html' },
+ { date:'2026-06-23', url:'赛前预测/2026-06-23/index.html', reviewUrl:'赛后复盘/2026-06-23/复盘-周二4场.md',
+   // picks: 单场预测(算命中率)；score 比分、wdl 胜平负(主胜/平/客胜)。
+   // picks: 单场预测；score/wdl 算命中率；an = 该场分析图表(信心/推荐/胜平负/xG/Top比分/总进球/让球/方案)。概率为分析师定性估计或赔率去水，示例值。
+   picks:[
+    { home:'阿根廷', away:'奥地利', score:'2:0', wdl:'主胜', an:{
+        conf:'高', rec:'让球主胜（阿根廷 -1）',
+        wdlQual:[62,22,16], wdlOdds:[58,24,18], xg:[2.1,0.7],
+        scoreTop:[{s:'2:0',p:13.5,pick:true},{s:'2:1',p:11.2,pick:true},{s:'1:0',p:10.4},{s:'3:1',p:8.1,pick:true},{s:'3:0',p:7.6}],
+        ttg:[4,14,24,26,18,9,3,2], hhad:{line:'阿根廷 -1', probs:[52,26,22]},
+        plans:[
+          {name:'稳健',tag:'推荐',play:'让球主胜·单关',cover:'让胜',odds:1.80,stake:50,max:90,note:'命中率优先'},
+          {name:'中庸',play:'比分复式',cover:'2:0 / 2:1 / 3:1',odds:6.0,stake:36,max:222},
+          {name:'搏大',play:'比分单式',cover:'2:0',odds:6.0,stake:20,max:120}
+        ] } },
+    { home:'法国', away:'伊拉克', score:'3:0', wdl:'主胜', an:{
+        conf:'高', rec:'让球主胜（法国 -2）',
+        wdlQual:[70,18,12], wdlOdds:[66,20,14], xg:[2.6,0.5],
+        scoreTop:[{s:'3:0',p:12.8,pick:true},{s:'2:0',p:12.1},{s:'3:1',p:9.4,pick:true},{s:'4:0',p:7.2,pick:true},{s:'1:0',p:8.0}],
+        ttg:[3,10,20,26,21,12,5,3], hhad:{line:'法国 -2', probs:[46,28,26]},
+        plans:[
+          {name:'稳健',tag:'推荐',play:'让球主胜·单关',cover:'让胜',odds:1.95,stake:50,max:97.5,note:'实力差明显'},
+          {name:'搏大',play:'比分复式',cover:'3:0 / 3:1 / 4:0',odds:10.0,stake:36,max:360}
+        ] } },
+    { home:'挪威', away:'塞内加尔', score:'2:1', wdl:'主胜', an:{
+        conf:'中', rec:'主胜 + 总进球 3 档',
+        wdlQual:[48,26,26], wdlOdds:[45,27,28], xg:[1.8,1.3],
+        scoreTop:[{s:'2:1',p:11.0,pick:true},{s:'2:0',p:9.2,pick:true},{s:'1:1',p:9.0},{s:'3:2',p:6.5},{s:'2:2',p:6.0}],
+        ttg:[3,9,18,24,21,14,7,4], hhad:{line:'挪威 -1', probs:[40,28,32]},
+        plans:[
+          {name:'稳健',tag:'推荐',play:'不让球主胜·单关',cover:'主胜',odds:2.05,stake:40,max:82},
+          {name:'中庸',play:'比分复式',cover:'2:1 / 2:0',odds:6.75,stake:18,max:121.5}
+        ] } },
+    { home:'约旦', away:'阿尔及利亚', score:'0:1', wdl:'客胜', an:{
+        conf:'中', rec:'客胜（阿尔及利亚）',
+        wdlQual:[30,30,40], wdlOdds:[32,29,39], xg:[0.9,1.4],
+        scoreTop:[{s:'0:1',p:11.5,pick:true},{s:'1:1',p:10.2},{s:'1:2',p:9.0},{s:'0:2',p:7.8},{s:'2:1',p:6.4}],
+        ttg:[8,20,26,22,13,7,3,1], hhad:{line:'阿尔及利亚 -1（客）', probs:[34,30,36]},
+        plans:[
+          {name:'稳健',tag:'推荐',play:'不让球客胜·单关',cover:'客胜',odds:2.30,stake:40,max:92},
+          {name:'搏大',play:'比分单式',cover:'0:1',odds:5.60,stake:20,max:112}
+        ] } }
+   ],
+   // combos: 串关票面(算盈亏)；按竞彩规则结算 投入=2×注数×倍数, 最高奖金=2×倍数×∏命中赔率, 全中才派奖
+   stakeTotal:124,
+   combos:[
+    { name:'保底层 · 比分复式 2串1', way:'2×1', mult:4, tag:'推荐', bets:9, stake:72, max:740,
+      hit:'两场各命中所选比分之一', risk:'三档里命中率最高；两场须全中',
+      legs:[
+       { no:1, home:'阿根廷', away:'奥地利', scores:[{s:'2:0',o:6.0},{s:'2:1',o:6.5},{s:'3:1',o:9.25}] },
+       { no:2, home:'法国',   away:'伊拉克', scores:[{s:'3:0',o:5.1},{s:'3:1',o:10.0},{s:'4:0',o:6.0}] }
+      ] },
+    { name:'中层 · 比分复式 3串1', way:'3×1', mult:2, bets:8, stake:32, max:1820,
+      hit:'三场各命中所选比分之一', risk:'比 2 串 1 多一场，命中率下降',
+      legs:[
+       { no:1, home:'阿根廷', away:'奥地利',   scores:[{s:'2:0',o:6.0},{s:'2:1',o:6.5}] },
+       { no:2, home:'法国',   away:'伊拉克',   scores:[{s:'3:1',o:10.0},{s:'3:0',o:5.1}] },
+       { no:3, home:'挪威',   away:'塞内加尔', scores:[{s:'2:1',o:6.75},{s:'2:0',o:7.0}] }
+      ] },
+    { name:'封顶层 · 比分单式 4串1', way:'4×1', mult:10, bets:1, stake:20, max:45360,
+      hit:'四场比分全中（倍率极高）', risk:'命中＜0.1%，愿亏彩票',
+      legs:[
+       { no:1, home:'阿根廷', away:'奥地利',   scores:[{s:'2:0',o:6.0}] },
+       { no:2, home:'法国',   away:'伊拉克',   scores:[{s:'3:1',o:10.0}] },
+       { no:3, home:'挪威',   away:'塞内加尔', scores:[{s:'2:1',o:6.75}] },
+       { no:4, home:'约旦',   away:'阿尔及利亚', scores:[{s:'0:1',o:5.6}] }
+      ] }
+   ] },
+ { date:'2026-06-22', url:'赛前预测/2026-06-22/index.html' },
+ { date:'2026-06-21', url:'赛前预测/2026-06-21/index.html' }
+];
+
+</script>
+<!-- WC_INLINE_DATA:END -->
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:#F4F1EA;font-family:'Spline Sans','PingFang SC','Microsoft YaHei',system-ui,sans-serif;color:#2A2622;-webkit-font-smoothing:antialiased}
+  @keyframes wcpulse{0%,100%{opacity:1}50%{opacity:.3}}
+  @keyframes wcspin{to{transform:rotate(360deg)}}
+  @keyframes wcmarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  @keyframes wcring{0%{box-shadow:0 0 0 0 rgba(214,69,63,.55)}70%{box-shadow:0 0 0 7px rgba(214,69,63,0)}100%{box-shadow:0 0 0 0 rgba(214,69,63,0)}}
+  ::-webkit-scrollbar{height:11px;width:11px}
+  ::-webkit-scrollbar-thumb{background:#d7d0c1;border-radius:8px;border:3px solid #F4F1EA}
+  ::-webkit-scrollbar-track{background:transparent}
+  .wc-mq:hover{animation-play-state:paused !important}
+  button{font-family:inherit}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="wc-report"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ===== palette / constants =====
+  var C = { paper:'#F4F1EA', card:'#FBFAF5', ink:'#2A2622', mut:'#8C8478', line:'#E4DECF',
+            clay:'#C0613B', claySoft:'#F1E2D8', green:'#3F7A4E', greenSoft:'#E4EDE2',
+            red:'#D6453F', gold:'#B5862E', goldSoft:'#F3E8CF' };
+  var XHS = 'https://www.xiaohongshu.com/worldcup26?wcup_source=web_sidebar_entry';
+  var GROUPS = 'ABCDEFGHIJKL'.split('');
+
+  var DATA = null, FLAGS = {}, OFF = {}, PRED = [], LEDGER = { days: [] };
+  var state = { tab:'bracket', lastSync:0, syncing:false, ready:false, exp:{} };
+  var now = Date.now();
+  var lastSig = null;
+  var app = document.getElementById('app');
+
+  // ===== tiny helpers =====
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+  function each(arr, fn){ return (arr||[]).map(fn).join(''); }
+  // 站内报告(赛前预测/赛后复盘 等相对路径)→ 页内 iframe 打开；外链(http/小红书)→ 新标签
+  function isReportUrl(u){ return !!u && u!=='#' && !/^https?:/i.test(u); }
+  function reportAttr(u){ return isReportUrl(u) ? (' data-report="'+esc(u)+'"') : ''; }
+
+  // ===== data helpers (ported 1:1 from the design's DCLogic) =====
+  function flag(z){ return FLAGS[z] || '⚪'; }
+  function off(v){ return (OFF[v] != null) ? OFF[v] : -5; }
+  function bj(m){
+    var p = m.date.split('-').map(Number);
+    var tm = (m.time_local||'').match(/(\d{1,2}):(\d{2})/);
+    var hh = tm ? +tm[1] : 12, mi = tm ? +tm[2] : 0;
+    var utc = Date.UTC(p[0], p[1]-1, p[2], hh, mi) - off(m.venue_en)*3600000;
+    var b = new Date(utc + 8*3600000);
+    var ymd = b.getUTCFullYear()+'-'+String(b.getUTCMonth()+1).padStart(2,'0')+'-'+String(b.getUTCDate()).padStart(2,'0');
+    return { ms:utc, ymd:ymd, md:(b.getUTCMonth()+1)+'/'+b.getUTCDate(),
+      hm:String(b.getUTCHours()).padStart(2,'0')+':'+String(b.getUTCMinutes()).padStart(2,'0'),
+      wd:['周日','周一','周二','周三','周四','周五','周六'][b.getUTCDay()] };
+  }
+  function phase(m){
+    if(m.home_score!=null && m.away_score!=null) return 'played';
+    var k = bj(m).ms;
+    if(now < k) return (k-now <= 3600000) ? 'soon' : 'upcoming';
+    if(now < k + 115*60000) return 'live';
+    return 'ended';
+  }
+  function phaseInfo(p){
+    return ({
+      played:{ label:'完场', color:C.mut, bg:'#ECE6D8' },
+      live:{ label:'● 直播中', color:'#fff', bg:C.red, live:true },
+      soon:{ label:'即将开赛', color:'#5a4400', bg:C.goldSoft },
+      upcoming:{ label:'未开赛', color:C.clay, bg:C.claySoft },
+      ended:{ label:'待更新', color:C.mut, bg:'#ECE6D8' }
+    })[p];
+  }
+  function card(m){
+    var ph = phase(m), pi = phaseInfo(ph), b = bj(m);
+    var played = m.home_score!=null && m.away_score!=null;
+    var hw = played && m.home_score > m.away_score;
+    var aw = played && m.away_score > m.home_score;
+    var live = !!pi.live;
+    return {
+      fh:flag(m.home_zh), hn:m.home_zh, fa:flag(m.away_zh), an:m.away_zh,
+      hsStr: played ? String(m.home_score) : '–', asStr: played ? String(m.away_score) : '–',
+      hW: hw?'700':'500', aW: aw?'700':'500',
+      hC: (played && !hw) ? C.mut : C.ink,
+      aC: (played && !aw) ? C.mut : C.ink,
+      dateStr:b.md, timeStr:b.hm, wd:b.wd, ymd:b.ymd, venue:(m.city||''),
+      phaseLabel:pi.label, phaseColor:pi.color, phaseBg:pi.bg,
+      ring: live ? 'animation:wcring 1.4s ease-out infinite;' : '',
+      cardBorder: live ? C.red : '#E8E2D4',
+      cardRing: live ? 'box-shadow:0 0 0 2px rgba(214,69,63,.25);' : 'box-shadow:0 1px 2px rgba(42,38,34,.05);',
+      url:XHS, _k:b.ms, _ph:ph
+    };
+  }
+  function standings(g){
+    var ms = DATA.schedule.filter(function(m){ return m.stage==='group' && m.group===g; });
+    var T = {};
+    ms.forEach(function(m){ [m.home_zh,m.away_zh].forEach(function(t){ if(!T[t]) T[t]={t:t,P:0,W:0,D:0,L:0,GF:0,GA:0,Pts:0}; }); });
+    ms.forEach(function(m){
+      if(m.home_score==null || m.away_score==null) return;
+      var h=T[m.home_zh], a=T[m.away_zh];
+      h.P++; a.P++; h.GF+=m.home_score; h.GA+=m.away_score; a.GF+=m.away_score; a.GA+=m.home_score;
+      if(m.home_score>m.away_score){ h.W++; a.L++; h.Pts+=3; }
+      else if(m.home_score<m.away_score){ a.W++; h.L++; a.Pts+=3; }
+      else { h.D++; a.D++; h.Pts++; a.Pts++; }
+    });
+    return Object.keys(T).map(function(k){ var x=T[k]; return Object.assign({}, x, { GD:x.GF-x.GA }); })
+      .sort(function(p,q){ return q.Pts-p.Pts || q.GD-p.GD || q.GF-p.GF || p.t.localeCompare(q.t,'zh'); });
+  }
+  function rowStyle(i){
+    if(i===0) return { bar:C.green, rowBg:'rgba(63,122,78,.07)' };
+    if(i===1) return { bar:'#7AA886', rowBg:'rgba(63,122,78,.04)' };
+    if(i===2) return { bar:C.gold, rowBg:'rgba(181,134,46,.06)' };
+    return { bar:'#D8D2C5', rowBg:'transparent' };
+  }
+  function gd(n){ return (n>0?'+':'') + n; }
+  function wdlOf(h,a){ return h>a?'主胜':(h<a?'客胜':'平'); }
+  function gdColor(n){ return n>0 ? C.green : (n<0 ? C.clay : C.mut); }
+  function fmtMs(ms){
+    if(ms<0) return '即将';
+    var s=Math.floor(ms/1000), d=Math.floor(s/86400), h=Math.floor(s%86400/3600), mi=Math.floor(s%3600/60), se=s%60;
+    if(d>0) return d+'天'+h+'时';
+    return String(h).padStart(2,'0')+':'+String(mi).padStart(2,'0')+':'+String(se).padStart(2,'0');
+  }
+  function fmtClock(ms){
+    try { return new Date(ms).toLocaleTimeString('zh-CN',{ hour12:false, timeZone:'Asia/Shanghai' }); }
+    catch(e){ return '—'; }
+  }
+  function bjToday(){
+    try { return new Date(now).toLocaleDateString('en-CA',{ timeZone:'Asia/Shanghai' }); }
+    catch(e){ return ''; }
+  }
+  function toggleExp(id){ var e=Object.assign({}, state.exp||{}); e[id]=!e[id]; state.exp=e; render(); }
+  function analysis(pk){
+    if(!pk || !pk.an) return null;
+    var a = pk.an, wc = [C.green,'#C9C0B0',C.clay];
+    var seg = function(arr){ return arr.map(function(v,i){ return { w:Math.max(v,0)+'%', val:v, color:wc[i] }; }); };
+    var stMax = Math.max.apply(null, [1].concat((a.scoreTop||[]).map(function(s){ return s.p; })));
+    var ttgMax = Math.max.apply(null, [1].concat(a.ttg||[]));
+    return {
+      conf:a.conf||'', confColor: a.conf==='高'?C.green:(a.conf==='中'?'#5a4400':C.mut),
+      confBg: a.conf==='高'?C.greenSoft:(a.conf==='中'?C.goldSoft:'#ECE6D8'), rec:a.rec||'',
+      hasQual: !!a.wdlQual, qual: a.wdlQual? seg(a.wdlQual):[],
+      qualLabel: a.wdlQual? ('主 '+a.wdlQual[0]+' · 平 '+a.wdlQual[1]+' · 客 '+a.wdlQual[2]):'',
+      hasOdds: !!a.wdlOdds, odds: a.wdlOdds? seg(a.wdlOdds):[],
+      oddsLabel: a.wdlOdds? ('主 '+a.wdlOdds[0]+' · 平 '+a.wdlOdds[1]+' · 客 '+a.wdlOdds[2]):'',
+      hasXg: !!a.xg, xgH: a.xg? a.xg[0].toFixed(1):'', xgA: a.xg? a.xg[1].toFixed(1):'',
+      xgHW: a.xg? Math.min(100,a.xg[0]/3.2*100)+'%':'0%', xgAW: a.xg? Math.min(100,a.xg[1]/3.2*100)+'%':'0%',
+      hasScore: !!(a.scoreTop && a.scoreTop.length),
+      scoreTop: (a.scoreTop||[]).map(function(s){ return { s:s.s, p:s.p.toFixed(1), w:(s.p/stMax*100)+'%', pick:!!s.pick,
+        barColor: s.pick?C.clay:'#D8CFBE', txtColor: s.pick?C.clay:C.ink }; }),
+      hasTtg: !!(a.ttg && a.ttg.length),
+      ttg: (a.ttg||[]).map(function(v,i){ return { label:i>=7?'7+':String(i), v:v, h:Math.max(4,v/ttgMax*100)+'%' }; }),
+      hasHhad: !!a.hhad, hhadLine: a.hhad? a.hhad.line:'', hhad: a.hhad? seg(a.hhad.probs):[],
+      hhadLabel: a.hhad? ('让胜 '+a.hhad.probs[0]+' · 让平 '+a.hhad.probs[1]+' · 让负 '+a.hhad.probs[2]):'',
+      hasPlans: !!(a.plans && a.plans.length),
+      plans: (a.plans||[]).map(function(pl){ return { name:pl.name, hasTag:!!pl.tag, tag:pl.tag||'', play:pl.play, cover:pl.cover||'',
+        oddsStr: pl.odds? ('@'+fmtOdds(pl.odds)):'', stakeStr: pl.stake? (pl.stake+'¥'):'—', maxStr: pl.max? (fmtMoney(pl.max)+'¥'):'—', note:pl.note||'' }; })
+    };
+  }
+  function fmtOdds(o){ return o<10 ? o.toFixed(3) : o.toFixed(2); }
+  function fmtMoney(n){ return (Math.round(n*100)/100).toLocaleString('en-US',{ minimumFractionDigits:2, maximumFractionDigits:2 }); }
+  // ===== ledger (真实押注台账 = 战绩/盈亏唯一真源) =====
+  function ledgerDayList(){ return (LEDGER && LEDGER.days) || []; }
+  function ledgerByDate(){ var m={}; ledgerDayList().forEach(function(d){ m[d.date]=d; }); return m; }
+  // 票面结算：比分票复用比分命中逻辑；自购/玩法票只展示玩法+实际，不自动判定
+  function settleTicket(t, dayStatus){
+    var isSelf = !!t.self || (t.legs||[]).some(function(l){ return l.play!=null && !l.scores; });
+    var anyUnplayed=false, allHit=true, prod=1;
+    var legs = (t.legs||[]).map(function(leg){
+      var m = DATA.schedule.find(function(x){ return x.home_zh===leg.home && x.away_zh===leg.away; });
+      var played = m && m.home_score!=null && m.away_score!=null;
+      var actual = played ? (m.home_score+':'+m.away_score) : '—';
+      if(!played) anyUnplayed=true;
+      var o = { no:leg.no, fh:flag(leg.home), hn:leg.home, fa:flag(leg.away), an:leg.away, actual:actual, played:played };
+      if(leg.scores){
+        var hitSc = played ? leg.scores.find(function(s){ return s.s===(m.home_score+':'+m.away_score); }) : null;
+        if(hitSc) prod*=hitSc.o; else allHit=false;
+        o.scoresStr = leg.scores.map(function(s){ return s.s+'@'+fmtOdds(s.o); }).join('  ');
+        o.mark = hitSc ? '✓' : (played ? '✗' : '·');
+        o.markColor = hitSc ? C.green : (played ? C.red : C.mut);
+      } else {
+        o.scoresStr = leg.play ? ('玩法 · '+leg.play) : '';
+        o.mark = '·'; o.markColor = C.mut; allHit=false;
+      }
+      return o;
+    });
+    var settledAll = !isSelf && !anyUnplayed && (t.legs||[]).length>0;
+    var win = settledAll && allHit;
+    var payout = (win && t.mult) ? 2*t.mult*prod : 0;
+    var profit = settledAll ? Math.round((payout - (t.stake||0))*100)/100 : null;
+    var pending = dayStatus==='pending' || !settledAll;
+    return {
+      name:t.name, hasTag: !!(t.rec||t.self), tag: t.rec?'推荐':(t.self?'自购':''),
+      wayLabel: (t.way||'') + (t.mult? (' · '+t.mult+' 倍') : ''),
+      betsLabel: (t.bets!=null? t.bets:'—')+' 注', stakeLabel: (t.stake!=null? t.stake:'—')+'¥',
+      maxLabel: (t.max!=null? (fmtMoney(t.max)+'¥') : '—'),
+      legs:legs, settledAll:settledAll, win:win, isSelf:isSelf,
+      statusLabel: pending ? '待结算' : (win?'中奖':'未中'),
+      statusBg: pending ? C.claySoft : (win?C.greenSoft:'#F0E2E0'),
+      statusColor: pending ? C.clay : (win?C.green:C.red),
+      payoutLabel: settledAll ? (win? ('派奖 '+fmtMoney(payout)+'¥') : '派奖 0¥') : '',
+      profitLabel: profit!=null ? ((profit>=0?'+':'')+profit.toFixed(2)+'¥') : '',
+      profitColor: (profit||0)>=0 ? C.green : C.red
+    };
+  }
+
+  function predictions(){
+    var today = bjToday();
+    var LBYDATE = ledgerByDate();
+    return (PRED||[]).map(function(p){
+      var dayMs = DATA.schedule.filter(function(m){ return bj(m).ymd===p.date; });
+      var picks = p.picks || [];
+      var findPick = function(m){ return picks.find(function(pk){ return pk.home===m.home_zh && pk.away===m.away_zh; }); };
+      var wHit=0, sHit=0, settled=0;
+      var matches = dayMs.map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return a.k-b.k; }).map(function(x){
+        var c = card(x.m), pk = findPick(x.m);
+        c.hasPick = !!pk;
+        c.eid = p.date+'|'+x.m.home_zh+'|'+x.m.away_zh;
+        c.ana = analysis(pk); c.hasAnalysis = !!c.ana;
+        c.expanded = !!(state.exp && state.exp[c.eid]);
+        c.chevStyle = c.expanded ? 'transform:rotate(180deg);transition:transform .2s;' : 'transition:transform .2s;';
+        if(pk){
+          c.predScore = pk.score; c.predWdl = pk.wdl;
+          var played = x.m.home_score!=null && x.m.away_score!=null;
+          if(played){
+            settled++;
+            var aw = wdlOf(x.m.home_score, x.m.away_score), act = x.m.home_score+':'+x.m.away_score;
+            c.wdlHit = pk.wdl===aw; if(c.wdlHit) wHit++;
+            c.scoreHit = pk.score===act; if(c.scoreHit) sHit++;
+            c.predTag = c.scoreHit?'比分命中':(c.wdlHit?'胜负命中':'未中');
+            c.predTagBg = c.scoreHit?C.greenSoft:(c.wdlHit?C.goldSoft:'#F0E2E0');
+            c.predTagColor = c.scoreHit?C.green:(c.wdlHit?'#5a4400':C.red);
+          } else {
+            c.predTag='已预测'; c.predTagBg=C.claySoft; c.predTagColor=C.clay;
+          }
+        }
+        return c;
+      });
+      // 押注票面：真源 betting-ledger.json（按北京日期对齐）
+      var ld = LBYDATE[p.date];
+      var tickets = (ld && ld.tickets) ? ld.tickets.map(function(t){ return settleTicket(t, ld.status); }) : [];
+      var dayStake = ld ? (ld.stake||0) : 0;
+      var daySettled = !!(ld && ld.status==='settled');
+      var dayPending = !!(ld && ld.status==='pending');
+      var dayNet = daySettled ? Math.round(((ld.payout||0)-dayStake)*100)/100 : null;
+      var grps = Array.from(new Set(dayMs.filter(function(m){ return m.group; }).map(function(m){ return m.group; })));
+      var rounds = Array.from(new Set(dayMs.filter(function(m){ return m.round; }).map(function(m){ return m.round; })));
+      var dt = p.date.split('-').map(Number);
+      var wd = ['周日','周一','周二','周三','周四','周五','周六'][new Date(Date.UTC(dt[0],dt[1]-1,dt[2])).getUTCDay()];
+      return { date:p.date, dateShort:dt[1]+'月'+dt[2]+'日', wd:wd, url:p.url, reviewUrl:p.reviewUrl||'#',
+        hasReview: !!p.reviewUrl,
+        groupsLabel: grps.length ? (grps.join(' / ')+' 组'+(rounds.length?(' · 第 '+rounds[0]+' 轮'):'')) : '淘汰赛',
+        count: matches.length+' 场', matches:matches, isToday: p.date===today,
+        tickets:tickets, hasTickets: tickets.length>0,
+        comboHeadLabel: tickets.length ? ('比分金字塔 · '+tickets.length+' 张 · 投 '+dayStake+'¥'+(dayPending?' · 待开奖':(daySettled?' · 已结算':''))) : '',
+        hasStats: settled>0,
+        statLabel: settled>0 ? ('胜负 '+wHit+'/'+settled+' · 比分 '+sHit+'/'+settled) : '',
+        statColor: settled>0 && wHit===settled ? C.green : (settled>0 ? '#5a4400' : C.mut),
+        hasProfit: dayNet!=null,
+        profitLabel: dayNet!=null ? ((dayNet>=0?'+':'')+dayNet.toFixed(2)+'¥') : '',
+        profitColor: (dayNet||0)>=0 ? C.green : C.red,
+        hasPending: dayPending, pendingLabel: dayPending ? ('待开奖 · 投 '+dayStake+'¥') : '',
+        _settled:settled, _wHit:wHit, _sHit:sHit };
+    });
+  }
+
+  // ===== build the full view-model (ported from renderVals) =====
+  function buildVM(){
+    var st = state;
+    var base = {
+      ready:false, loading:true, tab:st.tab,
+      isBracket:false, isStandings:false, isData:false, isPredict:false,
+      hasBanner:false, banner:[], groups:[], bracket:[], overall:[], stats:[], firepower:[], dailyPL:[],
+      predictions:[], todayPred:null, hasTodayPred:false, record:null, hasRecord:false,
+      clockStr:'—', lastSyncStr:'—', syncText:'连接中…', syncDot:C.gold,
+      spinStyle:'display:inline-block;', xhsUrl:XHS,
+      tabs:[
+        { key:'bracket', label:'对阵全景', icon:'◳', bg: st.tab==='bracket'? C.ink:'#FBFAF5', color: st.tab==='bracket'? C.paper:C.ink, border: st.tab==='bracket'? C.ink:'#E4DECF' },
+        { key:'predict', label:'每日预测', icon:'✎', bg: st.tab==='predict'? C.ink:'#FBFAF5', color: st.tab==='predict'? C.paper:C.ink, border: st.tab==='predict'? C.ink:'#E4DECF' },
+        { key:'standings', label:'积分榜', icon:'▦', bg: st.tab==='standings'? C.ink:'#FBFAF5', color: st.tab==='standings'? C.paper:C.ink, border: st.tab==='standings'? C.ink:'#E4DECF' },
+        { key:'data', label:'数据中心', icon:'◇', bg: st.tab==='data'? C.ink:'#FBFAF5', color: st.tab==='data'? C.paper:C.ink, border: st.tab==='data'? C.ink:'#E4DECF' }
+      ]
+    };
+    if(!st.ready) return base;
+
+    // prediction report links by Beijing date
+    var predByDate = {}; (PRED||[]).forEach(function(p){ predByDate[p.date] = p.url; });
+    var linkFor = function(c){ var u = predByDate[c.ymd]; if(u){ c.url=u; c.linkTag='✎ 预测'; c.linkColor=C.clay; } else { c.linkTag='▶ 直播'; c.linkColor='#a89f90'; } return c; };
+
+    // groups + standings
+    var groups = GROUPS.map(function(letter){
+      var rows0 = standings(letter);
+      var played = DATA.schedule.filter(function(m){ return m.stage==='group'&&m.group===letter&&m.home_score!=null; }).length;
+      var rows = rows0.map(function(r,i){
+        var rs = rowStyle(i);
+        return { rank:i+1, flag:flag(r.t), name:r.t, P:r.P, W:r.W, D:r.D, L:r.L,
+          GD:gd(r.GD), gdColor:gdColor(r.GD), Pts:r.Pts, bar:rs.bar, rowBg:rs.rowBg };
+      });
+      var fixtures = DATA.schedule.filter(function(m){ return m.stage==='group'&&m.group===letter; })
+        .map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return a.k-b.k; }).map(function(x){ return linkFor(card(x.m)); });
+      return { letter:letter, label:letter+' 组', progress: played+'/6', rows:rows, fixtures:fixtures };
+    });
+
+    // overall
+    var all = [];
+    GROUPS.forEach(function(letter){
+      standings(letter).forEach(function(r,i){ all.push(Object.assign({}, r, { group:letter, gpos:i })); });
+    });
+    all.sort(function(p,q){ return q.Pts-p.Pts || q.GD-p.GD || q.GF-p.GF || p.t.localeCompare(q.t,'zh'); });
+    var overall = all.map(function(r,i){ return {
+      rank:i+1, flag:flag(r.t), name:r.t, group:r.group, P:r.P, W:r.W, D:r.D, L:r.L,
+      GD:gd(r.GD), gdColor:gdColor(r.GD), Pts:r.Pts,
+      dot: r.gpos<2 ? C.green : (r.gpos===2 ? C.gold : '#D8D2C5'),
+      rowBg: i%2 ? 'rgba(244,241,234,.5)' : 'transparent'
+    }; });
+
+    // bracket
+    var byStage = function(s){ return DATA.schedule.filter(function(m){ return m.stage===s; })
+      .map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return a.k-b.k; }).map(function(x){ return card(x.m); }); };
+    var r32=byStage('r32'), r16=byStage('r16'), qf=byStage('qf'), sf=byStage('sf'), fin=byStage('final'), third=byStage('third');
+    var bracket = [
+      { label:'32 强', count:r32.length+' 场', cells:r32 },
+      { label:'16 强', count:r16.length+' 场', cells:r16 },
+      { label:'8 强',  count:qf.length+' 场',  cells:qf },
+      { label:'4 强',  count:sf.length+' 场',  cells:sf },
+      { label:'决赛',  count:'冠军 · 季军', cells:fin.concat(third) }
+    ];
+
+    // banner
+    var sched = DATA.schedule.map(function(m,i){ return { m:m, i:i, ph:phase(m), k:bj(m).ms }; });
+    var live = sched.filter(function(x){ return x.ph==='live'; });
+    var soon = sched.filter(function(x){ return x.ph==='soon'; }).sort(function(a,b){ return a.k-b.k; });
+    var up = sched.filter(function(x){ return x.ph==='upcoming'; }).sort(function(a,b){ return a.k-b.k; });
+    var pick = live.concat(soon, up).slice(0,10);
+    var banner = pick.map(function(x){
+      var b=bj(x.m), isLive=x.ph==='live', isSoon=x.ph==='soon';
+      return { key:'b'+x.i, fh:flag(x.m.home_zh), hn:x.m.home_zh, fa:flag(x.m.away_zh), an:x.m.away_zh,
+        timeStr:b.md+' '+b.wd+' '+b.hm,
+        tag: isLive?'直播中':(isSoon?'即将开赛':'未开赛'),
+        tagBg: isLive?C.red:(isSoon?C.gold:'#6b6358'),
+        cd: isLive?'正在直播':fmtMs(x.k - now),
+        cdColor: isLive?'#FF6b7f':(isSoon?'#E8B84B':'#b8b0a2'),
+        url:XHS, _k:x.k, _live:isLive };
+    });
+
+    // data center
+    var gPlayed = DATA.schedule.filter(function(m){ return m.stage==='group'&&m.home_score!=null; });
+    var goals = gPlayed.reduce(function(s,m){ return s+m.home_score+m.away_score; },0);
+    var upcomingN = DATA.schedule.filter(function(m){ return m.home_score==null; }).length;
+    var big=null, bigM=0;
+    gPlayed.forEach(function(m){ var d=Math.abs(m.home_score-m.away_score); if(d>bigM){ bigM=d; big=m; } });
+    var bigLabel = big ? flag(big.home_zh)+big.home_zh+' '+big.home_score+'-'+big.away_score+' '+big.away_zh+flag(big.away_zh) : '—';
+    var stats = [
+      { label:'已赛 / 总场次', value: gPlayed.length+'/104', sub:'小组赛进行中' },
+      { label:'总进球', value: String(goals), sub:'场均 '+(gPlayed.length?(goals/gPlayed.length).toFixed(2):'0')+' 球' },
+      { label:'待赛场次', value: String(upcomingN), sub:'含淘汰赛' },
+      { label:'最大分差', value: bigM+' 球', sub: bigLabel }
+    ];
+    var fp0 = all.slice().sort(function(p,q){ return q.GF-p.GF || q.GD-p.GD; }).slice(0,10);
+    var maxGF = fp0.length ? fp0[0].GF : 1;
+    var firepower = fp0.map(function(r,i){ return { rank:i+1, flag:flag(r.t), name:r.t, group:r.group, gf:r.GF,
+      barW: Math.round((r.GF/(maxGF||1))*100)+'%' }; });
+
+    // 每日盈亏走势（真源台账，替代示例赔率）
+    var ledgerDays = ledgerDayList();
+    var plDays = ledgerDays.slice().sort(function(a,b){ return a.date.localeCompare(b.date); });
+    var maxAbs = 1;
+    plDays.forEach(function(d){ if(d.status==='settled'){ var n=Math.abs((d.payout||0)-(d.stake||0)); if(n>maxAbs) maxAbs=n; } });
+    var dailyPL = plDays.map(function(d){
+      var dt=d.date.split('-').map(Number);
+      var settled = d.status==='settled';
+      var net = settled ? Math.round(((d.payout||0)-(d.stake||0))*100)/100 : null;
+      return {
+        date: dt[1]+'/'+dt[2], stakeLabel: '投 '+(d.stake||0)+(d.payout!=null?(' · 收 '+fmtMoney(d.payout)):''),
+        nobet: d.status==='nobet', pending: d.status==='pending', settled: settled,
+        netLabel: net!=null ? ((net>=0?'+':'')+net.toFixed(0)+'¥') : (d.status==='pending'?'待开奖':(d.status==='nobet'?'未下注':'—')),
+        netColor: net!=null ? (net>=0?C.green:C.clay) : C.mut,
+        barW: net!=null ? (Math.round(Math.abs(net)/maxAbs*100)+'%') : '0%',
+        barColor: net!=null ? (net>=0?C.green:C.clay) : '#D8D2C5'
+      };
+    });
+
+    // predictions
+    var preds = predictions();
+    var todayBJ = bjToday();
+    var todayPred = preds.find(function(p){ return p.isToday; });
+    if(!todayPred){ todayPred = preds.filter(function(p){ return p.date>=todayBJ; }).sort(function(a,b){ return a.date.localeCompare(b.date); })[0] || null; }
+    // 本届战绩 · 真源台账（口径同复盘报告：净盈亏 = 已兑奖 − 总投入；待开奖日收入按 0 计入，开奖后回填）
+    var rSettledDays=0, rStake=0, rPayout=0, pendDays=[], pendStake=0;
+    ledgerDays.forEach(function(d){
+      if(d.status==='nobet') return;
+      rStake += d.stake||0;
+      rPayout += (d.payout!=null ? d.payout : 0);
+      if(d.status==='settled') rSettledDays++;
+      if(d.status==='pending'){ pendDays.push(d); pendStake += d.stake||0; }
+    });
+    var rNet = Math.round((rPayout-rStake)*100)/100;
+    // 命中率：仅来自有逐场预测明细的日子（picks）
+    var oSettled=0, oW=0, oS=0;
+    preds.forEach(function(p){ oSettled+=p._settled||0; oW+=p._wHit||0; oS+=p._sHit||0; });
+    var record = {
+      settledDays: rSettledDays, stakeLabel: rStake+'¥', payoutLabel: fmtMoney(rPayout)+'¥',
+      netLabel: (rNet>=0?'+':'')+rNet.toFixed(2)+'¥', netColor: rNet>=0? C.green : C.clay,
+      roi: rStake? Math.round(rNet/rStake*100):0,
+      hasHits: oSettled>0, wLabel: oW+'/'+oSettled, sLabel: oS+'/'+oSettled,
+      wRate: oSettled? Math.round(oW/oSettled*100):0, sRate: oSettled? Math.round(oS/oSettled*100):0,
+      hasPending: pendDays.length>0, pendLabel: pendDays.length? (pendDays.length+' 天待开奖 · 投 '+pendStake+'¥') : ''
+    };
+
+    return Object.assign({}, base, {
+      ready:true, loading:false,
+      isBracket: st.tab==='bracket', isStandings: st.tab==='standings', isData: st.tab==='data', isPredict: st.tab==='predict',
+      predictions: preds, todayPred:todayPred, hasTodayPred: !!todayPred,
+      record:record, hasRecord: record.settledDays>0,
+      hasBanner: banner.length>0, banner:banner, groups:groups, bracket:bracket, overall:overall, stats:stats, firepower:firepower, dailyPL:dailyPL,
+      clockStr: fmtClock(now),
+      lastSyncStr: st.lastSync? fmtClock(st.lastSync) : '—',
+      syncText: st.syncing? '正在同步…' : '已同步官方数据',
+      syncDot: st.syncing? C.gold : C.green,
+      spinStyle: st.syncing? 'display:inline-block;animation:wcspin .8s linear infinite;' : 'display:inline-block;'
+    });
+  }
+
+  // ===== render: view-model -> HTML =====
+  function vHeader(vm){
+    return ''+
+    '<div style="position:sticky;top:0;z-index:60;background:rgba(244,241,234,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #E4DECF;">'+
+      '<div style="max-width:1340px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">'+
+        '<div style="display:flex;align-items:center;gap:13px;">'+
+          '<div style="width:42px;height:42px;border-radius:11px;background:#C0613B;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 2px 8px rgba(192,97,59,.3);">'+
+            '<span style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:18px;color:#F4F1EA;letter-spacing:-.5px;">26</span>'+
+          '</div>'+
+          '<div>'+
+            '<div style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:21px;line-height:1.05;letter-spacing:-.3px;">2026 世界杯 · 对阵全景</div>'+
+            '<div style="font-size:11.5px;color:#8C8478;font-weight:500;letter-spacing:.3px;margin-top:1px;">美加墨 FIFA World Cup · 48 队 · 104 场</div>'+
+          '</div>'+
+        '</div>'+
+        '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">'+
+          '<div style="display:flex;flex-direction:column;align-items:flex-end;line-height:1.25;">'+
+            '<span id="wc-clock" style="font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:600;color:#2A2622;">'+esc(vm.clockStr)+'</span>'+
+            '<span style="font-size:10px;color:#8C8478;letter-spacing:.4px;">北京时间</span>'+
+          '</div>'+
+          '<div style="display:flex;align-items:center;gap:8px;padding:7px 11px;background:#FBFAF5;border:1px solid #E4DECF;border-radius:10px;">'+
+            '<span style="width:8px;height:8px;border-radius:50%;background:'+vm.syncDot+';animation:wcpulse 1.6s ease-in-out infinite;flex:none;"></span>'+
+            '<div style="display:flex;flex-direction:column;line-height:1.2;">'+
+              '<span style="font-size:10px;color:#8C8478;letter-spacing:.3px;">'+esc(vm.syncText)+'</span>'+
+              '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;">'+esc(vm.lastSyncStr)+'</span>'+
+            '</div>'+
+            '<button data-action="refresh" title="手动同步" data-hover="background:#F1E2D8;color:#C0613B;border-color:#E3C8B8" style="margin-left:2px;width:26px;height:26px;border-radius:7px;border:1px solid #E4DECF;background:#F4F1EA;color:#8C8478;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none;">'+
+              '<span style="'+vm.spinStyle+'">⟳</span>'+
+            '</button>'+
+          '</div>'+
+          '<a href="'+vm.xhsUrl+'" target="_blank" rel="noopener" data-hover="background:#e51e3a" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:#FF2442;color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:13px;box-shadow:0 2px 9px rgba(255,36,66,.32);">'+
+            '<span style="width:7px;height:7px;border-radius:50%;background:#fff;animation:wcpulse 1.3s ease-in-out infinite;"></span>'+
+            '小红书看直播'+
+          '</a>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
+  }
+
+  function bannerLeg(b){
+    return '<a href="'+b.url+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;padding:0 18px;height:42px;border-right:1px solid rgba(244,241,234,.12);text-decoration:none;color:#F4F1EA;">'+
+      '<span style="font-size:10px;font-weight:700;letter-spacing:.5px;padding:3px 7px;border-radius:5px;background:'+b.tagBg+';color:#fff;">'+esc(b.tag)+'</span>'+
+      '<span style="font-size:13px;">'+b.fh+' '+esc(b.hn)+'</span>'+
+      '<span style="font-size:10px;color:#8C8478;">vs</span>'+
+      '<span style="font-size:13px;">'+esc(b.an)+' '+b.fa+'</span>'+
+      '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11.5px;color:#b8b0a2;">'+esc(b.timeStr)+'</span>'+
+      '<span class="wc-cd" data-k="'+b._k+'" data-live="'+(b._live?1:0)+'" style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;color:'+b.cdColor+';">'+esc(b.cd)+'</span>'+
+      '<span style="font-size:11.5px;color:#FF6b7f;font-weight:600;">看直播 ›</span>'+
+    '</a>';
+  }
+  function vBanner(vm){
+    if(!vm.hasBanner) return '';
+    var legs = each(vm.banner, bannerLeg);
+    return '<div style="background:#2A2622;color:#F4F1EA;display:flex;align-items:stretch;overflow:hidden;border-bottom:1px solid #1c1916;">'+
+      '<div style="flex:none;display:flex;align-items:center;gap:8px;padding:0 16px;background:#D6453F;font-weight:700;font-size:12.5px;letter-spacing:.5px;z-index:2;box-shadow:6px 0 14px rgba(42,38,34,.6);">'+
+        '<span style="width:8px;height:8px;border-radius:50%;background:#fff;animation:wcpulse 1s ease-in-out infinite;"></span>赛事提醒'+
+      '</div>'+
+      '<div style="flex:1;overflow:hidden;display:flex;align-items:center;">'+
+        '<div class="wc-mq" style="display:inline-flex;align-items:center;white-space:nowrap;animation:wcmarquee 48s linear infinite;will-change:transform;">'+
+          legs + legs +
+        '</div>'+
+      '</div>'+
+    '</div>';
+  }
+
+  function vTabs(vm){
+    return '<div style="max-width:1340px;margin:0 auto;padding:18px 24px 4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;">'+
+      each(vm.tabs, function(t){
+        return '<button data-tab="'+t.key+'" style="display:inline-flex;align-items:center;gap:7px;padding:9px 17px;border-radius:11px;border:1px solid '+t.border+';background:'+t.bg+';color:'+t.color+';font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:all .15s;">'+
+          '<span style="font-size:14px;">'+t.icon+'</span>'+esc(t.label)+
+        '</button>';
+      })+
+    '</div>';
+  }
+
+  function vLoading(){
+    return '<div style="max-width:1340px;margin:60px auto;padding:0 24px;display:flex;flex-direction:column;align-items:center;gap:14px;color:#8C8478;">'+
+      '<span style="width:34px;height:34px;border-radius:50%;border:3px solid #E4DECF;border-top-color:#C0613B;animation:wcspin .9s linear infinite;"></span>'+
+      '<span style="font-size:14px;letter-spacing:.5px;">正在同步官方赛事数据…</span>'+
+    '</div>';
+  }
+
+  // a two-line score row used in group fixtures / bracket / predictions
+  function teamLine(c, fsTeam, fsName, fsScore){
+    return '<div style="display:flex;align-items:center;gap:6px;"><span style="font-size:'+fsTeam+';">'+c.fh+'</span><span style="flex:1;font-size:'+fsName+';font-weight:'+c.hW+';color:'+c.hC+';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(c.hn)+'</span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:'+fsScore+';font-weight:700;color:'+c.hC+';">'+esc(c.hsStr)+'</span></div>'+
+      '<div style="display:flex;align-items:center;gap:6px;"><span style="font-size:'+fsTeam+';">'+c.fa+'</span><span style="flex:1;font-size:'+fsName+';font-weight:'+c.aW+';color:'+c.aC+';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(c.an)+'</span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:'+fsScore+';font-weight:700;color:'+c.aC+';">'+esc(c.asStr)+'</span></div>';
+  }
+
+  function vBracket(vm){
+    var out = '<div style="max-width:1340px;margin:0 auto;padding:14px 24px 60px;">';
+
+    // today's prediction highlight
+    if(vm.hasTodayPred){
+      var tp = vm.todayPred;
+      out += '<a href="'+tp.url+'" target="_blank" rel="noopener"'+reportAttr(tp.url)+' data-hover="border-color:#C0613B" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:linear-gradient(100deg,#F1E2D8,#FBFAF5 70%);border:1px solid #E3C8B8;border-radius:15px;padding:15px 18px;margin:10px 0 22px;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(192,97,59,.08);">'+
+        '<div style="display:flex;align-items:center;gap:13px;flex:none;">'+
+          '<span style="width:44px;height:44px;border-radius:11px;background:#C0613B;color:#F4F1EA;display:flex;align-items:center;justify-content:center;font-size:20px;flex:none;">✎</span>'+
+          '<div>'+
+            '<div style="font-size:11px;color:#C0613B;font-weight:700;letter-spacing:1px;">今日赛前预测</div>'+
+            '<div style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:19px;line-height:1.1;">'+esc(tp.dateShort)+' '+esc(tp.wd)+'</div>'+
+            '<div style="font-size:12px;color:#8C8478;margin-top:2px;">'+esc(tp.groupsLabel)+' · '+esc(tp.count)+'</div>'+
+          '</div>'+
+        '</div>'+
+        '<div style="flex:1;display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0;">'+
+          each(tp.matches, function(c){
+            return '<span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.7);border:1px solid #EADBCF;border-radius:9px;padding:6px 10px;font-size:12.5px;">'+
+              '<span>'+c.fh+'</span><span style="font-weight:600;">'+esc(c.hn)+'</span>'+
+              '<span style="color:#a89f90;">'+esc(c.hsStr)+':'+esc(c.asStr)+'</span>'+
+              '<span style="font-weight:600;">'+esc(c.an)+'</span><span>'+c.fa+'</span>'+
+            '</span>';
+          })+
+        '</div>'+
+        '<span style="flex:none;display:inline-flex;align-items:center;gap:6px;padding:10px 16px;background:#C0613B;color:#fff;border-radius:10px;font-weight:600;font-size:13.5px;">查看完整深度分析 →</span>'+
+      '</a>';
+    }
+
+    // group stage
+    out += '<div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:8px 0 16px;">'+
+      '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:0;letter-spacing:-.3px;">小组赛 · 12 组</h2>'+
+      '<div style="display:flex;align-items:center;gap:16px;font-size:11.5px;color:#8C8478;">'+
+        '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#3F7A4E;"></span>小组前二 · 直接出线</span>'+
+        '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#B5862E;"></span>小组第三 · 争最佳第三</span>'+
+        '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#D8D2C5;"></span>淘汰</span>'+
+      '</div>'+
+    '</div>';
+
+    out += '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(390px,1fr));gap:16px;">'+
+      each(vm.groups, function(g){
+        return '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
+          '<div style="display:flex;align-items:center;gap:10px;padding:13px 16px 11px;border-bottom:1px solid #EFEADD;">'+
+            '<span style="width:30px;height:30px;border-radius:8px;background:#2A2622;color:#F4F1EA;font-family:\'Source Serif 4\',serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;">'+g.letter+'</span>'+
+            '<span style="font-weight:600;font-size:15px;">'+esc(g.label)+'</span>'+
+            '<span style="margin-left:auto;font-family:\'Spline Sans Mono\',monospace;font-size:10.5px;color:#8C8478;background:#F4F1EA;padding:3px 8px;border-radius:6px;">'+esc(g.progress)+'</span>'+
+          '</div>'+
+          '<div style="padding:4px 8px 8px;">'+
+            '<div style="display:grid;grid-template-columns:20px 1fr 30px 30px 38px 34px;gap:0;align-items:center;padding:6px 8px 5px;font-size:10px;color:#8C8478;font-weight:600;letter-spacing:.4px;">'+
+              '<span></span><span></span><span style="text-align:center;">场</span><span style="text-align:center;">胜</span><span style="text-align:center;">净</span><span style="text-align:right;">积分</span>'+
+            '</div>'+
+            each(g.rows, function(r){
+              return '<div style="display:grid;grid-template-columns:20px 1fr 30px 30px 38px 34px;gap:0;align-items:center;padding:7px 8px;border-radius:8px;border-left:3px solid '+r.bar+';background:'+r.rowBg+';margin-bottom:2px;">'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;font-weight:600;">'+r.rank+'</span>'+
+                '<span style="display:flex;align-items:center;gap:7px;min-width:0;"><span style="font-size:17px;line-height:1;">'+r.flag+'</span><span style="font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(r.name)+'</span></span>'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.P+'</span>'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.W+'</span>'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:'+r.gdColor+';">'+esc(r.GD)+'</span>'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:14px;text-align:right;font-weight:700;color:#2A2622;">'+r.Pts+'</span>'+
+              '</div>';
+            })+
+          '</div>'+
+          '<div style="padding:4px 12px 12px;">'+
+            '<div style="font-size:10.5px;color:#8C8478;font-weight:600;letter-spacing:.5px;padding:6px 2px;border-top:1px solid #EFEADD;">赛程 · 北京时间</div>'+
+            each(g.fixtures, function(f){
+              return '<a href="'+f.url+'" target="_blank" rel="noopener"'+reportAttr(f.url)+' data-hover="background:#F4F1EA" style="display:flex;align-items:center;gap:10px;padding:6px 4px;border-radius:8px;text-decoration:none;color:inherit;">'+
+                '<div style="flex:none;width:60px;display:flex;flex-direction:column;line-height:1.25;">'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:10.5px;color:#8C8478;">'+esc(f.dateStr)+'</span>'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;">'+esc(f.timeStr)+'</span>'+
+                '</div>'+
+                '<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;">'+ teamLine(f,'14px','12.5px','12.5px') +'</div>'+
+                '<span style="flex:none;display:inline-flex;flex-direction:column;align-items:flex-end;gap:3px;">'+
+                  '<span style="font-size:9.5px;font-weight:700;padding:3px 7px;border-radius:5px;background:'+f.phaseBg+';color:'+f.phaseColor+';'+f.ring+'">'+esc(f.phaseLabel)+'</span>'+
+                  '<span style="font-size:9px;font-weight:600;color:'+f.linkColor+';white-space:nowrap;">'+esc(f.linkTag)+'</span>'+
+                '</span>'+
+              '</a>';
+            })+
+          '</div>'+
+        '</div>';
+      })+
+    '</div>';
+
+    // knockout bracket
+    out += '<div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:40px 0 6px;">'+
+      '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:0;letter-spacing:-.3px;">淘汰赛对阵树</h2>'+
+      '<span style="font-size:11.5px;color:#8C8478;">横向滑动查看完整晋级路线 →</span>'+
+    '</div>';
+    out += '<div style="border:1px solid #E8E2D4;border-radius:15px;background:#FBFAF5;overflow-x:auto;padding:18px;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
+      '<div style="display:flex;gap:30px;min-width:max-content;align-items:stretch;">'+
+        each(vm.bracket, function(rd){
+          return '<div style="display:flex;flex-direction:column;min-width:224px;">'+
+            '<div style="display:flex;align-items:baseline;gap:7px;padding:0 4px 12px;">'+
+              '<span style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:16px;">'+esc(rd.label)+'</span>'+
+              '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:10.5px;color:#8C8478;">'+esc(rd.count)+'</span>'+
+            '</div>'+
+            '<div style="display:flex;flex-direction:column;justify-content:space-around;flex:1;gap:12px;">'+
+              each(rd.cells, function(c){
+                return '<a href="'+c.url+'" target="_blank" rel="noopener" data-hover="border-color:#C0613B" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid '+c.cardBorder+';border-radius:11px;padding:9px 11px;'+c.cardRing+'">'+
+                  '<div style="display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:7px;">'+
+                    '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:10px;color:#8C8478;">'+esc(c.dateStr)+' · '+esc(c.timeStr)+'</span>'+
+                    '<span style="font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;background:'+c.phaseBg+';color:'+c.phaseColor+';'+c.ring+'">'+esc(c.phaseLabel)+'</span>'+
+                  '</div>'+
+                  '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;"><span style="font-size:15px;">'+c.fh+'</span><span style="flex:1;font-size:12.5px;font-weight:'+c.hW+';color:'+c.hC+';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(c.hn)+'</span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:700;color:'+c.hC+';">'+esc(c.hsStr)+'</span></div>'+
+                  '<div style="display:flex;align-items:center;gap:6px;"><span style="font-size:15px;">'+c.fa+'</span><span style="flex:1;font-size:12.5px;font-weight:'+c.aW+';color:'+c.aC+';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(c.an)+'</span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:700;color:'+c.aC+';">'+esc(c.asStr)+'</span></div>'+
+                  '<div style="font-size:9.5px;color:#a89f90;margin-top:6px;">'+esc(c.venue)+'</div>'+
+                '</a>';
+              })+
+            '</div>'+
+          '</div>';
+        })+
+      '</div>'+
+    '</div>';
+
+    out += '</div>';
+    return out;
+  }
+
+  function vStandings(vm){
+    var out = '<div style="max-width:1340px;margin:0 auto;padding:14px 24px 60px;">'+
+      '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:8px 0 16px;letter-spacing:-.3px;">分组积分榜</h2>'+
+      '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(370px,1fr));gap:16px;">'+
+        each(vm.groups, function(g){
+          return '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
+            '<div style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid #EFEADD;">'+
+              '<span style="width:28px;height:28px;border-radius:8px;background:#2A2622;color:#F4F1EA;font-family:\'Source Serif 4\',serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;">'+g.letter+'</span>'+
+              '<span style="font-weight:600;font-size:15px;">'+esc(g.label)+'</span>'+
+            '</div>'+
+            '<div style="padding:6px 10px 10px;">'+
+              '<div style="display:grid;grid-template-columns:22px 1fr 26px 26px 26px 26px 44px 30px;gap:0;align-items:center;padding:6px 8px;font-size:10px;color:#8C8478;font-weight:600;">'+
+                '<span></span><span></span><span style="text-align:center;">场</span><span style="text-align:center;">胜</span><span style="text-align:center;">平</span><span style="text-align:center;">负</span><span style="text-align:center;">净球</span><span style="text-align:right;">分</span>'+
+              '</div>'+
+              each(g.rows, function(r){
+                return '<div style="display:grid;grid-template-columns:22px 1fr 26px 26px 26px 26px 44px 30px;gap:0;align-items:center;padding:8px;border-radius:8px;border-left:3px solid '+r.bar+';background:'+r.rowBg+';margin-bottom:2px;">'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;font-weight:600;">'+r.rank+'</span>'+
+                  '<span style="display:flex;align-items:center;gap:7px;min-width:0;"><span style="font-size:17px;">'+r.flag+'</span><span style="font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(r.name)+'</span></span>'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.P+'</span>'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.W+'</span>'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.D+'</span>'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.L+'</span>'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:'+r.gdColor+';">'+esc(r.GD)+'</span>'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:14px;text-align:right;font-weight:700;">'+r.Pts+'</span>'+
+                '</div>';
+              })+
+            '</div>'+
+          '</div>';
+        })+
+      '</div>';
+
+    out += '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:40px 0 16px;letter-spacing:-.3px;">总积分榜 · 全部 48 队</h2>'+
+      '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
+        '<div style="display:grid;grid-template-columns:42px 1fr 56px 42px 42px 42px 42px 50px 52px;gap:0;align-items:center;padding:11px 16px;background:#F1ECDF;font-size:11px;color:#8C8478;font-weight:600;letter-spacing:.3px;">'+
+          '<span>排名</span><span>球队</span><span style="text-align:center;">小组</span><span style="text-align:center;">场</span><span style="text-align:center;">胜</span><span style="text-align:center;">平</span><span style="text-align:center;">负</span><span style="text-align:center;">净球</span><span style="text-align:right;">积分</span>'+
+        '</div>'+
+        each(vm.overall, function(o){
+          return '<div style="display:grid;grid-template-columns:42px 1fr 56px 42px 42px 42px 42px 50px 52px;gap:0;align-items:center;padding:9px 16px;border-top:1px solid #EFEADD;background:'+o.rowBg+';">'+
+            '<span style="display:flex;align-items:center;gap:6px;"><span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;color:#8C8478;">'+o.rank+'</span><span style="width:6px;height:6px;border-radius:50%;background:'+o.dot+';"></span></span>'+
+            '<span style="display:flex;align-items:center;gap:9px;min-width:0;"><span style="font-size:18px;">'+o.flag+'</span><span style="font-size:14px;font-weight:600;">'+esc(o.name)+'</span></span>'+
+            '<span style="text-align:center;font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:#8C8478;">'+o.group+'</span>'+
+            '<span style="text-align:center;font-family:\'Spline Sans Mono\',monospace;font-size:13px;color:#8C8478;">'+o.P+'</span>'+
+            '<span style="text-align:center;font-family:\'Spline Sans Mono\',monospace;font-size:13px;color:#8C8478;">'+o.W+'</span>'+
+            '<span style="text-align:center;font-family:\'Spline Sans Mono\',monospace;font-size:13px;color:#8C8478;">'+o.D+'</span>'+
+            '<span style="text-align:center;font-family:\'Spline Sans Mono\',monospace;font-size:13px;color:#8C8478;">'+o.L+'</span>'+
+            '<span style="text-align:center;font-family:\'Spline Sans Mono\',monospace;font-size:13px;color:'+o.gdColor+';">'+esc(o.GD)+'</span>'+
+            '<span style="text-align:right;font-family:\'Spline Sans Mono\',monospace;font-size:15px;font-weight:700;">'+o.Pts+'</span>'+
+          '</div>';
+        })+
+      '</div>'+
+    '</div>';
+    return out;
+  }
+
+  function vData(vm){
+    var out = '<div style="max-width:1340px;margin:0 auto;padding:14px 24px 60px;">'+
+      '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:8px 0 16px;letter-spacing:-.3px;">数据中心</h2>'+
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:26px;">'+
+        each(vm.stats, function(s){
+          return '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:14px;padding:16px 17px;">'+
+            '<div style="font-size:11.5px;color:#8C8478;font-weight:500;margin-bottom:8px;">'+esc(s.label)+'</div>'+
+            '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:28px;font-weight:700;color:#C0613B;line-height:1;">'+esc(s.value)+'</div>'+
+            '<div style="font-size:11px;color:#a89f90;margin-top:6px;">'+esc(s.sub)+'</div>'+
+          '</div>';
+        })+
+      '</div>'+
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;">'+
+        // firepower
+        '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
+          '<div style="padding:14px 16px 11px;border-bottom:1px solid #EFEADD;display:flex;align-items:baseline;gap:8px;">'+
+            '<span style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:16px;">球队火力榜</span>'+
+            '<span style="font-size:11px;color:#8C8478;">小组赛进球数</span>'+
+          '</div>'+
+          '<div style="padding:8px 12px 12px;">'+
+            each(vm.firepower, function(t){
+              return '<div style="display:flex;align-items:center;gap:11px;padding:8px 6px;border-bottom:1px solid #F1ECDF;">'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:#8C8478;width:18px;font-weight:600;">'+t.rank+'</span>'+
+                '<span style="font-size:18px;">'+t.flag+'</span>'+
+                '<span style="flex:1;font-size:14px;font-weight:600;">'+esc(t.name)+'</span>'+
+                '<span style="font-size:11px;color:#a89f90;font-family:\'Spline Sans Mono\',monospace;">'+esc(t.group)+'组</span>'+
+                '<div style="width:120px;height:9px;background:#EFEADD;border-radius:5px;overflow:hidden;"><div style="height:100%;width:'+t.barW+';background:#C0613B;border-radius:5px;"></div></div>'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:15px;font-weight:700;color:#C0613B;width:22px;text-align:right;">'+t.gf+'</span>'+
+              '</div>';
+            })+
+          '</div>'+
+        '</div>'+
+        // 每日盈亏走势（真源台账）
+        '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
+          '<div style="padding:14px 16px 11px;border-bottom:1px solid #EFEADD;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;">'+
+            '<span style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:16px;">每日盈亏</span>'+
+            '<span style="font-size:11px;color:#8C8478;">竞彩台账 · 净盈亏 = 收入 − 投入</span>'+
+          '</div>'+
+          '<div style="padding:8px 14px 12px;">'+
+            (vm.dailyPL.length ? each(vm.dailyPL, function(d){
+              return '<div style="display:flex;align-items:center;gap:10px;padding:7px 4px;border-bottom:1px solid #F1ECDF;">'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11.5px;color:#8C8478;width:38px;flex:none;">'+esc(d.date)+'</span>'+
+                '<span style="font-size:10.5px;color:#a89f90;width:118px;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(d.stakeLabel)+'</span>'+
+                '<div style="flex:1;height:9px;background:#EFEADD;border-radius:5px;overflow:hidden;"><div style="height:100%;width:'+d.barW+';background:'+d.barColor+';border-radius:5px;"></div></div>'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:13px;font-weight:700;color:'+d.netColor+';width:64px;text-align:right;flex:none;">'+esc(d.netLabel)+'</span>'+
+              '</div>';
+            }) : '<div style="padding:18px 6px;font-size:12.5px;color:#a89f90;">暂无台账记录。明细维护在 betting-ledger.json，跑 build_worldcup_data.py 同步。</div>')+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
+    return out;
+  }
+
+  function vAnalysis(c, pUrl){
+    var a = c.ana;
+    var out = '<div style="padding:2px 12px 12px 60px;">'+
+      '<div style="background:#FAF7F0;border:1px solid #EFEADD;border-radius:11px;padding:14px;">'+
+        '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:5px;">'+
+          '<span style="font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:6px;background:'+a.confBg+';color:'+a.confColor+';">信心 '+esc(a.conf)+'</span>'+
+          '<span style="font-size:12.5px;"><span style="color:#8C8478;">主推 · </span>'+esc(a.rec)+'</span>'+
+        '</div>'+
+        '<div style="font-size:10px;color:#a89f90;margin-bottom:12px;">下列 xG / 胜平负 / 总进球 / Top 比分为分析师赛前估计,非实时数据;完整推理见深度报告</div>'+
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">'+
+          '<div>';
+    if(a.hasQual){
+      out += '<div style="font-size:10.5px;color:#8C8478;font-weight:600;margin-bottom:6px;">胜平负倾向</div>'+
+        '<div style="font-size:10px;color:#a89f90;margin-bottom:3px;">分析师 · '+esc(a.qualLabel)+'</div>'+
+        '<div style="display:flex;height:11px;border-radius:6px;overflow:hidden;margin-bottom:7px;">'+
+          each(a.qual, function(s){ return '<div style="width:'+s.w+';background:'+s.color+';"></div>'; })+
+        '</div>';
+      if(a.hasOdds){
+        out += '<div style="font-size:10px;color:#a89f90;margin-bottom:3px;">市场赔率 · '+esc(a.oddsLabel)+'</div>'+
+          '<div style="display:flex;height:11px;border-radius:6px;overflow:hidden;opacity:.62;">'+
+            each(a.odds, function(s){ return '<div style="width:'+s.w+';background:'+s.color+';"></div>'; })+
+          '</div>';
+      }
+    }
+    if(a.hasHhad){
+      out += '<div style="font-size:10.5px;color:#8C8478;font-weight:600;margin:13px 0 6px;">让球倾向 · '+esc(a.hhadLine)+'</div>'+
+        '<div style="display:flex;height:11px;border-radius:6px;overflow:hidden;">'+
+          each(a.hhad, function(s){ return '<div style="width:'+s.w+';background:'+s.color+';"></div>'; })+
+        '</div>'+
+        '<div style="font-size:10px;color:#a89f90;margin-top:3px;">'+esc(a.hhadLabel)+'</div>';
+    }
+    out += '</div><div>';
+    if(a.hasXg){
+      out += '<div style="font-size:10.5px;color:#8C8478;font-weight:600;margin-bottom:7px;">预期进球 xG</div>'+
+        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;"><span style="width:26px;font-family:\'Spline Sans Mono\',monospace;font-size:13px;font-weight:700;color:#C0613B;">'+esc(a.xgH)+'</span><div style="flex:1;height:8px;background:#EFEADD;border-radius:4px;overflow:hidden;"><div style="height:100%;width:'+a.xgHW+';background:#C0613B;border-radius:4px;"></div></div></div>'+
+        '<div style="display:flex;align-items:center;gap:8px;"><span style="width:26px;font-family:\'Spline Sans Mono\',monospace;font-size:13px;font-weight:700;color:#8C8478;">'+esc(a.xgA)+'</span><div style="flex:1;height:8px;background:#EFEADD;border-radius:4px;overflow:hidden;"><div style="height:100%;width:'+a.xgAW+';background:#B0A99B;border-radius:4px;"></div></div></div>';
+    }
+    if(a.hasTtg){
+      out += '<div style="font-size:10.5px;color:#8C8478;font-weight:600;margin:13px 0 6px;">总进球分布（0–7+）</div>'+
+        '<div style="display:flex;align-items:flex-end;gap:5px;height:48px;">'+
+          each(a.ttg, function(t){
+            return '<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;height:100%;justify-content:flex-end;">'+
+              '<div style="width:100%;max-width:16px;background:#C9B79B;border-radius:3px 3px 0 0;height:'+t.h+';"></div>'+
+              '<span style="font-size:9px;color:#a89f90;font-family:\'Spline Sans Mono\',monospace;">'+esc(t.label)+'</span>'+
+            '</div>';
+          })+
+        '</div>';
+    }
+    out += '</div></div>';
+    if(a.hasScore){
+      out += '<div style="font-size:10.5px;color:#8C8478;font-weight:600;margin:15px 0 8px;">Top 比分 · <span style="color:#C0613B;">●</span> 已覆盖押注</div>'+
+        '<div style="display:flex;gap:10px;flex-wrap:wrap;">'+
+          each(a.scoreTop, function(s){
+            return '<div style="display:flex;flex-direction:column;align-items:center;gap:4px;min-width:50px;">'+
+              '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:13px;font-weight:700;color:'+s.txtColor+';">'+esc(s.s)+'</span>'+
+              '<div style="width:46px;height:6px;background:#EFEADD;border-radius:3px;overflow:hidden;"><div style="height:100%;width:'+s.w+';background:'+s.barColor+';border-radius:3px;"></div></div>'+
+              '<span style="font-size:9.5px;color:#a89f90;font-family:\'Spline Sans Mono\',monospace;">'+esc(s.p)+'%</span>'+
+            '</div>';
+          })+
+        '</div>';
+    }
+    if(a.hasPlans){
+      out += '<div style="font-size:10.5px;color:#8C8478;font-weight:600;margin:15px 0 8px;">单场押注方案</div>'+
+        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;">'+
+          each(a.plans, function(pl){
+            return '<div style="border:1px solid #E4DECF;border-radius:9px;background:#fff;padding:9px 11px;">'+
+              '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;"><span style="font-weight:700;font-size:12px;">'+esc(pl.name)+'</span>'+(pl.hasTag?'<span style="font-size:9px;font-weight:700;padding:1px 6px;border-radius:4px;background:#C0613B;color:#fff;">'+esc(pl.tag)+'</span>':'')+'</div>'+
+              '<div style="font-size:12px;">'+esc(pl.play)+' <span style="color:#8C8478;">'+esc(pl.cover)+'</span></div>'+
+              '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:10.5px;color:#8C8478;margin-top:4px;">'+esc(pl.oddsStr)+' · 投 '+esc(pl.stakeStr)+' · 最高 '+esc(pl.maxStr)+'</div>'+
+            '</div>';
+          })+
+        '</div>';
+    }
+    out += '<a href="'+pUrl+'" target="_blank" rel="noopener"'+reportAttr(pUrl)+' style="display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:600;color:#C0613B;text-decoration:none;">查看完整深度分析报告 →</a>'+
+      '</div></div>';
+    return out;
+  }
+
+  function vPredict(vm){
+    var out = '<div style="max-width:1340px;margin:0 auto;padding:14px 24px 60px;">'+
+      '<div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:8px 0 18px;">'+
+        '<h2 style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:24px;margin:0;letter-spacing:-.3px;">每日赛前预测</h2>'+
+        '<span style="font-size:11.5px;color:#8C8478;">点击任意一天 · 打开当日竞彩深度分析与比分串关报告</span>'+
+      '</div>';
+
+    if(vm.hasRecord){
+      var rec = vm.record;
+      out += '<div style="display:flex;align-items:stretch;gap:0;flex-wrap:wrap;background:#2A2622;border-radius:15px;overflow:hidden;margin-bottom:18px;">'+
+        '<div style="padding:16px 22px;display:flex;flex-direction:column;justify-content:center;gap:3px;background:#C0613B;flex:none;">'+
+          '<span style="font-size:11px;color:rgba(244,241,234,.8);font-weight:600;letter-spacing:1px;">本届战绩 · 台账自动结算</span>'+
+          '<span style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:18px;color:#F4F1EA;">已结算 '+rec.settledDays+' 天</span>'+
+          (rec.hasPending ? '<span style="font-size:10.5px;color:rgba(244,241,234,.78);">'+esc(rec.pendLabel)+'</span>' : '')+
+        '</div>'+
+        '<div style="flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0;">'+
+          '<div style="padding:14px 20px;border-right:1px solid rgba(244,241,234,.1);">'+
+            '<div style="font-size:11px;color:#b8b0a2;margin-bottom:5px;">净盈亏</div>'+
+            '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:22px;font-weight:700;color:'+rec.netColor+';">'+esc(rec.netLabel)+'</div>'+
+            '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#b8b0a2;margin-top:2px;">ROI '+rec.roi+'% · 投入 '+esc(rec.stakeLabel)+'</div>'+
+          '</div>'+
+          '<div style="padding:14px 20px;border-right:1px solid rgba(244,241,234,.1);">'+
+            '<div style="font-size:11px;color:#b8b0a2;margin-bottom:5px;">已兑奖</div>'+
+            '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:22px;font-weight:700;color:#F4F1EA;">'+esc(rec.payoutLabel)+'</div>'+
+            '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#b8b0a2;margin-top:2px;">总投入 '+esc(rec.stakeLabel)+'</div>'+
+          '</div>'+
+          (rec.hasHits ?
+          '<div style="padding:14px 20px;border-right:1px solid rgba(244,241,234,.1);">'+
+            '<div style="font-size:11px;color:#b8b0a2;margin-bottom:5px;">胜负命中 <span style="color:#76736a;">· 有明细</span></div>'+
+            '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:22px;font-weight:700;color:#F4F1EA;">'+esc(rec.wLabel)+'</div>'+
+            '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#7AA886;margin-top:2px;">'+rec.wRate+'%</div>'+
+          '</div>'+
+          '<div style="padding:14px 20px;">'+
+            '<div style="font-size:11px;color:#b8b0a2;margin-bottom:5px;">精确比分 <span style="color:#76736a;">· 有明细</span></div>'+
+            '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:22px;font-weight:700;color:#F4F1EA;">'+esc(rec.sLabel)+'</div>'+
+            '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#E8B84B;margin-top:2px;">'+rec.sRate+'%</div>'+
+          '</div>' : '')+
+        '</div>'+
+      '</div>';
+    }
+
+    out += '<div style="display:flex;flex-direction:column;gap:16px;">'+
+      each(vm.predictions, function(p){
+        var head = '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
+          '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:15px 18px;border-bottom:1px solid #EFEADD;">'+
+            '<div style="display:flex;align-items:center;gap:13px;flex:none;">'+
+              '<div style="text-align:center;min-width:54px;">'+
+                '<div style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:22px;line-height:1;color:#C0613B;">'+esc(p.dateShort)+'</div>'+
+                '<div style="font-size:11px;color:#8C8478;margin-top:3px;">'+esc(p.wd)+'</div>'+
+              '</div>'+
+              '<div style="width:1px;height:34px;background:#E4DECF;"></div>'+
+              '<div>'+
+                '<div style="font-weight:600;font-size:15px;">'+esc(p.groupsLabel)+'</div>'+
+                '<div style="font-size:11.5px;color:#8C8478;margin-top:2px;">'+esc(p.count)+'</div>'+
+              '</div>'+
+            '</div>'+
+            (p.hasStats ? '<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;background:#F4F1EA;border:1px solid #E4DECF;border-radius:8px;font-size:12.5px;font-weight:600;color:'+p.statColor+';"><span style="width:7px;height:7px;border-radius:50%;background:#3F7A4E;"></span>'+esc(p.statLabel)+'</span>' : '')+
+            (p.hasProfit ? '<span style="display:inline-flex;align-items:center;padding:6px 12px;background:#F4F1EA;border:1px solid #E4DECF;border-radius:8px;font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:700;color:'+p.profitColor+';">'+esc(p.profitLabel)+'</span>' : '')+
+            (p.hasPending ? '<span style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:#F1E2D8;border:1px solid #E3C8B8;border-radius:8px;font-size:12px;font-weight:600;color:#C0613B;"><span style="width:7px;height:7px;border-radius:50%;background:#C0613B;animation:wcpulse 1.6s ease-in-out infinite;"></span>'+esc(p.pendingLabel)+'</span>' : '')+
+            '<div style="margin-left:auto;display:flex;align-items:center;gap:9px;">'+
+              (p.hasReview ? '<a href="'+p.reviewUrl+'"'+reportAttr(p.reviewUrl)+' data-hover="border-color:#C0613B;color:#C0613B" style="display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border:1px solid #E4DECF;background:#F4F1EA;color:#2A2622;border-radius:10px;text-decoration:none;font-weight:600;font-size:13px;">赛后复盘</a>' : '')+
+              '<a href="'+p.url+'"'+reportAttr(p.url)+' data-hover="background:#C0613B" style="display:inline-flex;align-items:center;gap:6px;padding:9px 15px;background:#2A2622;color:#F4F1EA;border-radius:10px;text-decoration:none;font-weight:600;font-size:13px;">查看完整分析 →</a>'+
+            '</div>'+
+          '</div>';
+
+        var body = '<div style="padding:8px 14px 14px;display:flex;flex-direction:column;gap:2px;">'+
+          each(p.matches, function(c){
+            var row = '<div style="border-radius:10px;border:1px solid transparent;">'+
+              '<div '+(c.hasAnalysis ? 'data-toggle="'+esc(c.eid)+'" ' : '')+'style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;'+(c.hasAnalysis?'cursor:pointer;':'')+'"'+(c.hasAnalysis?' data-hover="background:#F4F1EA"':'')+'>'+
+                '<div style="flex:none;width:58px;display:flex;flex-direction:column;line-height:1.25;">'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:10.5px;color:#8C8478;">'+esc(c.dateStr)+'</span>'+
+                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;">'+esc(c.timeStr)+'</span>'+
+                '</div>'+
+                '<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;">'+ teamLine(c,'15px','13px','13px') +'</div>'+
+                (c.hasPick ?
+                  '<span style="flex:none;display:inline-flex;flex-direction:column;align-items:flex-end;gap:2px;line-height:1.2;margin-right:2px;">'+
+                    '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;">预测 '+esc(c.predScore)+'</span>'+
+                    '<span style="font-size:9px;font-weight:700;padding:1px 6px;border-radius:4px;background:'+c.predTagBg+';color:'+c.predTagColor+';">'+esc(c.predTag)+'</span>'+
+                  '</span>' : '')+
+                '<span style="flex:none;font-size:9.5px;font-weight:700;padding:3px 7px;border-radius:5px;background:'+c.phaseBg+';color:'+c.phaseColor+';">'+esc(c.phaseLabel)+'</span>'+
+                (c.hasAnalysis ? '<span style="flex:none;color:#a89f90;font-size:13px;'+c.chevStyle+'">▾</span>' : '')+
+              '</div>'+
+              ((c.expanded && c.hasAnalysis) ? vAnalysis(c, p.url) : '')+
+            '</div>';
+            return row;
+          })+
+        '</div>';
+
+        var combos = '';
+        if(p.hasTickets){
+          combos = '<div style="border-top:1px solid #EFEADD;padding:13px 14px 15px;background:#FAF7F0;">'+
+            '<div style="font-size:11px;color:#8C8478;font-weight:600;letter-spacing:.5px;margin-bottom:11px;">竞彩串关方案 · '+esc(p.comboHeadLabel)+' <span style="color:#a89f90;font-weight:500;">· 真实台账</span></div>'+
+            '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;">'+
+              each(p.tickets, function(cb){
+                return '<div style="border:1px solid #E4DECF;border-radius:12px;background:#fff;overflow:hidden;">'+
+                  '<div style="display:flex;align-items:center;gap:7px;padding:11px 13px;border-bottom:1px dashed #E4DECF;">'+
+                    '<span style="font-weight:700;font-size:13px;">'+esc(cb.name)+'</span>'+
+                    (cb.hasTag ? '<span style="font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:5px;background:#C0613B;color:#fff;">'+esc(cb.tag)+'</span>' : '')+
+                    '<span style="margin-left:auto;font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;background:'+cb.statusBg+';color:'+cb.statusColor+';">'+esc(cb.statusLabel)+'</span>'+
+                  '</div>'+
+                  '<div style="padding:5px 13px;">'+
+                    each(cb.legs, function(lg){
+                      return '<div style="padding:7px 0;border-bottom:1px solid #F4F1EA;">'+
+                        '<div style="display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;">'+
+                          '<span style="color:'+lg.markColor+';font-family:\'Spline Sans Mono\',monospace;width:12px;">'+esc(lg.mark)+'</span>'+
+                          '<span>'+lg.fh+' '+esc(lg.hn)+'</span><span style="color:#a89f90;font-weight:400;font-size:10px;">vs</span><span>'+esc(lg.an)+' '+lg.fa+'</span>'+
+                          '<span style="margin-left:auto;font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;">实际 '+esc(lg.actual)+'</span>'+
+                        '</div>'+
+                        '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;margin-top:3px;padding-left:18px;">'+esc(lg.scoresStr)+'</div>'+
+                      '</div>';
+                    })+
+                  '</div>'+
+                  '<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:9px 13px;background:#FAF7F0;font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;">'+
+                    '<span>过关 '+esc(cb.wayLabel)+'</span><span>'+esc(cb.betsLabel)+'</span><span>投 '+esc(cb.stakeLabel)+'</span><span>最高 '+esc(cb.maxLabel)+'</span>'+
+                    (cb.settledAll ? '<span style="margin-left:auto;font-weight:700;color:'+cb.profitColor+';">'+esc(cb.payoutLabel)+' · '+esc(cb.profitLabel)+'</span>' : '')+
+                  '</div>'+
+                '</div>';
+              })+
+            '</div>'+
+          '</div>';
+        }
+
+        return head + body + combos + '</div>';
+      })+
+    '</div>';
+
+    out += '<div style="margin-top:18px;font-size:11.5px;color:#a89f90;line-height:1.6;">战绩 / 净盈亏 / 串关票面来自真实台账 <code style="font-family:\'Spline Sans Mono\',monospace;background:#EFEADD;padding:1px 5px;border-radius:4px;">betting-ledger.json</code>；报告链接登记在 <code style="font-family:\'Spline Sans Mono\',monospace;background:#EFEADD;padding:1px 5px;border-radius:4px;">WORLDCUP_PREDICTIONS</code>。改完跑 <code style="font-family:\'Spline Sans Mono\',monospace;background:#EFEADD;padding:1px 5px;border-radius:4px;">build_worldcup_data.py</code> 同步。</div>'+
+    '</div>';
+    return out;
+  }
+
+  function vFooter(){
+    return '<div style="max-width:1340px;margin:0 auto;padding:0 24px 40px;">'+
+      '<div style="border-top:1px solid #E4DECF;padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11.5px;color:#a89f90;line-height:1.6;">'+
+        '<span>数据源：内置完整赛程（48 队 · 104 场）· 设置 <code style="font-family:\'Spline Sans Mono\',monospace;background:#EFEADD;padding:1px 5px;border-radius:4px;color:#8C8478;">window.WORLDCUP_ENDPOINT</code> 即可接入实时官方接口 · 每整点自动同步</span>'+
+        '<span>所有内容仅供赛事研究，不构成投注建议。竞彩有风险，理性娱乐。</span>'+
+      '</div>'+
+    '</div>';
+  }
+
+  // ===== full render =====
+  function render(){
+    var vm = buildVM();
+    var html = vHeader(vm);
+    if(vm.hasBanner) html += vBanner(vm);
+    html += vTabs(vm);
+    if(vm.loading) html += vLoading();
+    if(vm.isBracket) html += vBracket(vm);
+    if(vm.isStandings) html += vStandings(vm);
+    if(vm.isData) html += vData(vm);
+    if(vm.isPredict) html += vPredict(vm);
+    html += vFooter();
+    app.innerHTML = html;
+    attachHover();
+    lastSig = phaseSig();
+  }
+
+  function attachHover(){
+    var els = app.querySelectorAll('[data-hover]');
+    els.forEach(function(el){
+      el.addEventListener('mouseenter', function(){
+        if(el.__base == null) el.__base = el.getAttribute('style') || '';
+        el.setAttribute('style', el.__base + ';' + el.getAttribute('data-hover'));
+      });
+      el.addEventListener('mouseleave', function(){
+        el.setAttribute('style', el.__base || '');
+      });
+    });
+  }
+
+  // ===== per-second tick: phase transitions -> full render; else patch clock + countdowns =====
+  function phaseSig(){
+    if(!state.ready || !DATA) return 'boot';
+    var s = '';
+    for(var i=0;i<DATA.schedule.length;i++){ s += phase(DATA.schedule[i]).charAt(0); }
+    // 含北京日期：跨 0 点时「今日赛前预测」高亮 / isToday 才能在 1 秒内随之切换（对齐原稿每秒重算 bjToday）
+    return state.tab + '|' + bjToday() + '|' + s;
+  }
+  function tick(){
+    now = Date.now();
+    if(state.ready && phaseSig() !== lastSig){ render(); return; }
+    var ck = document.getElementById('wc-clock');
+    if(ck) ck.textContent = fmtClock(now);
+    var cds = app.querySelectorAll('.wc-cd');
+    cds.forEach(function(el){
+      if(el.getAttribute('data-live') === '1'){ el.textContent = '正在直播'; return; }
+      el.textContent = fmtMs(Number(el.getAttribute('data-k')) - now);
+    });
+  }
+
+  // ===== sync (official endpoint optional) =====
+  function sync(){
+    if(state.syncing) return;
+    state.syncing = true; render();
+    var done = function(){ state.syncing = false; state.lastSync = Date.now(); render(); };
+    var ep = window.WORLDCUP_ENDPOINT;
+    if(ep){ fetch(ep).then(function(r){ return r.json(); }).then(function(d){ if(d && d.schedule) DATA = d; done(); }).catch(done); }
+    else setTimeout(done, 700);
+  }
+
+  // ===== 站内报告浮层(页内打开 + 返回 + 浏览器后退) =====
+  var reportBox = document.getElementById('wc-report');
+  function openReport(url){
+    if(!isReportUrl(url)) { window.open(url, '_blank', 'noopener'); return; }
+    reportBox.innerHTML =
+      '<div style="position:fixed;inset:0;z-index:200;background:#F4F1EA;display:flex;flex-direction:column;">'+
+        '<div style="flex:none;display:flex;align-items:center;gap:12px;padding:11px 18px;border-bottom:1px solid #E4DECF;background:rgba(244,241,234,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">'+
+          '<button data-report-back style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #E4DECF;background:#FBFAF5;color:#2A2622;border-radius:9px;font-weight:600;font-size:13px;cursor:pointer;">← 返回</button>'+
+          '<span style="font-size:12.5px;color:#8C8478;font-family:\'Spline Sans Mono\',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;">'+esc(decodeURIComponent(url))+'</span>'+
+          '<a href="'+url+'" target="_blank" rel="noopener" style="flex:none;font-size:12px;color:#C0613B;text-decoration:none;font-weight:600;">↗ 新标签打开</a>'+
+        '</div>'+
+        '<iframe src="'+esc(url)+'" style="flex:1;width:100%;border:0;background:#fff;"></iframe>'+
+      '</div>';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeReport(){ reportBox.innerHTML = ''; document.body.style.overflow = ''; }
+  reportBox.addEventListener('click', function(e){ if(e.target.closest('[data-report-back]')) history.back(); });
+  window.addEventListener('popstate', function(){ if(reportBox.innerHTML) closeReport(); });
+
+  // ===== events (delegated, attached once) =====
+  app.addEventListener('click', function(e){
+    var report = e.target.closest('[data-report]');
+    if(report){ e.preventDefault(); var u = report.getAttribute('data-report'); history.pushState({ wcReport:u }, ''); openReport(u); return; }
+    var tabBtn = e.target.closest('[data-tab]');
+    if(tabBtn){ state.tab = tabBtn.getAttribute('data-tab'); render(); return; }
+    var refresh = e.target.closest('[data-action="refresh"]');
+    if(refresh){ sync(); return; }
+    var toggle = e.target.closest('[data-toggle]');
+    if(toggle){ toggleExp(toggle.getAttribute('data-toggle')); return; }
+  });
+
+  // ===== boot =====
+  function boot(){
+    DATA = window.WORLDCUP_DATA; FLAGS = window.WORLDCUP_FLAGS || {}; OFF = window.WORLDCUP_VENUE_OFFSET || {}; PRED = window.WORLDCUP_PREDICTIONS || []; LEDGER = window.WORLDCUP_LEDGER || { days: [] };
+    state.ready = true;
+    sync();
+    var n = new Date();
+    var ms = (60 - n.getMinutes())*60000 - n.getSeconds()*1000 - n.getMilliseconds();
+    setTimeout(function(){ sync(); setInterval(sync, 3600000); }, ms);
+    setInterval(tick, 1000);
+    render();
+  }
+
+  render(); // initial loading view
+  if(window.WORLDCUP_DATA){ boot(); }
+  else { var poll = setInterval(function(){ if(window.WORLDCUP_DATA){ clearInterval(poll); boot(); } }, 40); }
+
+  // 兜底诊断：万一数据没就位（如某些预览/浏览器缓存了旧版本，或内联脚本被环境拦截），别无限转圈，直接说明原因
+  setTimeout(function(){
+    if(state.ready) return;
+    var diag = '内联数据脚本(#wc-data)：' + (document.getElementById('wc-data') ? '存在' : '缺失')
+      + ' · typeof window.WORLDCUP_DATA = ' + (typeof window.WORLDCUP_DATA);
+    app.innerHTML = vHeader(buildVM())
+      + '<div style="max-width:1340px;margin:40px auto;padding:0 24px;">'
+        + '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;padding:22px 24px;box-shadow:0 1px 3px rgba(42,38,34,.04);">'
+          + '<div style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:18px;color:#C0613B;margin-bottom:8px;">数据未能加载</div>'
+          + '<div style="font-size:13px;color:#8C8478;line-height:1.7;">页面已内置完整赛程数据，正常无需联网即可显示。看到此提示多半是预览或浏览器缓存了旧版本——请<b>强制刷新</b>（Mac ⌘⇧R · Win Ctrl+F5），或直接用浏览器打开 index.html / 本地静态服务器。</div>'
+          + '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:11.5px;color:#a89f90;margin-top:12px;padding-top:12px;border-top:1px solid #EFEADD;">诊断 · ' + diag + '</div>'
+        + '</div>'
+      + '</div>'
+      + vFooter();
+  }, 3500);
+})();
+</script>
+</body>
+</html>
