@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>2026 世界杯 · 对阵全景</title>
+<meta name="description" content="2026 美加墨 FIFA 世界杯赛前预测与赛后复盘 · 48 队 104 场对阵全景、积分榜与竞彩量化台账。">
+<meta name="theme-color" content="#C0613B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="2026 世界杯 · 对阵全景">
+<meta property="og:description" content="48 队 104 场对阵全景、每日赛前预测与赛后复盘、积分榜与竞彩量化台账。">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Spline+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +20,7 @@
  *   WORLDCUP_DATA          赛事元信息 + 104 场赛程（自动生成，勿手改）
  *   WORLDCUP_FLAGS         球队 → 国旗 emoji（手工维护）
  *   WORLDCUP_VENUE_OFFSET  球场 → UTC 时区偏移（手工维护，缺省 -5）
+ *   WORLDCUP_FIFA_RANK     球队 → FIFA 世界排名（手工维护；约 2025 年末口径，随官方更新）
  *   WORLDCUP_PREDICTIONS   每日 预测/复盘 报告链接登记（手工维护）
  *
  * WORLDCUP_DATA 的唯一真源是
@@ -1931,7 +1938,7 @@ window.WORLDCUP_DATA = {
 window.WORLDCUP_LEDGER = {
  "title": "本届世界杯战绩",
  "currency": "¥",
- "updated": "2026-06-24",
+ "updated": "2026-06-25",
  "note": "6.16–6.22 仅留每日投入/收入金额，具体票面未留存；6.23 起留存完整投注明细。净盈亏 = 已兑奖收入 − 总投入；待开奖日按收入 0 计入，开奖后回填。",
  "days": [
   {
@@ -2330,6 +2337,138 @@ window.WORLDCUP_LEDGER = {
      ]
     }
    ]
+  },
+  {
+   "date": "2026-06-25",
+   "stake": 80,
+   "payout": null,
+   "status": "pending",
+   "note": "实押3张(体彩实票):①比分复式2串1(36,主力,摩[2:0/1:0]×波[1:0/2:0/2:1])+②混合胜平负/让球4串1(24,保命中)+③比分单式4串1(20,彩票)。合计80。赔率为体彩票面印制/读取值,max取票面印制值;待开奖回填payout。",
+   "tickets": [
+    {
+     "name": "实票① · 比分复式 2串1 · 主力",
+     "way": "2串1",
+     "mult": 3,
+     "bets": 6,
+     "stake": 36,
+     "max": 252.0,
+     "rec": true,
+     "legs": [
+      {
+       "home": "摩洛哥",
+       "away": "海地",
+       "scores": [
+        {
+         "s": "2:0",
+         "o": 4.6
+        },
+        {
+         "s": "1:0",
+         "o": 5.6
+        }
+       ]
+      },
+      {
+       "home": "波黑",
+       "away": "卡塔尔",
+       "scores": [
+        {
+         "s": "1:0",
+         "o": 7.5
+        },
+        {
+         "s": "2:0",
+         "o": 5.5
+        },
+        {
+         "s": "2:1",
+         "o": 5.0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "实票② · 混合 胜平负/让球 4串1 · 保命中",
+     "way": "4串1",
+     "mult": 3,
+     "bets": 4,
+     "stake": 24,
+     "max": 608.25,
+     "legs": [
+      {
+       "home": "摩洛哥",
+       "away": "海地",
+       "play": "平 @3.85"
+      },
+      {
+       "home": "波黑",
+       "away": "卡塔尔",
+       "play": "胜或平·不败(胜@1.19 / 平@5.40)"
+      },
+      {
+       "home": "苏格兰",
+       "away": "巴西",
+       "play": "负·巴西胜 @1.26"
+      },
+      {
+       "home": "南非",
+       "away": "韩国",
+       "play": "主队让球·平或负(平@3.87 / 负@1.44)"
+      }
+     ]
+    },
+    {
+     "name": "实票③ · 比分单式 4串1 · 彩票",
+     "way": "4串1",
+     "mult": 10,
+     "bets": 1,
+     "stake": 20,
+     "max": 21489.8,
+     "legs": [
+      {
+       "home": "摩洛哥",
+       "away": "海地",
+       "scores": [
+        {
+         "s": "2:0",
+         "o": 4.6
+        }
+       ]
+      },
+      {
+       "home": "波黑",
+       "away": "卡塔尔",
+       "scores": [
+        {
+         "s": "2:0",
+         "o": 5.5
+        }
+       ]
+      },
+      {
+       "home": "苏格兰",
+       "away": "巴西",
+       "scores": [
+        {
+         "s": "0:1",
+         "o": 4.7
+        }
+       ]
+      },
+      {
+       "home": "南非",
+       "away": "韩国",
+       "scores": [
+        {
+         "s": "0:1",
+         "o": 5.7
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 };
@@ -2337,9 +2476,20 @@ window.WORLDCUP_LEDGER = {
 
 window.WORLDCUP_FLAGS = {"墨西哥":"🇲🇽","南非":"🇿🇦","韩国":"🇰🇷","捷克":"🇨🇿","加拿大":"🇨🇦","波斯尼亚和黑塞哥维那":"🇧🇦","卡塔尔":"🇶🇦","瑞士":"🇨🇭","巴西":"🇧🇷","摩洛哥":"🇲🇦","海地":"🇭🇹","苏格兰":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","美国":"🇺🇸","巴拉圭":"🇵🇾","澳大利亚":"🇦🇺","土耳其":"🇹🇷","德国":"🇩🇪","库拉索":"🇨🇼","科特迪瓦":"🇨🇮","厄瓜多尔":"🇪🇨","荷兰":"🇳🇱","日本":"🇯🇵","瑞典":"🇸🇪","突尼斯":"🇹🇳","比利时":"🇧🇪","埃及":"🇪🇬","伊朗":"🇮🇷","新西兰":"🇳🇿","西班牙":"🇪🇸","佛得角":"🇨🇻","沙特阿拉伯":"🇸🇦","乌拉圭":"🇺🇾","法国":"🇫🇷","塞内加尔":"🇸🇳","伊拉克":"🇮🇶","挪威":"🇳🇴","阿根廷":"🇦🇷","阿尔及利亚":"🇩🇿","奥地利":"🇦🇹","约旦":"🇯🇴","葡萄牙":"🇵🇹","刚果(金)":"🇨🇩","乌兹别克斯坦":"🇺🇿","哥伦比亚":"🇨🇴","英格兰":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","克罗地亚":"🇭🇷","加纳":"🇬🇭","巴拿马":"🇵🇦","待定":"⚪"};
 window.WORLDCUP_VENUE_OFFSET = {"Estadio Azteca":-6,"Estadio Akron":-6,"Estadio BBVA":-6,"BC Place":-7,"SoFi Stadium":-7,"Levi's Stadium":-7,"Lumen Field":-7,"BMO Field":-4,"MetLife Stadium":-4,"Lincoln Financial Field":-4,"Mercedes-Benz Stadium":-4,"Hard Rock Stadium":-4,"Gillette Stadium":-4,"AT&T Stadium":-5,"NRG Stadium":-5,"Arrowhead Stadium":-5};
+// FIFA 世界排名（手工维护，约 2025 年末口径；仅作强弱参照，随官方排名更新；缺省=不显示徽章）
+window.WORLDCUP_FIFA_RANK = {"阿根廷":1,"西班牙":2,"法国":3,"英格兰":4,"巴西":5,"葡萄牙":6,"荷兰":7,"比利时":8,"德国":9,"克罗地亚":10,"摩洛哥":12,"哥伦比亚":13,"日本":15,"乌拉圭":16,"美国":17,"墨西哥":18,"塞内加尔":19,"瑞士":20,"伊朗":21,"奥地利":22,"韩国":23,"厄瓜多尔":24,"挪威":25,"澳大利亚":26,"土耳其":27,"加拿大":28,"埃及":33,"阿尔及利亚":36,"瑞典":38,"苏格兰":39,"巴拉圭":40,"科特迪瓦":41,"捷克":42,"巴拿马":43,"突尼斯":45,"卡塔尔":53,"刚果(金)":55,"南非":56,"乌兹别克斯坦":57,"沙特阿拉伯":58,"伊拉克":59,"约旦":62,"佛得角":70,"加纳":73,"波斯尼亚和黑塞哥维那":74,"海地":83,"新西兰":86,"库拉索":88};
 
 // ---- 每日赛前预测报告清单（编辑此处登记你的报告；url 相对平台文件路径）----
 window.WORLDCUP_PREDICTIONS = [
+ { date:'2026-06-25', url:'predictions/2026-06-25/index.html',
+   picks:[
+    { home:'摩洛哥', away:'海地', score:'2:0', wdl:'主胜' },
+    { home:'波斯尼亚和黑塞哥维那', away:'卡塔尔', score:'2:0', wdl:'主胜' },
+    { home:'苏格兰', away:'巴西', score:'0:1', wdl:'客胜' },
+    { home:'南非', away:'韩国', score:'0:1', wdl:'客胜' },
+    { home:'瑞士', away:'加拿大', score:'1:1', wdl:'平' },
+    { home:'捷克', away:'墨西哥', score:'1:2', wdl:'客胜' }
+   ] },
  { date:'2026-06-24', url:'predictions/2026-06-24/index.html' },
  { date:'2026-06-23', url:'predictions/2026-06-23/index.html', reviewUrl:'reviews/2026-06-23/复盘-周二4场.md',
    // picks: 单场预测(算命中率)；score 比分、wdl 胜平负(主胜/平/客胜)。
@@ -2420,18 +2570,50 @@ window.WORLDCUP_PREDICTIONS = [
   body{background:#F4F1EA;font-family:'Spline Sans','PingFang SC','Microsoft YaHei',system-ui,sans-serif;color:#2A2622;-webkit-font-smoothing:antialiased}
   @keyframes wcpulse{0%,100%{opacity:1}50%{opacity:.3}}
   @keyframes wcspin{to{transform:rotate(360deg)}}
-  @keyframes wcmarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   @keyframes wcring{0%{box-shadow:0 0 0 0 rgba(214,69,63,.55)}70%{box-shadow:0 0 0 7px rgba(214,69,63,0)}100%{box-shadow:0 0 0 0 rgba(214,69,63,0)}}
   ::-webkit-scrollbar{height:11px;width:11px}
   ::-webkit-scrollbar-thumb{background:#d7d0c1;border-radius:8px;border:3px solid #F4F1EA}
   ::-webkit-scrollbar-track{background:transparent}
-  .wc-mq:hover{animation-play-state:paused !important}
+  .wc-team-name{cursor:pointer;border-radius:4px}
+  .wc-team-name:hover{color:#C0613B !important;text-decoration:underline;text-underline-offset:2px}
   button{font-family:inherit}
+  /* 键盘焦点可见:覆盖所有原生可聚焦元素(内联 style 元素 outline 不会被覆盖) */
+  a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #C0613B;outline-offset:2px;border-radius:6px}
+  /* 尊重系统「减弱动态效果」:关掉所有无限脉冲/旋转/直播环 */
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  }
+  /* ===== 响应式:窄屏(手机)适配。内联 style 元素需用 !important 覆盖 ===== */
+  @media (max-width:640px){
+    /* 顶栏:同步块紧凑、刷新按钮放大到易点 */
+    .wc-hdr-sync{padding:6px 9px !important}
+    [data-action="refresh"]{width:38px !important;height:38px !important}
+    /* 赛事提醒:三件套竖向堆叠,消除重叠/裁切 */
+    .wc-banner-row{flex-direction:column !important;align-items:stretch !important;padding:0 !important}
+    .wc-banner-label{padding:8px 16px !important;justify-content:flex-start !important}
+    .wc-banner-grid{grid-template-columns:1fr !important}
+    .wc-banner-leg{flex-wrap:wrap !important;border-left:0 !important;border-top:1px solid rgba(244,241,234,.12) !important}
+    /* 子 tab:不在药丸内折行,整组可横向滑动 + 抬高热区 */
+    .wc-subtabs{display:flex !important;flex-wrap:nowrap !important;max-width:100% !important;overflow-x:auto !important}
+    .wc-subtab{flex:none !important;white-space:nowrap !important;padding-top:11px !important;padding-bottom:11px !important}
+    /* 主导航 tab:抬高热区 */
+    [data-tab]{padding-top:11px !important;padding-bottom:11px !important}
+    /* 今日预测卡:时段滚动区独占整行,不被挤裁 */
+    .wc-today-card [data-today-pred-groups]{min-width:0 !important;flex-basis:100% !important}
+    /* 总积分榜:窄屏改横向滚动,不再 overflow:hidden 裁掉积分列 */
+    .wc-overall-table{overflow-x:auto !important}
+    .wc-overall-table>div{min-width:560px}
+  }
+  @media (max-width:440px){
+    .wc-hdr-sub{display:none !important}
+  }
 </style>
 </head>
 <body>
 <div id="app"></div>
+<noscript><p style="max-width:560px;margin:48px auto;padding:0 24px;font-family:'Spline Sans',system-ui,sans-serif;color:#2A2622;line-height:1.7;text-align:center">本页的赛事数据需要 JavaScript 才能显示,请在浏览器中开启 JavaScript 后刷新。</p></noscript>
 <div id="wc-report"></div>
+<div id="wc-team-modal"></div>
 
 <script>
 (function(){
@@ -2444,21 +2626,174 @@ window.WORLDCUP_PREDICTIONS = [
   var XHS = 'https://www.xiaohongshu.com/worldcup26?wcup_source=web_sidebar_entry';
   var GROUPS = 'ABCDEFGHIJKL'.split('');
 
-  var DATA = null, FLAGS = {}, OFF = {}, PRED = [], LEDGER = { days: [] };
-  var state = { tab:'bracket', brView:'group', stView:'overall', lastSync:0, syncing:false, ready:false, exp:{} };
+  var DATA = null, FLAGS = {}, OFF = {}, PRED = [], LEDGER = { days: [] }, RANK = {}, TRANK = {}, ODDS = {};
+  var LIVE_STATUS = [];
+  var state = { tab:'bracket', brView:'group', stView:'overall', schDay:'', lastSync:0, syncing:false, ready:false, exp:{}, syncError:'' };
   var now = Date.now();
   var lastSig = null;
   var app = document.getElementById('app');
 
+  // ===== URL state =====
+  function pickParam(v, allowed, fallback){
+    return allowed.indexOf(v) >= 0 ? v : fallback;
+  }
+  function currentUrlTeam(){
+    try { return new URLSearchParams(window.location.search).get('team') || ''; }
+    catch(e){ return ''; }
+  }
+  function applyUrlState(){
+    var params;
+    try { params = new URLSearchParams(window.location.search); }
+    catch(e){ return ''; }
+    state.tab = pickParam(params.get('tab'), ['bracket','predict','standings','data'], 'bracket');
+    state.brView = pickParam(params.get('br'), ['group','knockout','schedule'], 'group');
+    state.stView = pickParam(params.get('st'), ['overall','group'], 'overall');
+    state.schDay = (/^\d{4}-\d{2}-\d{2}$/.test(params.get('day') || '')) ? params.get('day') : '';
+    return params.get('team') || '';
+  }
+  function stateUrl(extra){
+    var params = new URLSearchParams(window.location.search);
+    ['tab','br','st','day','team'].forEach(function(k){ params.delete(k); });
+    if(state.tab !== 'bracket') params.set('tab', state.tab);
+    if(state.brView !== 'group') params.set('br', state.brView);
+    if(state.stView !== 'overall') params.set('st', state.stView);
+    if(state.schDay) params.set('day', state.schDay);
+    var team = extra && Object.prototype.hasOwnProperty.call(extra, 'team')
+      ? extra.team
+      : ((typeof teamModalBox !== 'undefined' && teamModalBox) ? (teamModalBox.getAttribute('data-current-team') || '') : currentUrlTeam());
+    if(team) params.set('team', team);
+    var q = params.toString();
+    return window.location.pathname + (q ? ('?' + q) : '') + window.location.hash;
+  }
+  function syncUrlState(push, extra){
+    try {
+      var url = stateUrl(extra || {});
+      var cur = window.location.pathname + window.location.search + window.location.hash;
+      if(url === cur) return;
+      window.history[push ? 'pushState' : 'replaceState']({ wcApp:true }, '', url);
+    } catch(e){}
+  }
+  function setAppState(patch, push){
+    Object.assign(state, patch || {});
+    render();
+    syncUrlState(push !== false);
+  }
+  function restoreUrlState(){
+    if(typeof reportBox !== 'undefined' && reportBox && reportBox.innerHTML){ closeReport(); return; }
+    var team = applyUrlState();
+    render();
+    if(team) openTeamModal(team, { resetHistory:true, skipUrl:true });
+    else if(typeof teamModalBox !== 'undefined' && teamModalBox && teamModalBox.innerHTML) closeTeamModal({ skipUrl:true });
+  }
+
   // ===== tiny helpers =====
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+  // href 安全:转义引号/尖括号防属性逃逸,并挡掉 javascript:/data:/vbscript: 伪协议(相对路径、http(s)、mailto 照常放行)
+  function safeUrl(u){ u = String(u==null?'':u); return /^\s*(javascript|data|vbscript):/i.test(u) ? '#' : esc(u); }
   function each(arr, fn){ return (arr||[]).map(fn).join(''); }
+  function matchTimeGroups(matches){
+    var out = [], byTime = {};
+    (matches||[]).forEach(function(c){
+      var k = c.timeStr || '—';
+      if(!byTime[k]){ byTime[k] = { time:k, matches:[] }; out.push(byTime[k]); }
+      byTime[k].matches.push(c);
+    });
+    return out;
+  }
   // 站内报告(predictions/ reviews/ 等相对路径)→ 页内 iframe 打开；外链(http/小红书)→ 新标签
   function isReportUrl(u){ return !!u && u!=='#' && !/^https?:/i.test(u); }
   function reportAttr(u){ return isReportUrl(u) ? (' data-report="'+esc(u)+'"') : ''; }
 
+  // ===== live sync snapshot =====
+  function liveEndpoint(force){
+    if(window.WORLDCUP_ENDPOINT){
+      return (typeof window.WORLDCUP_ENDPOINT === 'function') ? window.WORLDCUP_ENDPOINT(!!force) : window.WORLDCUP_ENDPOINT;
+    }
+    var local = location.protocol.indexOf('http') === 0 && /^(127\.0\.0\.1|localhost)$/i.test(location.hostname);
+    if(!local) return '';
+    return force ? '/api/sync?force=1' : '/api/live';
+  }
+  function applyLiveSnapshot(snap){
+    if(!snap || snap.ok === false) return false;
+    if(snap.data && snap.data.schedule) DATA = snap.data;
+    else if(snap.schedule) DATA = snap; // compatibility with the old single DATA endpoint shape
+    if(snap.rank) RANK = snap.rank;
+    if(snap.ledger) LEDGER = snap.ledger;
+    if(snap.odds) ODDS = snap.odds;
+    window.WORLDCUP_LIVE_ODDS = ODDS;
+    LIVE_STATUS = snap.sourceStatus || [];
+    return !!(DATA && DATA.schedule);
+  }
+  function syncLabel(){
+    if(state.syncing) return '正在同步…';
+    if(state.syncError) return '同步失败 · 使用本地数据';
+    if(!LIVE_STATUS.length) return '已同步本地数据';
+    var ok = LIVE_STATUS.filter(function(s){ return s.status === 'ok'; }).length;
+    var fallback = LIVE_STATUS.filter(function(s){ return s.status === 'fallback'; }).length;
+    var error = LIVE_STATUS.filter(function(s){ return s.status === 'error'; }).length;
+    if(error || fallback) return '已同步 · 部分源降级';
+    return ok ? '已同步官方数据' : '已同步本地数据';
+  }
+  function syncDot(){
+    if(state.syncing) return C.gold;
+    if(state.syncError) return C.red;
+    return LIVE_STATUS.some(function(s){ return s.status === 'error' || s.status === 'fallback'; }) ? C.gold : C.green;
+  }
+  function syncTitle(){
+    if(state.syncError) return state.syncError;
+    if(!LIVE_STATUS.length) return '当前使用页面内联数据';
+    return LIVE_STATUS.map(function(s){ return s.name + ': ' + s.status + (s.detail ? (' · ' + s.detail) : ''); }).join('\n');
+  }
+
   // ===== data helpers (ported 1:1 from the design's DCLogic) =====
   function flag(z){ return FLAGS[z] || '⚪'; }
+  function rank(z){ return (RANK[z] != null) ? RANK[z] : null; }
+  // 世界排名 → 强弱分档配色（单色「权重」梯度：越深越强，避开绿=出线/金=第三/红=直播语义）
+  function rankTier(r){
+    if(r == null) return null;
+    if(r <= 10) return { bg:'#2A2622', color:'#F4F1EA' };   // 顶尖 1–10
+    if(r <= 24) return { bg:'#7C7468', color:'#F4F1EA' };   // 强   11–24
+    if(r <= 45) return { bg:'#DAD0BB', color:'#5A5347' };   // 中   25–45
+    return { bg:'#EFEADD', color:'#A89F90' };               // 弱   46+
+  }
+  function rankBadge(z){
+    var r = rank(z), t = rankTier(r);
+    if(!t) return '';
+    return '<span title="FIFA 世界排名" style="display:inline-flex;align-items:center;gap:2px;line-height:1;padding:2px 5px;border-radius:4px;background:'+t.bg+';color:'+t.color+';flex:none;white-space:nowrap;font-family:inherit;">'+
+      '<span style="font-size:8px;font-weight:600;opacity:.82;">世界</span>'+
+      '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:9.5px;font-weight:700;">'+r+'</span>'+
+    '</span>';
+  }
+  // 积分榜「世界排名」列：纯数字 + 强弱分档底色（列头已标明，无需再带「世界」字样）
+  function rankNum(z){
+    var r = rank(z), t = rankTier(r);
+    if(!t) return '<span style="color:#C9C1B2;">—</span>';
+    return '<span title="FIFA 世界排名" style="display:inline-block;font-family:\'Spline Sans Mono\',monospace;font-size:11px;font-weight:700;line-height:1;padding:3px 7px;border-radius:5px;background:'+t.bg+';color:'+t.color+';">'+r+'</span>';
+  }
+  // 本届世界杯积分排名（总积分榜名次 1–48，buildVM 时填充）+ clay 配色徽章（与「世界」单色档区分）
+  function trank(z){ return (TRANK[z] != null) ? TRANK[z] : null; }
+  function trankBadge(z){
+    var r = trank(z);
+    if(r == null) return '';
+    return '<span title="本届世界杯积分排名" style="display:inline-flex;align-items:center;gap:2px;line-height:1;padding:2px 5px;border-radius:4px;background:#F1E2D8;color:#B0552F;flex:none;white-space:nowrap;font-family:inherit;">'+
+      '<span style="font-size:8px;font-weight:600;opacity:.85;">本届</span>'+
+      '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:9.5px;font-weight:700;">'+r+'</span>'+
+    '</span>';
+  }
+  function teamName(team, fsName, weight, color){
+    return '<span class="wc-team-name" role="button" tabindex="0" data-team="'+esc(team)+'" title="查看 '+esc(team)+' 本届全部比赛" style="min-width:0;font-size:'+fsName+';font-weight:'+weight+';color:'+color+';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(team)+'</span>';
+  }
+  function bannerTeamName(team, fsName, weight, color){
+    return '<span class="wc-team-name" role="button" tabindex="0" data-team="'+esc(team)+'" title="查看 '+esc(team)+' 本届全部比赛" style="flex:none;font-size:'+fsName+';font-weight:'+weight+';color:'+color+';white-space:nowrap;overflow:visible;text-overflow:clip;">'+esc(team)+'</span>';
+  }
+  function groupTomorrowBadge(g){
+    if(!g || !g.hasTomorrow) return '';
+    return '<span data-tomorrow-group="1" title="本组明天有比赛" style="display:inline-flex;align-items:center;gap:4px;line-height:1;padding:4px 8px;border-radius:7px;background:#F1E2D8;color:#B0552F;border:1px solid #E7C7B5;font-size:10.5px;font-weight:800;white-space:nowrap;">'+esc(g.tomorrowLabel)+'</span>';
+  }
+  function stageLabel(m){
+    if(m.stage==='group') return (m.group||'')+'组 · 第'+(m.round||'')+'轮';
+    return ({ r32:'1/16 决赛', r16:'1/8 决赛', qf:'1/4 决赛', sf:'半决赛', third:'季军赛', final:'决赛' })[m.stage] || m.stage;
+  }
   function off(v){ return (OFF[v] != null) ? OFF[v] : -5; }
   function bj(m){
     var p = m.date.split('-').map(Number);
@@ -2529,6 +2864,12 @@ window.WORLDCUP_PREDICTIONS = [
     return { bar:'#D8D2C5', rowBg:'transparent' };
   }
   function gd(n){ return (n>0?'+':'') + n; }
+  // 出线状态标记:形状冗余(实心圆=出线 / 空心环=待定 / 横杠=淘汰),不只靠绿/金/灰区分,色盲也能读
+  function qualMark(q, sz){ sz = sz||8; var base='display:inline-block;flex:none;vertical-align:middle;box-sizing:border-box;';
+    if(q==='q') return '<span aria-hidden="true" style="'+base+'width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:'+C.green+';"></span>';
+    if(q==='p') return '<span aria-hidden="true" style="'+base+'width:'+sz+'px;height:'+sz+'px;border-radius:50%;border:2px solid '+C.gold+';"></span>';
+    return '<span aria-hidden="true" style="'+base+'width:'+(sz+2)+'px;height:2px;border-radius:1px;background:#BDB6A6;"></span>';
+  }
   function wdlOf(h,a){ return h>a?'主胜':(h<a?'客胜':'平'); }
   function gdColor(n){ return n>0 ? C.green : (n<0 ? C.clay : C.mut); }
   function fmtMs(ms){
@@ -2545,6 +2886,13 @@ window.WORLDCUP_PREDICTIONS = [
     try { return new Date(now).toLocaleDateString('en-CA',{ timeZone:'Asia/Shanghai' }); }
     catch(e){ return ''; }
   }
+  function addDaysYmd(ymd, days){
+    var p = String(ymd||'').split('-').map(Number);
+    if(p.length!==3 || !p[0] || !p[1] || !p[2]) return '';
+    var d = new Date(Date.UTC(p[0], p[1]-1, p[2]) + days*86400000);
+    return d.getUTCFullYear()+'-'+String(d.getUTCMonth()+1).padStart(2,'0')+'-'+String(d.getUTCDate()).padStart(2,'0');
+  }
+  function bjTomorrow(){ return addDaysYmd(bjToday(), 1); }
   function toggleExp(id){ var e=Object.assign({}, state.exp||{}); e[id]=!e[id]; state.exp=e; render(); }
   function analysis(pk){
     if(!pk || !pk.an) return null;
@@ -2592,6 +2940,7 @@ window.WORLDCUP_PREDICTIONS = [
         var hitSc = played ? leg.scores.find(function(s){ return s.s===(m.home_score+':'+m.away_score); }) : null;
         if(hitSc) prod*=hitSc.o; else allHit=false;
         o.scoresStr = leg.scores.map(function(s){ return s.s+'@'+fmtOdds(s.o); }).join('  ');
+        o.scores = leg.scores.map(function(s){ return { s:s.s, o:fmtOdds(s.o), hit:(played && s.s===actual) }; });
         o.mark = hitSc ? '✓' : (played ? '✗' : '·');
         o.markColor = hitSc ? C.green : (played ? C.red : C.mut);
       } else {
@@ -2604,16 +2953,18 @@ window.WORLDCUP_PREDICTIONS = [
     var win = settledAll && allHit;
     var payout = (win && t.mult) ? 2*t.mult*prod : 0;
     var profit = settledAll ? Math.round((payout - (t.stake||0))*100)/100 : null;
-    var pending = dayStatus==='pending' || !settledAll;
+    var dayPending = dayStatus==='pending';
+    // 当日已结算、但本票是玩法/自购(无逐场比分可自动判定)→ 计入当日总账,不再矛盾地显示「待结算」
+    var manualOnly = !dayPending && !settledAll;
     return {
       name:t.name, hasTag: !!(t.rec||t.self), tag: t.rec?'推荐':(t.self?'自购':''),
       wayLabel: (t.way||'') + (t.mult? (' · '+t.mult+' 倍') : ''),
       betsLabel: (t.bets!=null? t.bets:'—')+' 注', stakeLabel: (t.stake!=null? t.stake:'—')+'¥',
       maxLabel: (t.max!=null? (fmtMoney(t.max)+'¥') : '—'),
       legs:legs, settledAll:settledAll, win:win, isSelf:isSelf,
-      statusLabel: pending ? '待结算' : (win?'中奖':'未中'),
-      statusBg: pending ? C.claySoft : (win?C.greenSoft:'#F0E2E0'),
-      statusColor: pending ? C.clay : (win?C.green:C.red),
+      statusLabel: dayPending ? '待结算' : manualOnly ? '玩法 · 计入当日' : (win?'✓ 中奖':'✗ 未中'),
+      statusBg: dayPending ? C.claySoft : manualOnly ? '#ECE6DA' : (win?C.greenSoft:'#F0E2E0'),
+      statusColor: dayPending ? C.clay : manualOnly ? C.mut : (win?C.green:'#9A5A50'),
       payoutLabel: settledAll ? (win? ('派奖 '+fmtMoney(payout)+'¥') : '派奖 0¥') : '',
       profitLabel: profit!=null ? ((profit>=0?'+':'')+profit.toFixed(2)+'¥') : '',
       profitColor: (profit||0)>=0 ? C.green : C.red
@@ -2628,7 +2979,7 @@ window.WORLDCUP_PREDICTIONS = [
       var picks = p.picks || [];
       var findPick = function(m){ return picks.find(function(pk){ return pk.home===m.home_zh && pk.away===m.away_zh; }); };
       var wHit=0, sHit=0, settled=0;
-      var matches = dayMs.map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return a.k-b.k; }).map(function(x){
+      var matches = dayMs.map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return b.k-a.k; }).map(function(x){
         var c = card(x.m), pk = findPick(x.m);
         c.hasPick = !!pk;
         c.eid = p.date+'|'+x.m.home_zh+'|'+x.m.away_zh;
@@ -2661,12 +3012,13 @@ window.WORLDCUP_PREDICTIONS = [
       var dayNet = daySettled ? Math.round(((ld.payout||0)-dayStake)*100)/100 : null;
       var grps = Array.from(new Set(dayMs.filter(function(m){ return m.group; }).map(function(m){ return m.group; })));
       var rounds = Array.from(new Set(dayMs.filter(function(m){ return m.round; }).map(function(m){ return m.round; })));
+      var hasUnplayedMatches = dayMs.some(function(m){ return m.home_score == null || m.away_score == null; });
       var dt = p.date.split('-').map(Number);
       var wd = ['周日','周一','周二','周三','周四','周五','周六'][new Date(Date.UTC(dt[0],dt[1]-1,dt[2])).getUTCDay()];
       return { date:p.date, dateShort:dt[1]+'月'+dt[2]+'日', wd:wd, url:p.url, reviewUrl:p.reviewUrl||'#',
         hasReview: !!p.reviewUrl,
         groupsLabel: grps.length ? (grps.join(' / ')+' 组'+(rounds.length?(' · 第 '+rounds[0]+' 轮'):'')) : '淘汰赛',
-        count: matches.length+' 场', matches:matches, isToday: p.date===today,
+        count: matches.length+' 场', matches:matches, isToday: p.date===today, hasUnplayedMatches: hasUnplayedMatches,
         tickets:tickets, hasTickets: tickets.length>0,
         comboHeadLabel: tickets.length ? ('比分金字塔 · '+tickets.length+' 张 · 投 '+dayStake+'¥'+(dayPending?' · 待开奖':(daySettled?' · 已结算':''))) : '',
         hasStats: settled>0,
@@ -2688,7 +3040,7 @@ window.WORLDCUP_PREDICTIONS = [
       isBracket:false, isStandings:false, isData:false, isPredict:false,
       hasBanner:false, banner:[], groups:[], bracket:[], overall:[], stats:[], firepower:[], dailyPL:[],
       predictions:[], todayPred:null, hasTodayPred:false, record:null, hasRecord:false,
-      clockStr:'—', lastSyncStr:'—', syncText:'连接中…', syncDot:C.gold,
+      clockStr:'—', lastSyncStr:'—', syncText:'连接中…', syncDot:C.gold, syncTitle:'当前使用页面内联数据',
       spinStyle:'display:inline-block;', xhsUrl:XHS,
       tabs:[
         { key:'bracket', label:'对阵全景', icon:'◳', bg: st.tab==='bracket'? C.ink:'#FBFAF5', color: st.tab==='bracket'? C.paper:C.ink, border: st.tab==='bracket'? C.ink:'#E4DECF' },
@@ -2702,19 +3054,30 @@ window.WORLDCUP_PREDICTIONS = [
     // prediction report links by Beijing date
     var predByDate = {}; (PRED||[]).forEach(function(p){ predByDate[p.date] = p.url; });
     var linkFor = function(c){ var u = predByDate[c.ymd]; if(u){ c.url=u; c.linkTag='✎ 预测'; c.linkColor=C.clay; } else { c.linkTag='▶ 直播'; c.linkColor='#a89f90'; } return c; };
+    var tomorrowY = bjTomorrow();
 
     // groups + standings
     var groups = GROUPS.map(function(letter){
       var rows0 = standings(letter);
       var played = DATA.schedule.filter(function(m){ return m.stage==='group'&&m.group===letter&&m.home_score!=null; }).length;
+      var tomorrowMatches = DATA.schedule.filter(function(m){ return m.stage==='group'&&m.group===letter&&bj(m).ymd===tomorrowY; })
+        .map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return b.k-a.k; }).map(function(x){ return x.m; });
+      var tomorrowByTeam = {};
+      tomorrowMatches.forEach(function(m){
+        var b = bj(m);
+        tomorrowByTeam[m.home_zh] = { time:b.hm, opponent:m.away_zh };
+        tomorrowByTeam[m.away_zh] = { time:b.hm, opponent:m.home_zh };
+      });
       var rows = rows0.map(function(r,i){
-        var rs = rowStyle(i);
+        var rs = rowStyle(i), tm = tomorrowByTeam[r.t] || null;
         return { rank:i+1, flag:flag(r.t), name:r.t, P:r.P, W:r.W, D:r.D, L:r.L,
-          GD:gd(r.GD), gdColor:gdColor(r.GD), Pts:r.Pts, bar:rs.bar, rowBg:rs.rowBg };
+          GD:gd(r.GD), gdColor:gdColor(r.GD), Pts:r.Pts, bar:rs.bar, rowBg:rs.rowBg,
+          hasTomorrow: !!tm, tomorrowLabel: tm ? ('明日 '+tm.time) : '', tomorrowTitle: tm ? ('明天 '+tm.time+' 对 '+tm.opponent) : '' };
       });
       var fixtures = DATA.schedule.filter(function(m){ return m.stage==='group'&&m.group===letter; })
-        .map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return a.k-b.k; }).map(function(x){ return linkFor(card(x.m)); });
-      return { letter:letter, label:letter+' 组', progress: played+'/6', rows:rows, fixtures:fixtures };
+        .map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return b.k-a.k; }).map(function(x){ return linkFor(card(x.m)); });
+      return { letter:letter, label:letter+' 组', progress: played+'/6', rows:rows, fixtures:fixtures,
+        hasTomorrow: tomorrowMatches.length>0, tomorrowCount: tomorrowMatches.length, tomorrowLabel: tomorrowMatches.length ? ('明日 '+tomorrowMatches.length+'场') : '' };
     });
 
     // overall
@@ -2727,12 +3090,15 @@ window.WORLDCUP_PREDICTIONS = [
       rank:i+1, flag:flag(r.t), name:r.t, group:r.group, P:r.P, W:r.W, D:r.D, L:r.L,
       GD:gd(r.GD), gdColor:gdColor(r.GD), Pts:r.Pts,
       dot: r.gpos<2 ? C.green : (r.gpos===2 ? C.gold : '#D8D2C5'),
+      qual: r.gpos<2 ? 'q' : (r.gpos===2 ? 'p' : 'o'),
       rowBg: i%2 ? 'rgba(244,241,234,.5)' : 'transparent'
     }; });
+    // 本届积分排名映射（球队中文名 → 总积分榜名次），供卡片「本届 N」徽章使用
+    TRANK = {}; overall.forEach(function(o){ TRANK[o.name] = o.rank; });
 
     // bracket
     var byStage = function(s){ return DATA.schedule.filter(function(m){ return m.stage===s; })
-      .map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return a.k-b.k; }).map(function(x){ return card(x.m); }); };
+      .map(function(m){ return { m:m, k:bj(m).ms }; }).sort(function(a,b){ return b.k-a.k; }).map(function(x){ return card(x.m); }); };
     var r32=byStage('r32'), r16=byStage('r16'), qf=byStage('qf'), sf=byStage('sf'), fin=byStage('final'), third=byStage('third');
     var bracket = [
       { label:'32 强', count:r32.length+' 场', cells:r32 },
@@ -2742,12 +3108,34 @@ window.WORLDCUP_PREDICTIONS = [
       { label:'决赛',  count:'冠军 · 季军', cells:fin.concat(third) }
     ];
 
+    // schedule（日期优先视图：按北京日期分组）
+    var dayMap = {}, dayOrder = [];
+    DATA.schedule.forEach(function(m){
+      var b = bj(m), y = b.ymd;
+      if(!dayMap[y]){ dayMap[y] = { ymd:y, md:b.md, wd:b.wd, items:[] }; dayOrder.push(y); }
+      dayMap[y].items.push({ m:m, k:b.ms });
+    });
+    dayOrder.sort(function(a,b){ return b.localeCompare(a); });
+    var todayY = bjToday();
+    var schDay = st.schDay;
+    if(!schDay || dayOrder.indexOf(schDay) < 0){
+      schDay = dayOrder.indexOf(todayY) >= 0 ? todayY
+        : (dayOrder.filter(function(y){ return y >= todayY; }).sort()[0] || dayOrder[0] || '');
+    }
+    var schDays = dayOrder.map(function(y){
+      var d = dayMap[y], played = d.items.filter(function(it){ return it.m.home_score != null; }).length;
+      return { ymd:y, md:d.md, wd:d.wd, n:d.items.length, count:d.items.length+' 场',
+        active: y===schDay, isToday: y===todayY, isPast: (y < todayY && played === d.items.length) };
+    });
+    var schMatches = (dayMap[schDay] ? dayMap[schDay].items.slice().sort(function(a,b){ return b.k-a.k; }) : [])
+      .map(function(it){ var c = linkFor(card(it.m)); c.stage = stageLabel(it.m); return c; });
+    var schedule = { days: schDays, matches: schMatches, hasDays: schDays.length>0,
+      sel: (dayMap[schDay] ? { ymd:schDay, md:dayMap[schDay].md, wd:dayMap[schDay].wd, count:dayMap[schDay].items.length } : null) };
+
     // banner
     var sched = DATA.schedule.map(function(m,i){ return { m:m, i:i, ph:phase(m), k:bj(m).ms }; });
-    var live = sched.filter(function(x){ return x.ph==='live'; });
-    var soon = sched.filter(function(x){ return x.ph==='soon'; }).sort(function(a,b){ return a.k-b.k; });
-    var up = sched.filter(function(x){ return x.ph==='upcoming'; }).sort(function(a,b){ return a.k-b.k; });
-    var pick = live.concat(soon, up).slice(0,10);
+    var bannerMatches = sched.filter(function(x){ return bj(x.m).ymd===tomorrowY; }).sort(function(a,b){ return b.k-a.k; });
+    var pick = bannerMatches;
     var banner = pick.map(function(x){
       var b=bj(x.m), isLive=x.ph==='live', isSoon=x.ph==='soon';
       return { key:'b'+x.i, fh:flag(x.m.home_zh), hn:x.m.home_zh, fa:flag(x.m.away_zh), an:x.m.away_zh,
@@ -2781,26 +3169,31 @@ window.WORLDCUP_PREDICTIONS = [
     var ledgerDays = ledgerDayList();
     var plDays = ledgerDays.slice().sort(function(a,b){ return b.date.localeCompare(a.date); }); // 降序：最近日期在上
     var maxAbs = 1;
-    plDays.forEach(function(d){ if(d.status==='settled'){ var n=Math.abs((d.payout||0)-(d.stake||0)); if(n>maxAbs) maxAbs=n; } });
+    plDays.forEach(function(d){ if(d.status==='settled'||d.status==='pending'){ var n=Math.abs((d.payout||0)-(d.stake||0)); if(n>maxAbs) maxAbs=n; } });
     var dailyPL = plDays.map(function(d){
       var dt=d.date.split('-').map(Number);
       var settled = d.status==='settled';
-      var net = settled ? Math.round(((d.payout||0)-(d.stake||0))*100)/100 : null;
+      var pending = d.status==='pending';
+      // 待开奖日按口径「收入暂记 0」算出暂记净额(开奖后回填),让列表逐日加总 = 头部净盈亏
+      var net = (settled||pending) ? Math.round(((d.payout||0)-(d.stake||0))*100)/100 : null;
       return {
         date: dt[1]+'/'+dt[2], stakeLabel: '投 '+(d.stake||0)+(d.payout!=null?(' · 收 '+fmtMoney(d.payout)):''),
-        nobet: d.status==='nobet', pending: d.status==='pending', settled: settled,
-        netLabel: net!=null ? ((net>=0?'+':'')+net.toFixed(0)+'¥') : (d.status==='pending'?'待开奖':(d.status==='nobet'?'未下注':'—')),
-        netColor: net!=null ? (net>=0?C.green:C.clay) : C.mut,
-        barW: net!=null ? (Math.round(Math.abs(net)/maxAbs*100)+'%') : '0%',
-        barColor: net!=null ? (net>=0?C.green:C.clay) : '#D8D2C5'
+        nobet: d.status==='nobet', pending: pending, settled: settled,
+        netLabel: settled ? ((net>=0?'+':'')+net.toFixed(0)+'¥')
+                : pending ? (net.toFixed(0)+'¥ 暂记')
+                : (d.status==='nobet'?'未下注':'—'),
+        netColor: settled ? (net>=0?C.green:C.clay) : C.mut,
+        barW: (net!=null) ? (Math.round(Math.abs(net)/maxAbs*100)+'%') : '0%',
+        barColor: settled ? (net>=0?C.green:C.clay) : pending ? '#C9C1B2' : '#D8D2C5'
       };
     });
 
     // predictions
-    var preds = predictions();
+    var preds = predictions().sort(function(a,b){ return b.date.localeCompare(a.date); });
     var todayBJ = bjToday();
-    var todayPred = preds.find(function(p){ return p.isToday; });
-    if(!todayPred){ todayPred = preds.filter(function(p){ return p.date>=todayBJ; }).sort(function(a,b){ return a.date.localeCompare(b.date); })[0] || null; }
+    var upcomingPreds = preds.filter(function(p){ return p.date>=todayBJ && p.hasUnplayedMatches; })
+      .sort(function(a,b){ return a.date.localeCompare(b.date); });
+    var todayPred = upcomingPreds[0] || preds.find(function(p){ return p.isToday; }) || null;
     // 本届战绩 · 真源台账（口径同复盘报告：净盈亏 = 已兑奖 − 总投入；待开奖日收入按 0 计入，开奖后回填）
     var rSettledDays=0, rStake=0, rPayout=0, pendDays=[], pendStake=0;
     ledgerDays.forEach(function(d){
@@ -2823,17 +3216,33 @@ window.WORLDCUP_PREDICTIONS = [
       hasPending: pendDays.length>0, pendLabel: pendDays.length? (pendDays.length+' 天待开奖 · 投 '+pendStake+'¥') : ''
     };
 
+    var liveSources = (LIVE_STATUS || []).map(function(s){
+      var status = s.status || 'unknown';
+      return {
+        name: s.name || 'unknown',
+        status: status,
+        detail: s.detail || '',
+        rows: s.rows,
+        updated: s.updated || '',
+        color: status === 'ok' ? C.green : (status === 'fallback' ? C.gold : C.clay),
+        bg: status === 'ok' ? '#EAF2E8' : (status === 'fallback' ? '#F5E7C5' : '#F1E2D8'),
+        label: status === 'ok' ? '已更新' : (status === 'fallback' ? '已降级' : '失败')
+      };
+    });
+
     return Object.assign({}, base, {
       ready:true, loading:false,
       isBracket: st.tab==='bracket', isStandings: st.tab==='standings', isData: st.tab==='data', isPredict: st.tab==='predict',
-      brView: st.brView, stView: st.stView,
+      brView: st.brView, stView: st.stView, schedule: schedule,
       predictions: preds, todayPred:todayPred, hasTodayPred: !!todayPred,
       record:record, hasRecord: record.settledDays>0,
-      hasBanner: banner.length>0, banner:banner, groups:groups, bracket:bracket, overall:overall, stats:stats, firepower:firepower, dailyPL:dailyPL,
+      hasBanner: banner.length>0, banner:banner, bannerExpanded: !!(st.exp && st.exp.banner), groups:groups, bracket:bracket, overall:overall, stats:stats, firepower:firepower, dailyPL:dailyPL,
+      liveSources: liveSources, hasLiveSources: liveSources.length>0, oddsCount: ODDS && ODDS.raw ? 1 : 0,
       clockStr: fmtClock(now),
       lastSyncStr: st.lastSync? fmtClock(st.lastSync) : '—',
-      syncText: st.syncing? '正在同步…' : '已同步官方数据',
-      syncDot: st.syncing? C.gold : C.green,
+      syncText: syncLabel(),
+      syncDot: syncDot(),
+      syncTitle: syncTitle(),
       spinStyle: st.syncing? 'display:inline-block;animation:wcspin .8s linear infinite;' : 'display:inline-block;'
     });
   }
@@ -2849,7 +3258,7 @@ window.WORLDCUP_PREDICTIONS = [
           '</div>'+
           '<div>'+
             '<div style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:21px;line-height:1.05;letter-spacing:-.3px;">2026 世界杯 · 对阵全景</div>'+
-            '<div style="font-size:11.5px;color:#8C8478;font-weight:500;letter-spacing:.3px;margin-top:1px;">美加墨 FIFA World Cup · 48 队 · 104 场</div>'+
+            '<div class="wc-hdr-sub" style="font-size:11.5px;color:#8C8478;font-weight:500;letter-spacing:.3px;margin-top:1px;">美加墨 FIFA World Cup · 48 队 · 104 场</div>'+
           '</div>'+
         '</div>'+
         '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">'+
@@ -2857,17 +3266,17 @@ window.WORLDCUP_PREDICTIONS = [
             '<span id="wc-clock" style="font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:600;color:#2A2622;">'+esc(vm.clockStr)+'</span>'+
             '<span style="font-size:10px;color:#8C8478;letter-spacing:.4px;">北京时间</span>'+
           '</div>'+
-          '<div style="display:flex;align-items:center;gap:8px;padding:7px 11px;background:#FBFAF5;border:1px solid #E4DECF;border-radius:10px;">'+
+          '<div class="wc-hdr-sync" title="'+esc(vm.syncTitle)+'" style="display:flex;align-items:center;gap:8px;padding:7px 11px;background:#FBFAF5;border:1px solid #E4DECF;border-radius:10px;">'+
             '<span style="width:8px;height:8px;border-radius:50%;background:'+vm.syncDot+';animation:wcpulse 1.6s ease-in-out infinite;flex:none;"></span>'+
             '<div style="display:flex;flex-direction:column;line-height:1.2;">'+
               '<span style="font-size:10px;color:#8C8478;letter-spacing:.3px;">'+esc(vm.syncText)+'</span>'+
               '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;">'+esc(vm.lastSyncStr)+'</span>'+
             '</div>'+
-            '<button data-action="refresh" title="手动同步" data-hover="background:#F1E2D8;color:#C0613B;border-color:#E3C8B8" style="margin-left:2px;width:26px;height:26px;border-radius:7px;border:1px solid #E4DECF;background:#F4F1EA;color:#8C8478;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none;">'+
+            '<button data-action="refresh" title="手动同步" aria-label="手动同步数据" data-hover="background:#F1E2D8;color:#C0613B;border-color:#E3C8B8" style="margin-left:2px;width:26px;height:26px;border-radius:7px;border:1px solid #E4DECF;background:#F4F1EA;color:#8C8478;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none;">'+
               '<span style="'+vm.spinStyle+'">⟳</span>'+
             '</button>'+
           '</div>'+
-          '<a href="'+vm.xhsUrl+'" target="_blank" rel="noopener" data-hover="background:#e51e3a" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:#FF2442;color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:13px;box-shadow:0 2px 9px rgba(255,36,66,.32);">'+
+          '<a href="'+safeUrl(vm.xhsUrl)+'" target="_blank" rel="noopener" data-hover="background:#e51e3a" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:#FF2442;color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:13px;box-shadow:0 2px 9px rgba(255,36,66,.32);">'+
             '<span style="width:7px;height:7px;border-radius:50%;background:#fff;animation:wcpulse 1.3s ease-in-out infinite;"></span>'+
             '小红书看直播'+
           '</a>'+
@@ -2877,27 +3286,27 @@ window.WORLDCUP_PREDICTIONS = [
   }
 
   function bannerLeg(b){
-    return '<a href="'+b.url+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;padding:0 18px;height:42px;border-right:1px solid rgba(244,241,234,.12);text-decoration:none;color:#F4F1EA;">'+
-      '<span style="font-size:10px;font-weight:700;letter-spacing:.5px;padding:3px 7px;border-radius:5px;background:'+b.tagBg+';color:#fff;">'+esc(b.tag)+'</span>'+
-      '<span style="font-size:13px;">'+b.fh+' '+esc(b.hn)+'</span>'+
-      '<span style="font-size:10px;color:#8C8478;">vs</span>'+
-      '<span style="font-size:13px;">'+esc(b.an)+' '+b.fa+'</span>'+
-      '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11.5px;color:#b8b0a2;">'+esc(b.timeStr)+'</span>'+
-      '<span class="wc-cd" data-k="'+b._k+'" data-live="'+(b._live?1:0)+'" style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;color:'+b.cdColor+';">'+esc(b.cd)+'</span>'+
-      '<span style="font-size:11.5px;color:#FF6b7f;font-weight:600;">看直播 ›</span>'+
+    return '<a class="wc-banner-leg" href="'+safeUrl(b.url)+'" target="_blank" rel="noopener" data-hover="background:rgba(255,255,255,.06)" style="min-width:0;display:flex;align-items:center;gap:9px;padding:8px 12px;border-left:1px solid rgba(244,241,234,.1);text-decoration:none;color:#F4F1EA;">'+
+      '<span style="flex:none;font-size:9.5px;font-weight:700;letter-spacing:.4px;padding:3px 7px;border-radius:5px;background:'+b.tagBg+';color:#fff;">'+esc(b.tag)+'</span>'+
+      '<span style="flex:none;display:inline-flex;align-items:center;gap:5px;font-size:12.5px;white-space:nowrap;">'+b.fh+' '+bannerTeamName(b.hn, '12.5px', '500', '#F4F1EA')+'</span>'+
+      '<span style="flex:none;font-size:10px;color:#8C8478;">vs</span>'+
+      '<span style="flex:none;display:inline-flex;align-items:center;gap:5px;font-size:12.5px;white-space:nowrap;">'+bannerTeamName(b.an, '12.5px', '500', '#F4F1EA')+' '+b.fa+'</span>'+
+      '<span style="flex:none;font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#b8b0a2;">'+esc(b.timeStr)+'</span>'+
+      '<span class="wc-cd" data-k="'+b._k+'" data-live="'+(b._live?1:0)+'" style="flex:none;font-family:\'Spline Sans Mono\',monospace;font-size:11.5px;font-weight:700;color:'+b.cdColor+';">'+esc(b.cd)+'</span>'+
     '</a>';
   }
   function vBanner(vm){
     if(!vm.hasBanner) return '';
-    var legs = each(vm.banner, bannerLeg);
-    return '<div style="background:#2A2622;color:#F4F1EA;display:flex;align-items:stretch;overflow:hidden;border-bottom:1px solid #1c1916;">'+
-      '<div style="flex:none;display:flex;align-items:center;gap:8px;padding:0 16px;background:#D6453F;font-weight:700;font-size:12.5px;letter-spacing:.5px;z-index:2;box-shadow:6px 0 14px rgba(42,38,34,.6);">'+
-        '<span style="width:8px;height:8px;border-radius:50%;background:#fff;animation:wcpulse 1s ease-in-out infinite;"></span>赛事提醒'+
-      '</div>'+
-      '<div style="flex:1;overflow:hidden;display:flex;align-items:center;">'+
-        '<div class="wc-mq" style="display:inline-flex;align-items:center;white-space:nowrap;animation:wcmarquee 48s linear infinite;will-change:transform;">'+
-          legs + legs +
+    var items = vm.bannerExpanded ? vm.banner : vm.banner.slice(0,3);
+    return '<div style="background:#2A2622;color:#F4F1EA;border-bottom:1px solid #1c1916;">'+
+      '<div class="wc-banner-row" style="max-width:1340px;margin:0 auto;display:flex;align-items:stretch;gap:0;padding:0 24px;">'+
+        '<div class="wc-banner-label" style="flex:none;display:flex;align-items:center;gap:8px;padding:0 14px;background:#D6453F;font-weight:700;font-size:12px;letter-spacing:.5px;">'+
+          '<span style="width:8px;height:8px;border-radius:50%;background:#fff;animation:wcpulse 1s ease-in-out infinite;"></span>赛事提醒'+
         '</div>'+
+        '<div class="wc-banner-grid" style="flex:1;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));overflow:visible;">'+
+          each(items, bannerLeg)+
+        '</div>'+
+        (vm.banner.length>3 ? '<button data-toggle="banner" data-hover="background:#4A433B;color:#fff" style="flex:none;border:0;border-left:1px solid rgba(244,241,234,.12);background:#332E29;color:#D8D2C5;padding:0 13px;font-family:inherit;font-size:11.5px;font-weight:700;cursor:pointer;">'+(vm.bannerExpanded?'收起':'展开全部 '+vm.banner.length)+'</button>' : '')+
       '</div>'+
     '</div>';
   }
@@ -2914,10 +3323,10 @@ window.WORLDCUP_PREDICTIONS = [
 
   // 段落内的子视图切换控件（如 总积分榜 / 分组积分榜、小组赛 / 淘汰赛）。attr 为 data-* 属性名，items[i]={key,label,count?,active}
   function subTabs(attr, items){
-    return '<div style="display:inline-flex;gap:4px;padding:4px;background:#EAE3D6;border:1px solid #E0D8C8;border-radius:12px;">'+
+    return '<div class="wc-subtabs" style="display:inline-flex;gap:4px;padding:4px;background:#EAE3D6;border:1px solid #E0D8C8;border-radius:12px;">'+
       each(items, function(it){
         var on = it.active;
-        return '<button '+attr+'="'+esc(it.key)+'" style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border:0;border-radius:9px;background:'+(on?'#2A2622':'transparent')+';color:'+(on?'#F4F1EA':'#8C8478')+';font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;transition:all .15s;">'+
+        return '<button class="wc-subtab" '+attr+'="'+esc(it.key)+'" style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border:0;border-radius:9px;background:'+(on?'#2A2622':'transparent')+';color:'+(on?'#F4F1EA':'#8C8478')+';font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;transition:all .15s;">'+
           esc(it.label)+
           (it.count?('<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;font-weight:500;'+(on?'opacity:.75;':'color:#a89f90;')+'">'+esc(it.count)+'</span>'):'')+
         '</button>';
@@ -2934,8 +3343,8 @@ window.WORLDCUP_PREDICTIONS = [
 
   // a two-line score row used in group fixtures / bracket / predictions
   function teamLine(c, fsTeam, fsName, fsScore){
-    return '<div style="display:flex;align-items:center;gap:6px;"><span style="font-size:'+fsTeam+';">'+c.fh+'</span><span style="flex:1;font-size:'+fsName+';font-weight:'+c.hW+';color:'+c.hC+';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(c.hn)+'</span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:'+fsScore+';font-weight:700;color:'+c.hC+';">'+esc(c.hsStr)+'</span></div>'+
-      '<div style="display:flex;align-items:center;gap:6px;"><span style="font-size:'+fsTeam+';">'+c.fa+'</span><span style="flex:1;font-size:'+fsName+';font-weight:'+c.aW+';color:'+c.aC+';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(c.an)+'</span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:'+fsScore+';font-weight:700;color:'+c.aC+';">'+esc(c.asStr)+'</span></div>';
+    return '<div style="display:flex;align-items:center;gap:6px;"><span style="font-size:'+fsTeam+';">'+c.fh+'</span>'+teamName(c.hn, fsName, c.hW, c.hC)+rankBadge(c.hn)+trankBadge(c.hn)+'<span style="flex:1;"></span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:'+fsScore+';font-weight:700;color:'+c.hC+';">'+esc(c.hsStr)+'</span></div>'+
+      '<div style="display:flex;align-items:center;gap:6px;"><span style="font-size:'+fsTeam+';">'+c.fa+'</span>'+teamName(c.an, fsName, c.aW, c.aC)+rankBadge(c.an)+trankBadge(c.an)+'<span style="flex:1;"></span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:'+fsScore+';font-weight:700;color:'+c.aC+';">'+esc(c.asStr)+'</span></div>';
   }
 
   function vBracket(vm){
@@ -2944,7 +3353,8 @@ window.WORLDCUP_PREDICTIONS = [
     // today's prediction highlight
     if(vm.hasTodayPred){
       var tp = vm.todayPred;
-      out += '<a href="'+tp.url+'" target="_blank" rel="noopener"'+reportAttr(tp.url)+' data-hover="border-color:#C0613B" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:linear-gradient(100deg,#F1E2D8,#FBFAF5 70%);border:1px solid #E3C8B8;border-radius:15px;padding:15px 18px;margin:10px 0 22px;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(192,97,59,.08);">'+
+      var tpGroups = matchTimeGroups(tp.matches);
+      out += '<a class="wc-today-card" href="'+safeUrl(tp.url)+'" target="_blank" rel="noopener"'+reportAttr(tp.url)+' data-hover="border-color:#C0613B" style="display:flex;align-items:stretch;gap:16px;flex-wrap:wrap;background:linear-gradient(100deg,#F1E2D8,#FBFAF5 70%);border:1px solid #E3C8B8;border-radius:15px;padding:15px 18px;margin:10px 0 22px;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(192,97,59,.08);">'+
         '<div style="display:flex;align-items:center;gap:13px;flex:none;">'+
           '<span style="width:44px;height:44px;border-radius:11px;background:#C0613B;color:#F4F1EA;display:flex;align-items:center;justify-content:center;font-size:20px;flex:none;">✎</span>'+
           '<div>'+
@@ -2953,83 +3363,143 @@ window.WORLDCUP_PREDICTIONS = [
             '<div style="font-size:12px;color:#8C8478;margin-top:2px;">'+esc(tp.groupsLabel)+' · '+esc(tp.count)+'</div>'+
           '</div>'+
         '</div>'+
-        '<div style="flex:1;display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0;">'+
-          each(tp.matches, function(c){
-            return '<span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.7);border:1px solid #EADBCF;border-radius:9px;padding:6px 10px;font-size:12.5px;">'+
-              '<span>'+c.fh+'</span><span style="font-weight:600;">'+esc(c.hn)+'</span>'+
-              '<span style="color:#a89f90;">'+esc(c.hsStr)+':'+esc(c.asStr)+'</span>'+
-              '<span style="font-weight:600;">'+esc(c.an)+'</span><span>'+c.fa+'</span>'+
-            '</span>';
+        '<div data-today-pred-groups="1" style="flex:1;min-width:320px;display:flex;align-items:stretch;gap:8px;overflow-x:auto;padding-bottom:1px;">'+
+          each(tpGroups, function(g){
+            return '<div data-today-pred-time="'+esc(g.time)+'" style="flex:1 0 190px;min-width:190px;display:flex;flex-direction:column;gap:6px;background:rgba(255,255,255,.55);border:1px solid #EADBCF;border-radius:10px;padding:8px 9px;">'+
+              '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:11.5px;font-weight:800;color:#C0613B;line-height:1;">'+esc(g.time)+'</div>'+
+              each(g.matches, function(c){
+                return '<span style="white-space:nowrap;display:flex;align-items:center;gap:5px;min-width:0;font-size:12.2px;line-height:1.15;">'+
+                  '<span style="flex:none;">'+c.fh+'</span>'+teamName(c.hn, '12.2px', '600', '#2A2622')+
+                  '<span style="flex:none;color:#a89f90;font-family:\'Spline Sans Mono\',monospace;">'+esc(c.hsStr)+':'+esc(c.asStr)+'</span>'+
+                  teamName(c.an, '12.2px', '600', '#2A2622')+'<span style="flex:none;">'+c.fa+'</span>'+
+                '</span>';
+              })+
+            '</div>';
           })+
         '</div>'+
-        '<span style="flex:none;display:inline-flex;align-items:center;gap:6px;padding:10px 16px;background:#C0613B;color:#fff;border-radius:10px;font-weight:600;font-size:13.5px;">查看完整深度分析 →</span>'+
+        '<span style="flex:none;display:inline-flex;align-items:center;align-self:center;gap:6px;padding:10px 16px;background:#C0613B;color:#fff;border-radius:10px;font-weight:600;font-size:13.5px;">查看完整深度分析 →</span>'+
       '</a>';
     }
 
-    // 小组赛 / 淘汰赛 子视图切换（点击切换，二选一展示）
-    var isGroup = vm.brView !== 'knockout';
+    // 小组赛 / 淘汰赛 / 赛程 子视图切换（点击切换，单一展示）
+    var isSchedule = vm.brView === 'schedule';
+    var isKnock = vm.brView === 'knockout';
+    var isGroup = !isSchedule && !isKnock;
     out += '<div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:6px 0 18px;">'+
       subTabs('data-brview', [
         { key:'group', label:'小组赛', count:'12 组', active:isGroup },
-        { key:'knockout', label:'淘汰赛', count:'对阵树', active:!isGroup }
+        { key:'knockout', label:'淘汰赛', count:'对阵树', active:isKnock },
+        { key:'schedule', label:'赛程', count:'按日期', active:isSchedule }
       ])+
       ( isGroup
         ? '<div style="display:flex;align-items:center;gap:16px;font-size:11.5px;color:#8C8478;flex-wrap:wrap;">'+
-            '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#3F7A4E;"></span>小组前二 · 直接出线</span>'+
-            '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#B5862E;"></span>小组第三 · 争最佳第三</span>'+
-            '<span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:9px;height:9px;border-radius:2px;background:#D8D2C5;"></span>淘汰</span>'+
+            '<span style="display:inline-flex;align-items:center;gap:5px;">'+qualMark('q',9)+'出线</span>'+
+            '<span style="display:inline-flex;align-items:center;gap:5px;">'+qualMark('p',9)+'待定</span>'+
+            '<span style="display:inline-flex;align-items:center;gap:5px;">'+qualMark('o',9)+'淘汰</span>'+
           '</div>'
-        : '<span style="font-size:11.5px;color:#8C8478;">横向滑动查看完整晋级路线 →</span>'
+        : isKnock
+          ? '<span style="font-size:11.5px;color:#8C8478;">横向滑动查看完整晋级路线 →</span>'
+          : '<span style="font-size:11.5px;color:#8C8478;">点日期查看当天全部比赛 · 队名后 <span style="font-weight:700;color:#2A2622;">世界 n / 本届 n</span> 徽章分别为 FIFA 世界排名、本届积分排名</span>'
       )+
     '</div>';
 
-    if(isGroup){
-    out += '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(390px,1fr));gap:16px;">'+
-      each(vm.groups, function(g){
-        return '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
-          '<div style="display:flex;align-items:center;gap:10px;padding:13px 16px 11px;border-bottom:1px solid #EFEADD;">'+
-            '<span style="width:30px;height:30px;border-radius:8px;background:#2A2622;color:#F4F1EA;font-family:\'Source Serif 4\',serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;">'+g.letter+'</span>'+
+    // 赛程（日期优先）
+    if(isSchedule){
+      var sc = vm.schedule;
+      out += '<div id="wc-daystrip" style="display:flex;gap:8px;overflow-x:auto;padding:2px 2px 10px;">'+
+        each(sc.days, function(d){
+          var on = d.active;
+          return '<button data-schday="'+d.ymd+'"'+(on?' data-schactive="1"':'')+' style="flex:none;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:60px;padding:8px 10px;border-radius:12px;border:1px solid '+(on?'#2A2622':(d.isToday?'#C0613B':'#E4DECF'))+';background:'+(on?'#2A2622':'#FBFAF5')+';color:'+(on?'#F4F1EA':'#2A2622')+';cursor:pointer;font-family:inherit;transition:all .12s;'+((d.isPast&&!on)?'opacity:.55;':'')+'">'+
+            '<span style="font-size:9px;font-weight:600;letter-spacing:.3px;color:'+(on?'rgba(244,241,234,.72)':(d.isToday?'#C0613B':'#8C8478'))+';">'+(d.isToday?'今天':esc(d.wd))+'</span>'+
+            '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:15px;font-weight:700;line-height:1.15;">'+esc(d.md)+'</span>'+
+            '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:9px;'+(on?'opacity:.7;':'color:#a89f90;')+'">'+d.n+' 场</span>'+
+          '</button>';
+        })+
+      '</div>';
+      if(sc.sel){
+        out += '<div style="display:flex;align-items:baseline;gap:9px;margin:12px 2px 12px;">'+
+          '<span style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:20px;letter-spacing:-.3px;">'+esc(sc.sel.md)+' '+esc(sc.sel.wd)+'</span>'+
+          '<span style="font-size:12.5px;color:#8C8478;">共 '+sc.sel.count+' 场 · 北京时间</span>'+
+        '</div>'+
+        '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
+          each(sc.matches, function(c, i){
+            return '<a data-schedule-match-row="1" data-time-ms="'+esc(c._k)+'" href="'+safeUrl(c.url)+'" target="_blank" rel="noopener"'+reportAttr(c.url)+' data-hover="background:#F4F1EA" style="display:flex;align-items:center;gap:14px;padding:12px 16px;text-decoration:none;color:inherit;'+(i?'border-top:1px solid #EFEADD;':'')+'">'+
+              '<div style="flex:none;width:50px;text-align:center;">'+
+                '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:15.5px;font-weight:700;line-height:1;">'+esc(c.timeStr)+'</div>'+
+              '</div>'+
+              '<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;">'+ teamLine(c,'17px','14px','14px') +'</div>'+
+              '<div style="flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right;min-width:78px;">'+
+                '<span style="font-size:9.5px;font-weight:700;padding:3px 7px;border-radius:5px;background:'+c.phaseBg+';color:'+c.phaseColor+';'+c.ring+'">'+esc(c.phaseLabel)+'</span>'+
+                '<span style="font-size:10px;color:#8C8478;white-space:nowrap;">'+esc(c.stage)+'</span>'+
+                '<span style="font-size:9.5px;color:#a89f90;white-space:nowrap;">'+esc(c.venue)+' · '+esc(c.linkTag)+'</span>'+
+              '</div>'+
+            '</a>';
+          })+
+        '</div>';
+      } else {
+        out += '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;padding:30px;text-align:center;color:#8C8478;font-size:13px;">该日暂无比赛</div>';
+      }
+    }
+
+	    if(isGroup){
+	    out += '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(390px,100%),1fr));gap:16px;">'+
+	      each(vm.groups, function(g){
+	        var groupScheduleId = 'groupSchedule:' + g.letter;
+	        var groupScheduleOpen = !!(state.exp && state.exp[groupScheduleId]);
+	        var scheduleBody = groupScheduleOpen ? '<div data-group-schedule-body="1" style="padding:3px 0 0;">'+
+	          each(g.fixtures, function(f){
+            return '<a data-group-fixture-row="1" data-time-ms="'+esc(f._k)+'" href="'+safeUrl(f.url)+'" target="_blank" rel="noopener"'+reportAttr(f.url)+' data-hover="background:#F4F1EA" style="display:flex;align-items:center;gap:10px;padding:6px 4px;border-radius:8px;text-decoration:none;color:inherit;">'+
+	              '<div style="flex:none;width:60px;display:flex;flex-direction:column;line-height:1.25;">'+
+	                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:10.5px;color:#8C8478;">'+esc(f.dateStr)+'</span>'+
+	                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;">'+esc(f.timeStr)+'</span>'+
+	              '</div>'+
+	              '<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;">'+ teamLine(f,'14px','12.5px','12.5px') +'</div>'+
+	              '<span style="flex:none;display:inline-flex;flex-direction:column;align-items:flex-end;gap:3px;">'+
+	                '<span style="font-size:9.5px;font-weight:700;padding:3px 7px;border-radius:5px;background:'+f.phaseBg+';color:'+f.phaseColor+';'+f.ring+'">'+esc(f.phaseLabel)+'</span>'+
+	                '<span style="font-size:9px;font-weight:600;color:'+f.linkColor+';white-space:nowrap;">'+esc(f.linkTag)+'</span>'+
+	              '</span>'+
+	            '</a>';
+	          })+
+	        '</div>' : '';
+	        return '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
+	          '<div style="display:flex;align-items:center;gap:10px;padding:13px 16px 11px;border-bottom:1px solid #EFEADD;">'+
+	            '<span style="width:30px;height:30px;border-radius:8px;background:#2A2622;color:#F4F1EA;font-family:\'Source Serif 4\',serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;">'+g.letter+'</span>'+
             '<span style="font-weight:600;font-size:15px;">'+esc(g.label)+'</span>'+
+            groupTomorrowBadge(g)+
             '<span style="margin-left:auto;font-family:\'Spline Sans Mono\',monospace;font-size:10.5px;color:#8C8478;background:#F4F1EA;padding:3px 8px;border-radius:6px;">'+esc(g.progress)+'</span>'+
           '</div>'+
-          '<div style="padding:4px 8px 8px;">'+
-            '<div style="display:grid;grid-template-columns:20px 1fr 30px 30px 38px 34px;gap:0;align-items:center;padding:6px 8px 5px;font-size:10px;color:#8C8478;font-weight:600;letter-spacing:.4px;">'+
-              '<span></span><span></span><span style="text-align:center;">场</span><span style="text-align:center;">胜</span><span style="text-align:center;">净</span><span style="text-align:right;">积分</span>'+
+          '<div data-bracket-group-table="1" style="padding:4px 8px 8px;">'+
+            '<div style="display:grid;grid-template-columns:20px minmax(0,1fr) 26px 26px 26px 26px 36px 34px;gap:0;align-items:center;padding:6px 8px 5px;font-size:10px;color:#8C8478;font-weight:600;letter-spacing:.4px;">'+
+              '<span></span><span></span><span style="text-align:center;">场</span><span style="text-align:center;">胜</span><span style="text-align:center;">平</span><span style="text-align:center;">负</span><span style="text-align:center;">净</span><span style="text-align:right;">积分</span>'+
             '</div>'+
             each(g.rows, function(r){
-              return '<div style="display:grid;grid-template-columns:20px 1fr 30px 30px 38px 34px;gap:0;align-items:center;padding:7px 8px;border-radius:8px;border-left:3px solid '+r.bar+';background:'+r.rowBg+';margin-bottom:2px;">'+
+              return '<div style="display:grid;grid-template-columns:20px minmax(0,1fr) 26px 26px 26px 26px 36px 34px;gap:0;align-items:center;padding:7px 8px;border-radius:8px;border-left:3px solid '+r.bar+';background:'+r.rowBg+';margin-bottom:2px;">'+
                 '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;font-weight:600;">'+r.rank+'</span>'+
-                '<span style="display:flex;align-items:center;gap:7px;min-width:0;"><span style="font-size:17px;line-height:1;">'+r.flag+'</span><span style="font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(r.name)+'</span></span>'+
+                '<span style="display:flex;align-items:center;gap:6px;min-width:0;overflow:hidden;"><span style="font-size:17px;line-height:1;flex:none;">'+r.flag+'</span>'+teamName(r.name, '13.5px', '600', '#2A2622')+rankBadge(r.name)+trankBadge(r.name)+'</span>'+
                 '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.P+'</span>'+
                 '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.W+'</span>'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.D+'</span>'+
+                '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.L+'</span>'+
                 '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:'+r.gdColor+';">'+esc(r.GD)+'</span>'+
                 '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:14px;text-align:right;font-weight:700;color:#2A2622;">'+r.Pts+'</span>'+
               '</div>';
             })+
           '</div>'+
-          '<div style="padding:4px 12px 12px;">'+
-            '<div style="font-size:10.5px;color:#8C8478;font-weight:600;letter-spacing:.5px;padding:6px 2px;border-top:1px solid #EFEADD;">赛程 · 北京时间</div>'+
-            each(g.fixtures, function(f){
-              return '<a href="'+f.url+'" target="_blank" rel="noopener"'+reportAttr(f.url)+' data-hover="background:#F4F1EA" style="display:flex;align-items:center;gap:10px;padding:6px 4px;border-radius:8px;text-decoration:none;color:inherit;">'+
-                '<div style="flex:none;width:60px;display:flex;flex-direction:column;line-height:1.25;">'+
-                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:10.5px;color:#8C8478;">'+esc(f.dateStr)+'</span>'+
-                  '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;">'+esc(f.timeStr)+'</span>'+
-                '</div>'+
-                '<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;">'+ teamLine(f,'14px','12.5px','12.5px') +'</div>'+
-                '<span style="flex:none;display:inline-flex;flex-direction:column;align-items:flex-end;gap:3px;">'+
-                  '<span style="font-size:9.5px;font-weight:700;padding:3px 7px;border-radius:5px;background:'+f.phaseBg+';color:'+f.phaseColor+';'+f.ring+'">'+esc(f.phaseLabel)+'</span>'+
-                  '<span style="font-size:9px;font-weight:600;color:'+f.linkColor+';white-space:nowrap;">'+esc(f.linkTag)+'</span>'+
-                '</span>'+
-              '</a>';
-            })+
-          '</div>'+
-        '</div>';
-      })+
-    '</div>';
-    }
+	          '<div style="padding:4px 12px 12px;">'+
+	            '<button data-group-schedule-toggle="1" data-toggle="'+esc(groupScheduleId)+'" aria-expanded="'+(groupScheduleOpen?'true':'false')+'" data-hover="background:#F4F1EA" style="width:100%;display:flex;align-items:center;gap:8px;padding:8px 2px 7px;border:0;border-top:1px solid #EFEADD;background:transparent;color:#8C8478;cursor:pointer;font-family:inherit;text-align:left;">'+
+	              '<span style="font-size:10.5px;font-weight:600;letter-spacing:.5px;">赛程 · 北京时间</span>'+
+	              '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:10px;background:#F4F1EA;color:#8C8478;padding:2px 7px;border-radius:6px;">'+g.fixtures.length+'场</span>'+
+	              '<span style="margin-left:auto;font-size:11px;font-weight:700;color:#C0613B;">'+(groupScheduleOpen?'折叠赛程':'展开赛程')+' '+(groupScheduleOpen?'▴':'▾')+'</span>'+
+	            '</button>'+
+	            scheduleBody+
+	          '</div>'+
+	        '</div>';
+	      })+
+	    '</div>';
+	    }
 
     // knockout bracket
-    if(!isGroup){
+    if(isKnock){
     out += '<div style="border:1px solid #E8E2D4;border-radius:15px;background:#FBFAF5;overflow-x:auto;padding:18px;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
       '<div style="display:flex;gap:30px;min-width:max-content;align-items:stretch;">'+
         each(vm.bracket, function(rd){
@@ -3040,13 +3510,13 @@ window.WORLDCUP_PREDICTIONS = [
             '</div>'+
             '<div style="display:flex;flex-direction:column;justify-content:space-around;flex:1;gap:12px;">'+
               each(rd.cells, function(c){
-                return '<a href="'+c.url+'" target="_blank" rel="noopener" data-hover="border-color:#C0613B" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid '+c.cardBorder+';border-radius:11px;padding:9px 11px;'+c.cardRing+'">'+
+                return '<a href="'+safeUrl(c.url)+'" target="_blank" rel="noopener" data-hover="border-color:#C0613B" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid '+c.cardBorder+';border-radius:11px;padding:9px 11px;'+c.cardRing+'">'+
                   '<div style="display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:7px;">'+
                     '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:10px;color:#8C8478;">'+esc(c.dateStr)+' · '+esc(c.timeStr)+'</span>'+
                     '<span style="font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;background:'+c.phaseBg+';color:'+c.phaseColor+';'+c.ring+'">'+esc(c.phaseLabel)+'</span>'+
                   '</div>'+
-                  '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;"><span style="font-size:15px;">'+c.fh+'</span><span style="flex:1;font-size:12.5px;font-weight:'+c.hW+';color:'+c.hC+';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(c.hn)+'</span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:700;color:'+c.hC+';">'+esc(c.hsStr)+'</span></div>'+
-                  '<div style="display:flex;align-items:center;gap:6px;"><span style="font-size:15px;">'+c.fa+'</span><span style="flex:1;font-size:12.5px;font-weight:'+c.aW+';color:'+c.aC+';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(c.an)+'</span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:700;color:'+c.aC+';">'+esc(c.asStr)+'</span></div>'+
+                  '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;"><span style="font-size:15px;">'+c.fh+'</span>'+teamName(c.hn, '12.5px', c.hW, c.hC)+rankBadge(c.hn)+trankBadge(c.hn)+'<span style="flex:1;"></span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:700;color:'+c.hC+';">'+esc(c.hsStr)+'</span></div>'+
+                  '<div style="display:flex;align-items:center;gap:6px;"><span style="font-size:15px;">'+c.fa+'</span>'+teamName(c.an, '12.5px', c.aW, c.aC)+rankBadge(c.an)+trankBadge(c.an)+'<span style="flex:1;"></span><span style="font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:700;color:'+c.aC+';">'+esc(c.asStr)+'</span></div>'+
                   '<div style="font-size:9.5px;color:#a89f90;margin-top:6px;">'+esc(c.venue)+'</div>'+
                 '</a>';
               })+
@@ -3073,12 +3543,13 @@ window.WORLDCUP_PREDICTIONS = [
       '</div>';
 
     if(!isOverall){
-    out += '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(370px,1fr));gap:16px;">'+
+    out += '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(370px,100%),1fr));gap:16px;">'+
         each(vm.groups, function(g){
           return '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
             '<div style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid #EFEADD;">'+
               '<span style="width:28px;height:28px;border-radius:8px;background:#2A2622;color:#F4F1EA;font-family:\'Source Serif 4\',serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;">'+g.letter+'</span>'+
               '<span style="font-weight:600;font-size:15px;">'+esc(g.label)+'</span>'+
+              '<span style="margin-left:auto;">'+groupTomorrowBadge(g)+'</span>'+
             '</div>'+
             '<div style="padding:6px 10px 10px;">'+
               '<div style="display:grid;grid-template-columns:22px 1fr 26px 26px 26px 26px 44px 30px;gap:0;align-items:center;padding:6px 8px;font-size:10px;color:#8C8478;font-weight:600;">'+
@@ -3087,7 +3558,7 @@ window.WORLDCUP_PREDICTIONS = [
               each(g.rows, function(r){
                 return '<div style="display:grid;grid-template-columns:22px 1fr 26px 26px 26px 26px 44px 30px;gap:0;align-items:center;padding:8px;border-radius:8px;border-left:3px solid '+r.bar+';background:'+r.rowBg+';margin-bottom:2px;">'+
                   '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;font-weight:600;">'+r.rank+'</span>'+
-                  '<span style="display:flex;align-items:center;gap:7px;min-width:0;"><span style="font-size:17px;">'+r.flag+'</span><span style="font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(r.name)+'</span></span>'+
+                  '<span style="display:flex;align-items:center;gap:7px;min-width:0;overflow:hidden;"><span style="font-size:17px;flex:none;">'+r.flag+'</span>'+teamName(r.name, '13.5px', '600', '#2A2622')+rankBadge(r.name)+trankBadge(r.name)+'</span>'+
                   '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.P+'</span>'+
                   '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.W+'</span>'+
                   '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;text-align:center;color:#8C8478;">'+r.D+'</span>'+
@@ -3103,14 +3574,15 @@ window.WORLDCUP_PREDICTIONS = [
     }
 
     if(isOverall){
-    out += '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
-        '<div style="display:grid;grid-template-columns:42px 1fr 56px 42px 42px 42px 42px 50px 52px;gap:0;align-items:center;padding:11px 16px;background:#F1ECDF;font-size:11px;color:#8C8478;font-weight:600;letter-spacing:.3px;">'+
-          '<span>排名</span><span>球队</span><span style="text-align:center;">小组</span><span style="text-align:center;">场</span><span style="text-align:center;">胜</span><span style="text-align:center;">平</span><span style="text-align:center;">负</span><span style="text-align:center;">净球</span><span style="text-align:right;">积分</span>'+
+    out += '<div class="wc-overall-table" style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
+        '<div style="display:grid;grid-template-columns:42px 1fr 64px 56px 42px 42px 42px 42px 50px 52px;gap:0;align-items:center;padding:11px 16px;background:#F1ECDF;font-size:11px;color:#8C8478;font-weight:600;letter-spacing:.3px;">'+
+          '<span>排名</span><span>球队</span><span style="text-align:center;">世界排名</span><span style="text-align:center;">小组</span><span style="text-align:center;">场</span><span style="text-align:center;">胜</span><span style="text-align:center;">平</span><span style="text-align:center;">负</span><span style="text-align:center;">净球</span><span style="text-align:right;">积分</span>'+
         '</div>'+
         each(vm.overall, function(o){
-          return '<div style="display:grid;grid-template-columns:42px 1fr 56px 42px 42px 42px 42px 50px 52px;gap:0;align-items:center;padding:9px 16px;border-top:1px solid #EFEADD;background:'+o.rowBg+';">'+
-            '<span style="display:flex;align-items:center;gap:6px;"><span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;color:#8C8478;">'+o.rank+'</span><span style="width:6px;height:6px;border-radius:50%;background:'+o.dot+';"></span></span>'+
-            '<span style="display:flex;align-items:center;gap:9px;min-width:0;"><span style="font-size:18px;">'+o.flag+'</span><span style="font-size:14px;font-weight:600;">'+esc(o.name)+'</span></span>'+
+          return '<div style="display:grid;grid-template-columns:42px 1fr 64px 56px 42px 42px 42px 42px 50px 52px;gap:0;align-items:center;padding:9px 16px;border-top:1px solid #EFEADD;background:'+o.rowBg+';">'+
+            '<span style="display:flex;align-items:center;gap:6px;"><span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;color:#8C8478;">'+o.rank+'</span>'+qualMark(o.qual,8)+'</span>'+
+            '<span style="display:flex;align-items:center;gap:9px;min-width:0;"><span style="font-size:18px;">'+o.flag+'</span>'+teamName(o.name, '14px', '600', '#2A2622')+'</span>'+
+            '<span style="text-align:center;">'+rankNum(o.name)+'</span>'+
             '<span style="text-align:center;font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:#8C8478;">'+o.group+'</span>'+
             '<span style="text-align:center;font-family:\'Spline Sans Mono\',monospace;font-size:13px;color:#8C8478;">'+o.P+'</span>'+
             '<span style="text-align:center;font-family:\'Spline Sans Mono\',monospace;font-size:13px;color:#8C8478;">'+o.W+'</span>'+
@@ -3139,7 +3611,29 @@ window.WORLDCUP_PREDICTIONS = [
           '</div>';
         })+
       '</div>'+
-      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;">'+
+      '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;padding:14px 16px;margin:-8px 0 22px;">'+
+        '<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px;">'+
+          '<div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;">'+
+            '<span style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:16px;">实时数据源</span>'+
+            '<span style="font-size:11px;color:#8C8478;">刷新按钮与整点自动同步共用这一套源</span>'+
+          '</div>'+
+          '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;">实时赔率源 '+vm.oddsCount+'</span>'+
+        '</div>'+
+        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:9px;">'+
+          (vm.hasLiveSources ? each(vm.liveSources, function(src){
+            return '<div title="'+esc(src.detail)+'" style="border:1px solid #EFEADD;border-radius:10px;background:#FFFDF8;padding:10px 11px;min-width:0;">'+
+              '<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">'+
+                '<span style="width:8px;height:8px;border-radius:50%;background:'+src.color+';flex:none;"></span>'+
+                '<span style="font-weight:700;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(src.name)+'</span>'+
+                '<span style="margin-left:auto;font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:5px;background:'+src.bg+';color:'+src.color+';">'+esc(src.label)+'</span>'+
+              '</div>'+
+              '<div style="font-size:10.5px;color:#8C8478;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(src.detail || '—')+'</div>'+
+              '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:10px;color:#a89f90;margin-top:4px;">'+(src.rows!=null ? ('rows '+esc(src.rows)) : '')+(src.updated ? (' · '+esc(src.updated)) : '')+'</div>'+
+            '</div>';
+          }) : '<div style="font-size:12px;color:#8C8478;">尚未连接实时同步服务，当前使用页面内联数据。</div>')+
+        '</div>'+
+      '</div>'+
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:16px;align-items:start;">'+
         // firepower
         '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;">'+
           '<div style="padding:14px 16px 11px;border-bottom:1px solid #EFEADD;display:flex;align-items:baseline;gap:8px;">'+
@@ -3254,7 +3748,7 @@ window.WORLDCUP_PREDICTIONS = [
           })+
         '</div>';
     }
-    out += '<a href="'+pUrl+'" target="_blank" rel="noopener"'+reportAttr(pUrl)+' style="display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:600;color:#C0613B;text-decoration:none;">查看完整深度分析报告 →</a>'+
+    out += '<a href="'+safeUrl(pUrl)+'" target="_blank" rel="noopener"'+reportAttr(pUrl)+' style="display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:600;color:#C0613B;text-decoration:none;">查看完整深度分析报告 →</a>'+
       '</div></div>';
     return out;
   }
@@ -3302,8 +3796,10 @@ window.WORLDCUP_PREDICTIONS = [
 
     out += '<div style="display:flex;flex-direction:column;gap:16px;">'+
       each(vm.predictions, function(p){
+        var dayId = 'predDay:' + p.date;
+        var dayOpen = !!(state.exp && state.exp[dayId]);
         var head = '<div style="background:#FBFAF5;border:1px solid #E8E2D4;border-radius:15px;overflow:hidden;box-shadow:0 1px 3px rgba(42,38,34,.04);">'+
-          '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:15px 18px;border-bottom:1px solid #EFEADD;">'+
+          '<div data-pred-day-toggle="1" data-toggle="'+esc(dayId)+'" role="button" tabindex="0" aria-expanded="'+(dayOpen?'true':'false')+'" data-hover="background:#FAF7F0" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:15px 18px;'+(dayOpen?'border-bottom:1px solid #EFEADD;':'')+'cursor:pointer;">'+
             '<div style="display:flex;align-items:center;gap:13px;flex:none;">'+
               '<div style="text-align:center;min-width:54px;">'+
                 '<div style="font-family:\'Source Serif 4\',serif;font-weight:700;font-size:22px;line-height:1;color:#C0613B;">'+esc(p.dateShort)+'</div>'+
@@ -3319,15 +3815,16 @@ window.WORLDCUP_PREDICTIONS = [
             (p.hasProfit ? '<span style="display:inline-flex;align-items:center;padding:6px 12px;background:#F4F1EA;border:1px solid #E4DECF;border-radius:8px;font-family:\'Spline Sans Mono\',monospace;font-size:12.5px;font-weight:700;color:'+p.profitColor+';">'+esc(p.profitLabel)+'</span>' : '')+
             (p.hasPending ? '<span style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:#F1E2D8;border:1px solid #E3C8B8;border-radius:8px;font-size:12px;font-weight:600;color:#C0613B;"><span style="width:7px;height:7px;border-radius:50%;background:#C0613B;animation:wcpulse 1.6s ease-in-out infinite;"></span>'+esc(p.pendingLabel)+'</span>' : '')+
             '<div style="margin-left:auto;display:flex;align-items:center;gap:9px;">'+
-              (p.hasReview ? '<a href="'+p.reviewUrl+'"'+reportAttr(p.reviewUrl)+' data-hover="border-color:#C0613B;color:#C0613B" style="display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border:1px solid #E4DECF;background:#F4F1EA;color:#2A2622;border-radius:10px;text-decoration:none;font-weight:600;font-size:13px;">赛后复盘</a>' : '')+
-              '<a href="'+p.url+'"'+reportAttr(p.url)+' data-hover="background:#C0613B" style="display:inline-flex;align-items:center;gap:6px;padding:9px 15px;background:#2A2622;color:#F4F1EA;border-radius:10px;text-decoration:none;font-weight:600;font-size:13px;">查看完整分析 →</a>'+
+              '<button data-pred-day-toggle="1" data-toggle="'+esc(dayId)+'" aria-expanded="'+(dayOpen?'true':'false')+'" style="display:inline-flex;align-items:center;gap:6px;padding:9px 13px;border:1px solid #E4DECF;background:#F4F1EA;color:#2A2622;border-radius:10px;font-weight:700;font-size:12.5px;font-family:inherit;cursor:pointer;">'+(dayOpen?'折叠':'展开')+' <span style="font-size:11px;color:#8C8478;">'+(dayOpen?'▴':'▾')+'</span></button>'+
+              (p.hasReview ? '<a href="'+safeUrl(p.reviewUrl)+'"'+reportAttr(p.reviewUrl)+' data-hover="border-color:#C0613B;color:#C0613B" style="display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border:1px solid #E4DECF;background:#F4F1EA;color:#2A2622;border-radius:10px;text-decoration:none;font-weight:600;font-size:13px;">赛后复盘</a>' : '')+
+              '<a href="'+safeUrl(p.url)+'"'+reportAttr(p.url)+' data-hover="background:#C0613B" style="display:inline-flex;align-items:center;gap:6px;padding:9px 15px;background:#2A2622;color:#F4F1EA;border-radius:10px;text-decoration:none;font-weight:600;font-size:13px;">查看完整分析 →</a>'+
             '</div>'+
           '</div>';
 
-        var body = '<div style="padding:8px 14px 14px;display:flex;flex-direction:column;gap:2px;">'+
+        var body = dayOpen ? '<div data-pred-day-body="1" style="padding:8px 14px 14px;display:flex;flex-direction:column;gap:2px;">'+
           each(p.matches, function(c){
-            var row = '<div style="border-radius:10px;border:1px solid transparent;">'+
-              '<div '+(c.hasAnalysis ? 'data-toggle="'+esc(c.eid)+'" ' : '')+'style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;'+(c.hasAnalysis?'cursor:pointer;':'')+'"'+(c.hasAnalysis?' data-hover="background:#F4F1EA"':'')+'>'+
+            var row = '<div data-pred-match-row="1" data-time-ms="'+esc(c._k)+'" style="border-radius:10px;border:1px solid transparent;">'+
+              '<div '+(c.hasAnalysis ? 'data-toggle="'+esc(c.eid)+'" role="button" tabindex="0" aria-expanded="'+(c.expanded?'true':'false')+'" ' : '')+'style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;'+(c.hasAnalysis?'cursor:pointer;':'')+'"'+(c.hasAnalysis?' data-hover="background:#F4F1EA"':'')+'>'+
                 '<div style="flex:none;width:58px;display:flex;flex-direction:column;line-height:1.25;">'+
                   '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:10.5px;color:#8C8478;">'+esc(c.dateStr)+'</span>'+
                   '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:600;">'+esc(c.timeStr)+'</span>'+
@@ -3345,34 +3842,50 @@ window.WORLDCUP_PREDICTIONS = [
             '</div>';
             return row;
           })+
-        '</div>';
+        '</div>' : '';
 
         var combos = '';
-        if(p.hasTickets){
-          combos = '<div style="border-top:1px solid #EFEADD;padding:13px 14px 15px;background:#FAF7F0;">'+
-            '<div style="font-size:11px;color:#8C8478;font-weight:600;letter-spacing:.5px;margin-bottom:11px;">竞彩串关方案 · '+esc(p.comboHeadLabel)+' <span style="color:#a89f90;font-weight:500;">· 真实台账</span></div>'+
-            '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;">'+
+        if(dayOpen && p.hasTickets){
+          combos = '<div data-pred-day-combos="1" style="border-top:1px solid #EFEADD;padding:13px 14px 15px;background:#FAF7F0;">'+
+            '<div style="font-size:11px;color:#6B6358;font-weight:600;letter-spacing:.5px;margin-bottom:11px;">竞彩串关方案 · '+esc(p.comboHeadLabel)+' <span style="color:#a89f90;font-weight:500;">· 真实台账</span></div>'+
+            '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px;">'+
               each(p.tickets, function(cb){
-                return '<div style="border:1px solid #E4DECF;border-radius:12px;background:#fff;overflow:hidden;">'+
-                  '<div style="display:flex;align-items:center;gap:7px;padding:11px 13px;border-bottom:1px dashed #E4DECF;">'+
-                    '<span style="font-weight:700;font-size:13px;">'+esc(cb.name)+'</span>'+
+                var rec = cb.tag==='推荐';
+                return '<div style="border:1px solid '+(rec?'#C0613B':'#E4DECF')+';border-radius:14px;background:#fff;overflow:hidden;'+(rec?'box-shadow:0 0 0 1px rgba(192,97,59,.55),0 7px 22px rgba(192,97,59,.12);':'box-shadow:0 1px 3px rgba(42,38,34,.04);')+'">'+
+                  '<div style="display:flex;align-items:center;gap:7px;padding:12px 13px;border-bottom:1px solid #EDE4D6;'+(rec?'background:#FBF1EA;':'background:#FFFDF8;')+'">'+
+                    '<span style="font-weight:700;font-size:13px;color:#2A2622;">'+esc(cb.name)+'</span>'+
                     (cb.hasTag ? '<span style="font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:5px;background:#C0613B;color:#fff;">'+esc(cb.tag)+'</span>' : '')+
                     '<span style="margin-left:auto;font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;background:'+cb.statusBg+';color:'+cb.statusColor+';">'+esc(cb.statusLabel)+'</span>'+
                   '</div>'+
-                  '<div style="padding:5px 13px;">'+
+                  '<div style="padding:11px 13px 4px;">'+
+                    '<div style="display:flex;align-items:baseline;gap:8px 12px;flex-wrap:wrap;padding:0 0 9px;border-bottom:1px dashed #E4DECF;font-family:\'Spline Sans Mono\',monospace;font-size:11.5px;color:#6B6358;">'+
+                      '<span style="font-weight:700;color:#2A2622;">过关方式 '+esc(cb.wayLabel)+'</span>'+
+                      '<span style="margin-left:auto;">合计 <b style="font-size:12.5px;color:#2A2622;">'+esc(cb.stakeLabel)+'</b></span>'+
+                    '</div>'+
                     each(cb.legs, function(lg){
-                      return '<div style="padding:7px 0;border-bottom:1px solid #F4F1EA;">'+
+                      var scoreHtml = (lg.scores && lg.scores.length)
+                        ? '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:7px;padding-left:18px;">'+
+                            each(lg.scores, function(s){
+                              return '<span style="display:inline-flex;align-items:center;gap:3px;font-family:\'Spline Sans Mono\',monospace;font-size:11.5px;padding:3px 8px;border-radius:6px;background:'+(s.hit?'#E4EDE2':'#F1ECDF')+';border:1px solid '+(s.hit?'#B8D2BC':'#DED4C2')+';box-shadow:inset 0 -1px 0 rgba(42,38,34,.04);">'+
+                                '<span style="font-weight:700;color:'+(s.hit?'#3F7A4E':'#2A2622')+';">'+esc(s.s)+'</span>'+
+                                '<span style="font-weight:600;color:'+(s.hit?'#3F7A4E':'#3A6EA5')+';">@'+esc(s.o)+'</span>'+
+                              '</span>';
+                            })+
+                          '</div>'
+                        : (lg.scoresStr ? '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#6B6358;margin-top:3px;padding-left:18px;">'+esc(lg.scoresStr)+'</div>' : '');
+                      return '<div style="padding:9px 0;border-bottom:1px solid #F1ECDF;">'+
                         '<div style="display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;">'+
                           '<span style="color:'+lg.markColor+';font-family:\'Spline Sans Mono\',monospace;width:12px;">'+esc(lg.mark)+'</span>'+
-                          '<span>'+lg.fh+' '+esc(lg.hn)+'</span><span style="color:#a89f90;font-weight:400;font-size:10px;">vs</span><span>'+esc(lg.an)+' '+lg.fa+'</span>'+
+                          '<span style="color:#2A2622;">'+lg.fh+' '+esc(lg.hn)+'</span><span style="color:#a89f90;font-weight:400;font-size:10px;">vs</span><span style="color:#2A2622;">'+esc(lg.an)+' '+lg.fa+'</span>'+
                           '<span style="margin-left:auto;font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;">实际 '+esc(lg.actual)+'</span>'+
                         '</div>'+
-                        '<div style="font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;margin-top:3px;padding-left:18px;">'+esc(lg.scoresStr)+'</div>'+
+                        scoreHtml+
                       '</div>';
                     })+
                   '</div>'+
-                  '<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:9px 13px;background:#FAF7F0;font-family:\'Spline Sans Mono\',monospace;font-size:11px;color:#8C8478;">'+
-                    '<span>过关 '+esc(cb.wayLabel)+'</span><span>'+esc(cb.betsLabel)+'</span><span>投 '+esc(cb.stakeLabel)+'</span><span>最高 '+esc(cb.maxLabel)+'</span>'+
+                  '<div style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;padding:10px 13px 12px;background:#F4EEE3;border-top:1px solid #EFE7D6;font-family:\'Spline Sans Mono\',monospace;color:#6B6358;">'+
+                    '<span style="font-size:11px;line-height:1.45;">单倍注数 '+esc(cb.wayLabel)+' × '+esc(cb.betsLabel)+'<br>共 '+esc(cb.betsLabel)+'</span>'+
+                    '<span style="margin-left:auto;text-align:right;line-height:1.15;"><span style="display:block;font-size:9.5px;color:#A89F90;font-family:\'Spline Sans\',sans-serif;">本票最高可能固定奖金</span><b style="display:block;color:#3F7A4E;font-size:18px;letter-spacing:.2px;">'+esc(cb.maxLabel)+'</b></span>'+
                     (cb.settledAll ? '<span style="margin-left:auto;font-weight:700;color:'+cb.profitColor+';">'+esc(cb.payoutLabel)+' · '+esc(cb.profitLabel)+'</span>' : '')+
                   '</div>'+
                 '</div>';
@@ -3393,7 +3906,7 @@ window.WORLDCUP_PREDICTIONS = [
   function vFooter(){
     return '<div style="max-width:1340px;margin:0 auto;padding:0 24px 40px;">'+
       '<div style="border-top:1px solid #E4DECF;padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11.5px;color:#a89f90;line-height:1.6;">'+
-        '<span>数据源：内置完整赛程（48 队 · 104 场）· 设置 <code style="font-family:\'Spline Sans Mono\',monospace;background:#EFEADD;padding:1px 5px;border-radius:4px;color:#8C8478;">window.WORLDCUP_ENDPOINT</code> 即可接入实时官方接口 · 每整点自动同步</span>'+
+        '<span>数据源：内置完整赛程（48 队 · 104 场）· 运行 <code style="font-family:\'Spline Sans Mono\',monospace;background:#EFEADD;padding:1px 5px;border-radius:4px;color:#8C8478;">scripts/live_sync_server.py</code> 后,刷新按钮与整点自动同步会拉取最新快照</span>'+
         '<span>所有内容仅供赛事研究，不构成投注建议。竞彩有风险，理性娱乐。</span>'+
       '</div>'+
     '</div>';
@@ -3413,19 +3926,28 @@ window.WORLDCUP_PREDICTIONS = [
     html += vFooter();
     app.innerHTML = html;
     attachHover();
+    // 赛程日期条：把选中日横向居中（只动日期条自身 scrollLeft，不影响页面滚动）
+    var strip = document.getElementById('wc-daystrip');
+    if(strip){ var act = strip.querySelector('[data-schactive="1"]'); if(act){ strip.scrollLeft = act.offsetLeft - strip.clientWidth/2 + act.offsetWidth/2; } }
     lastSig = phaseSig();
   }
 
   function attachHover(){
     var els = app.querySelectorAll('[data-hover]');
     els.forEach(function(el){
-      el.addEventListener('mouseenter', function(){
+      var on = function(){
         if(el.__base == null) el.__base = el.getAttribute('style') || '';
         el.setAttribute('style', el.__base + ';' + el.getAttribute('data-hover'));
-      });
-      el.addEventListener('mouseleave', function(){
-        el.setAttribute('style', el.__base || '');
-      });
+      };
+      var off = function(){ el.setAttribute('style', el.__base || ''); };
+      // 鼠标 + 键盘(focus/blur)+ 触屏(touch),让反馈在三种输入下都生效
+      el.addEventListener('mouseenter', on);
+      el.addEventListener('mouseleave', off);
+      el.addEventListener('focus', on);
+      el.addEventListener('blur', off);
+      el.addEventListener('touchstart', on, { passive:true });
+      el.addEventListener('touchend', off);
+      el.addEventListener('touchcancel', off);
     });
   }
 
@@ -3449,18 +3971,125 @@ window.WORLDCUP_PREDICTIONS = [
     });
   }
 
-  // ===== sync (official endpoint optional) =====
-  function sync(){
+  // ===== sync (local live snapshot service with embedded-data fallback) =====
+  function sync(force){
     if(state.syncing) return;
-    state.syncing = true; render();
-    var done = function(){ state.syncing = false; state.lastSync = Date.now(); render(); };
-    var ep = window.WORLDCUP_ENDPOINT;
-    if(ep){ fetch(ep).then(function(r){ return r.json(); }).then(function(d){ if(d && d.schedule) DATA = d; done(); }).catch(done); }
-    else setTimeout(done, 700);
+    state.syncing = true;
+    state.syncError = '';
+    render();
+    var done = function(ok){
+      state.syncing = false;
+      state.lastSync = Date.now();
+      if(ok === false && !LIVE_STATUS.length){
+        LIVE_STATUS = [{ name:'local-data', status:'fallback', detail:'using embedded local data' }];
+      }
+      render();
+    };
+    var ep = liveEndpoint(!!force);
+    if(!ep){
+      LIVE_STATUS = [{ name:'local-data', status:'fallback', detail:'no live sync server' }];
+      setTimeout(function(){ done(true); }, 150);
+      return;
+    }
+    fetch(ep, { cache:'no-store' })
+      .then(function(r){
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        return r.json();
+      })
+      .then(function(snap){
+        if(!applyLiveSnapshot(snap)) throw new Error('invalid live snapshot');
+        state.syncError = '';
+        done(true);
+      })
+      .catch(function(err){
+        state.syncError = err && err.message ? err.message : 'live sync failed';
+        LIVE_STATUS = [{ name:'live-sync', status:'error', detail:state.syncError }];
+        done(false);
+      });
   }
 
   // ===== 站内报告浮层(页内打开 + 返回 + 浏览器后退) =====
   var reportBox = document.getElementById('wc-report');
+  var teamModalBox = document.getElementById('wc-team-modal');
+  var teamModalStack = [];
+  function predictionUrlForDate(ymd){
+    var p = (PRED||[]).find(function(x){ return x.date===ymd; });
+    return p ? p.url : '';
+  }
+  function openTeamModal(team){
+    if(!DATA || !team) return;
+    var opts = arguments[1] || {};
+    if(opts.resetHistory) teamModalStack = [];
+    var currentTeam = teamModalBox.getAttribute('data-current-team') || '';
+    if(opts.pushHistory && currentTeam && currentTeam !== team) teamModalStack.push(currentTeam);
+    var matches = DATA.schedule.filter(function(m){ return m.home_zh===team || m.away_zh===team; })
+      .slice().sort(function(a,b){ return bj(b).ms-bj(a).ms; });
+    var group = '';
+    for(var i=0;i<matches.length;i++){ if(matches[i].group){ group = matches[i].group; break; } }
+    var row = null;
+    if(group){
+      row = standings(group).find(function(r){ return r.t===team; }) || null;
+    }
+    var record = row ? (group+'组 · '+row.P+'场 '+row.W+'胜 '+row.D+'平 '+row.L+'负 · 净 '+gd(row.GD)+' · '+row.Pts+'分') : '淘汰赛队伍 · 暂无小组积分';
+    var rows = each(matches, function(m){
+      var c = card(m), url = predictionUrlForDate(c.ymd) || XHS;
+      c.url = url;
+      var opponent = m.home_zh===team ? m.away_zh : m.home_zh;
+      var side = m.home_zh===team ? '主队' : '客队';
+      var linkTag = predictionUrlForDate(c.ymd) ? '查看预测' : '看直播';
+      return '<a href="'+safeUrl(url)+'" target="_blank" rel="noopener"'+reportAttr(url)+' data-hover="background:#F4F1EA;border-color:#D8CDBC" style="display:grid;grid-template-columns:92px 1fr 112px;gap:12px;align-items:center;padding:12px 14px;border-top:1px solid #EFEADD;border-left:3px solid '+(m.home_zh===team?C.clay:'#D8D2C5')+';text-decoration:none;color:inherit;background:#FBFAF5;">'+
+        '<div style="display:flex;flex-direction:column;gap:2px;line-height:1.2;">'+
+          '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:700;color:#2A2622;">'+esc(c.dateStr)+' '+esc(c.timeStr)+'</span>'+
+          '<span style="font-size:10.5px;color:#8C8478;">'+esc(c.wd)+' · '+esc(side)+'</span>'+
+        '</div>'+
+        '<div style="min-width:0;">'+
+          '<div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;font-size:11px;color:#8C8478;">'+
+            '<span style="font-weight:700;color:#C0613B;">'+esc(stageLabel(m))+'</span>'+
+            '<span>对手 '+esc(opponent)+'</span>'+
+            '<span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+esc(c.venue)+'</span>'+
+          '</div>'+
+          '<div style="display:flex;flex-direction:column;gap:3px;">'+teamLine(c,'16px','13.5px','13.5px')+'</div>'+
+        '</div>'+
+        '<div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;text-align:right;">'+
+          '<span style="font-size:9.5px;font-weight:700;padding:3px 7px;border-radius:5px;background:'+c.phaseBg+';color:'+c.phaseColor+';'+c.ring+'">'+esc(c.phaseLabel)+'</span>'+
+          '<span style="font-size:10.5px;color:#C0613B;font-weight:700;">'+linkTag+' →</span>'+
+        '</div>'+
+      '</a>';
+    });
+    var backBtn = teamModalStack.length ? '<button data-team-back title="返回上一支队伍" style="flex:none;display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 10px;border-radius:9px;border:1px solid #E4DECF;background:#FBFAF5;color:#2A2622;cursor:pointer;font-size:12px;font-weight:700;">← 返回</button>' : '';
+    teamModalBox.innerHTML =
+      '<div data-team-backdrop style="position:fixed;inset:0;z-index:160;background:rgba(42,38,34,.38);display:flex;align-items:center;justify-content:center;padding:28px;">'+
+        '<section role="dialog" aria-modal="true" aria-label="'+esc(team)+' 本届世界杯比赛" style="width:min(880px,calc(100vw - 40px));max-height:calc(100vh - 56px);display:flex;flex-direction:column;background:#FBFAF5;border:1px solid #E4DECF;border-radius:16px;box-shadow:0 22px 70px rgba(42,38,34,.28);overflow:hidden;">'+
+          '<div style="display:flex;align-items:flex-start;gap:14px;padding:18px 20px 15px;border-bottom:1px solid #EFEADD;background:#F4F1EA;">'+
+            backBtn+
+            '<span style="font-size:30px;line-height:1;flex:none;">'+flag(team)+'</span>'+
+            '<div style="min-width:0;flex:1;">'+
+              '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">'+
+                '<h2 style="margin:0;font-family:\'Source Serif 4\',serif;font-size:24px;line-height:1.1;font-weight:700;">'+esc(team)+'</h2>'+rankBadge(team)+trankBadge(team)+
+              '</div>'+
+              '<div style="margin-top:6px;font-size:12.5px;color:#8C8478;">'+esc(record)+' · 本届全部 '+matches.length+' 场</div>'+
+            '</div>'+
+            '<button data-team-close title="关闭" aria-label="关闭弹窗" style="flex:none;width:34px;height:34px;border-radius:9px;border:1px solid #E4DECF;background:#FBFAF5;color:#8C8478;cursor:pointer;font-size:20px;line-height:1;">×</button>'+
+          '</div>'+
+          '<div style="overflow:auto;padding:0 0 6px;background:#FBFAF5;">'+(rows || '<div style="padding:24px;color:#8C8478;font-size:13px;">暂无比赛。</div>')+'</div>'+
+        '</section>'+
+      '</div>';
+    teamModalBox.setAttribute('data-current-team', team);
+    document.body.style.overflow = 'hidden';
+    if(!opts.skipUrl) syncUrlState(!opts.replaceUrl, { team:team });
+  }
+  function goTeamModalBack(){
+    var prev = teamModalStack.pop();
+    if(prev) openTeamModal(prev, { pushHistory:false, replaceUrl:true });
+  }
+  function closeTeamModal(){
+    var opts = arguments[0] || {};
+    teamModalStack = [];
+    teamModalBox.removeAttribute('data-current-team');
+    teamModalBox.innerHTML = '';
+    document.body.style.overflow = '';
+    if(!opts.skipUrl) syncUrlState(false, { team:'' });
+  }
   function openReport(url){
     if(!isReportUrl(url)) { window.open(url, '_blank', 'noopener'); return; }
     reportBox.innerHTML =
@@ -3468,7 +4097,7 @@ window.WORLDCUP_PREDICTIONS = [
         '<div style="flex:none;display:flex;align-items:center;gap:12px;padding:11px 18px;border-bottom:1px solid #E4DECF;background:rgba(244,241,234,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">'+
           '<button data-report-back style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #E4DECF;background:#FBFAF5;color:#2A2622;border-radius:9px;font-weight:600;font-size:13px;cursor:pointer;">← 返回</button>'+
           '<span style="font-size:12.5px;color:#8C8478;font-family:\'Spline Sans Mono\',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;">'+esc(decodeURIComponent(url))+'</span>'+
-          '<a href="'+url+'" target="_blank" rel="noopener" style="flex:none;font-size:12px;color:#C0613B;text-decoration:none;font-weight:600;">↗ 新标签打开</a>'+
+          '<a href="'+safeUrl(url)+'" target="_blank" rel="noopener" style="flex:none;font-size:12px;color:#C0613B;text-decoration:none;font-weight:600;">↗ 新标签打开</a>'+
         '</div>'+
         '<iframe src="'+esc(url)+'" style="flex:1;width:100%;border:0;background:#fff;"></iframe>'+
       '</div>';
@@ -3476,34 +4105,61 @@ window.WORLDCUP_PREDICTIONS = [
   }
   function closeReport(){ reportBox.innerHTML = ''; document.body.style.overflow = ''; }
   reportBox.addEventListener('click', function(e){ if(e.target.closest('[data-report-back]')) history.back(); });
-  window.addEventListener('popstate', function(){ if(reportBox.innerHTML) closeReport(); });
+  teamModalBox.addEventListener('click', function(e){
+    if(e.target.closest('[data-team-back]')){ e.preventDefault(); e.stopPropagation(); goTeamModalBack(); return; }
+    var team = e.target.closest('[data-team]');
+    if(team){ e.preventDefault(); e.stopPropagation(); openTeamModal(team.getAttribute('data-team'), { pushHistory:true }); return; }
+    var report = e.target.closest('[data-report]');
+    if(report){ e.preventDefault(); closeTeamModal(); var u = report.getAttribute('data-report'); history.pushState({ wcReport:u }, ''); openReport(u); return; }
+    if(e.target.closest('[data-team-close]') || e.target.hasAttribute('data-team-backdrop')) closeTeamModal();
+  });
+  teamModalBox.addEventListener('keydown', function(e){
+    var team = e.target.closest('[data-team]');
+    if(team && (e.key==='Enter' || e.key===' ')){ e.preventDefault(); openTeamModal(team.getAttribute('data-team'), { pushHistory:true }); }
+  });
+  window.addEventListener('popstate', restoreUrlState);
+  window.addEventListener('keydown', function(e){ if(e.key==='Escape' && teamModalBox.innerHTML) closeTeamModal(); });
 
   // ===== events (delegated, attached once) =====
   app.addEventListener('click', function(e){
+    var team = e.target.closest('[data-team]');
+    if(team){ e.preventDefault(); e.stopPropagation(); openTeamModal(team.getAttribute('data-team')); return; }
     var report = e.target.closest('[data-report]');
     if(report){ e.preventDefault(); var u = report.getAttribute('data-report'); history.pushState({ wcReport:u }, ''); openReport(u); return; }
     var tabBtn = e.target.closest('[data-tab]');
-    if(tabBtn){ state.tab = tabBtn.getAttribute('data-tab'); render(); return; }
+    if(tabBtn){ setAppState({ tab:tabBtn.getAttribute('data-tab') }); return; }
     var brBtn = e.target.closest('[data-brview]');
-    if(brBtn){ state.brView = brBtn.getAttribute('data-brview'); render(); return; }
+    if(brBtn){ setAppState({ brView:brBtn.getAttribute('data-brview') }); return; }
     var stBtn = e.target.closest('[data-stview]');
-    if(stBtn){ state.stView = stBtn.getAttribute('data-stview'); render(); return; }
+    if(stBtn){ setAppState({ stView:stBtn.getAttribute('data-stview') }); return; }
+    var schBtn = e.target.closest('[data-schday]');
+    if(schBtn){ setAppState({ schDay:schBtn.getAttribute('data-schday'), brView:'schedule' }); return; }
     var refresh = e.target.closest('[data-action="refresh"]');
-    if(refresh){ sync(); return; }
+    if(refresh){ sync(true); return; }
     var toggle = e.target.closest('[data-toggle]');
     if(toggle){ toggleExp(toggle.getAttribute('data-toggle')); return; }
+  });
+  app.addEventListener('keydown', function(e){
+    if(e.key!=='Enter' && e.key!==' ') return;
+    var team = e.target.closest('[data-team]');
+    if(team){ e.preventDefault(); openTeamModal(team.getAttribute('data-team')); return; }
+    // 展开行是裸 div(role=button),原生 <button> 由浏览器处理回车,这里只接管非 button
+    var toggle = e.target.closest('[data-toggle]');
+    if(toggle && toggle.tagName!=='BUTTON'){ e.preventDefault(); toggleExp(toggle.getAttribute('data-toggle')); return; }
   });
 
   // ===== boot =====
   function boot(){
-    DATA = window.WORLDCUP_DATA; FLAGS = window.WORLDCUP_FLAGS || {}; OFF = window.WORLDCUP_VENUE_OFFSET || {}; PRED = window.WORLDCUP_PREDICTIONS || []; LEDGER = window.WORLDCUP_LEDGER || { days: [] };
+    DATA = window.WORLDCUP_DATA; FLAGS = window.WORLDCUP_FLAGS || {}; OFF = window.WORLDCUP_VENUE_OFFSET || {}; PRED = window.WORLDCUP_PREDICTIONS || []; LEDGER = window.WORLDCUP_LEDGER || { days: [] }; RANK = window.WORLDCUP_FIFA_RANK || {}; ODDS = window.WORLDCUP_LIVE_ODDS || {};
+    var initialTeam = applyUrlState();
     state.ready = true;
-    sync();
+    sync(false);
     var n = new Date();
     var ms = (60 - n.getMinutes())*60000 - n.getSeconds()*1000 - n.getMilliseconds();
-    setTimeout(function(){ sync(); setInterval(sync, 3600000); }, ms);
+    setTimeout(function(){ sync(true); setInterval(function(){ sync(true); }, 3600000); }, ms);
     setInterval(tick, 1000);
     render();
+    if(initialTeam) openTeamModal(initialTeam, { resetHistory:true, skipUrl:true });
   }
 
   render(); // initial loading view
