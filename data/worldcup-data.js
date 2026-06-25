@@ -28,7 +28,7 @@ window.WORLDCUP_DATA = {
  "matches": 104,
  "final_venue_zh": "大都会人寿球场",
  "opening_venue_zh": "阿兹特克体育场",
- "updated": "2026-06-24",
+ "updated": "2026-06-25",
  "source": "维基百科 2026 FIFA World Cup（逐组 + 淘汰赛），赛果随赛事推进更新",
  "venues": [
   {
@@ -226,9 +226,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "捷克",
    "away_en": "Mexico",
    "away_zh": "墨西哥",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 0,
+   "away_score": 3,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -243,9 +243,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "南非",
    "away_en": "South Korea",
    "away_zh": "韩国",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 1,
+   "away_score": 0,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -328,9 +328,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "瑞士",
    "away_en": "Canada",
    "away_zh": "加拿大",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 2,
+   "away_score": 1,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -345,9 +345,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "波斯尼亚和黑塞哥维那",
    "away_en": "Qatar",
    "away_zh": "卡塔尔",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 3,
+   "away_score": 1,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -430,9 +430,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "苏格兰",
    "away_en": "Brazil",
    "away_zh": "巴西",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 0,
+   "away_score": 3,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -447,9 +447,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "摩洛哥",
    "away_en": "Haiti",
    "away_zh": "海地",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 4,
+   "away_score": 2,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -2324,9 +2324,9 @@ window.WORLDCUP_LEDGER = {
   {
    "date": "2026-06-25",
    "stake": 80,
-   "payout": null,
-   "status": "pending",
-   "note": "实押3张(体彩实票):①比分复式2串1(36,主力,摩[2:0/1:0]×波[1:0/2:0/2:1])+②混合胜平负/让球4串1(24,保命中)+③比分单式4串1(20,彩票)。合计80。赔率为体彩票面印制/读取值,max取票面印制值;待开奖回填payout。",
+   "payout": 0,
+   "status": "settled",
+   "note": "实押3张(体彩实票),合计80。实际赛果:摩4-2海、波黑3-1卡、苏0-3巴、南非1-0韩、瑞2-1加、捷0-3墨。押注层面全灭→收0、当日净-80。方向4/6对(摩/波/苏/捷),但①比分复式(摩4:2、波3:1均不在选项)②混合保命中卡(摩-海腿押『平』与主判主胜相反、首腿即挂)③比分单式(摩2:0即错)三张全废;比分0/6、总进球0/6(5场实际高1档、摩高4档)。详见 reviews/2026-06-25/。",
    "tickets": [
     {
      "name": "实票① · 比分复式 2串1 · 主力",

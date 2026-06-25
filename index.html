@@ -45,7 +45,7 @@ window.WORLDCUP_DATA = {
  "matches": 104,
  "final_venue_zh": "大都会人寿球场",
  "opening_venue_zh": "阿兹特克体育场",
- "updated": "2026-06-24",
+ "updated": "2026-06-25",
  "source": "维基百科 2026 FIFA World Cup（逐组 + 淘汰赛），赛果随赛事推进更新",
  "venues": [
   {
@@ -243,9 +243,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "捷克",
    "away_en": "Mexico",
    "away_zh": "墨西哥",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 0,
+   "away_score": 3,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -260,9 +260,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "南非",
    "away_en": "South Korea",
    "away_zh": "韩国",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 1,
+   "away_score": 0,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -345,9 +345,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "瑞士",
    "away_en": "Canada",
    "away_zh": "加拿大",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 2,
+   "away_score": 1,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -362,9 +362,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "波斯尼亚和黑塞哥维那",
    "away_en": "Qatar",
    "away_zh": "卡塔尔",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 3,
+   "away_score": 1,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -447,9 +447,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "苏格兰",
    "away_en": "Brazil",
    "away_zh": "巴西",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 0,
+   "away_score": 3,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -464,9 +464,9 @@ window.WORLDCUP_DATA = {
    "home_zh": "摩洛哥",
    "away_en": "Haiti",
    "away_zh": "海地",
-   "home_score": null,
-   "away_score": null,
-   "status": "upcoming"
+   "home_score": 4,
+   "away_score": 2,
+   "status": "played"
   },
   {
    "stage": "group",
@@ -2341,9 +2341,9 @@ window.WORLDCUP_LEDGER = {
   {
    "date": "2026-06-25",
    "stake": 80,
-   "payout": null,
-   "status": "pending",
-   "note": "实押3张(体彩实票):①比分复式2串1(36,主力,摩[2:0/1:0]×波[1:0/2:0/2:1])+②混合胜平负/让球4串1(24,保命中)+③比分单式4串1(20,彩票)。合计80。赔率为体彩票面印制/读取值,max取票面印制值;待开奖回填payout。",
+   "payout": 0,
+   "status": "settled",
+   "note": "实押3张(体彩实票),合计80。实际赛果:摩4-2海、波黑3-1卡、苏0-3巴、南非1-0韩、瑞2-1加、捷0-3墨。押注层面全灭→收0、当日净-80。方向4/6对(摩/波/苏/捷),但①比分复式(摩4:2、波3:1均不在选项)②混合保命中卡(摩-海腿押『平』与主判主胜相反、首腿即挂)③比分单式(摩2:0即错)三张全废;比分0/6、总进球0/6(5场实际高1档、摩高4档)。详见 reviews/2026-06-25/。",
    "tickets": [
     {
      "name": "实票① · 比分复式 2串1 · 主力",
@@ -2872,6 +2872,56 @@ window.WORLDCUP_PREDICTIONS = [
   }
   function wdlOf(h,a){ return h>a?'主胜':(h<a?'客胜':'平'); }
   function gdColor(n){ return n>0 ? C.green : (n<0 ? C.clay : C.mut); }
+  function thirdPlaceStatusMeta(code){
+    if(code === 'q') return { qual:'q', statusLabel:'出线', statusBg:'#E4EDE2', statusColor:C.green, rowBg:'rgba(63,122,78,.06)', bar:C.green };
+    if(code === 'o') return { qual:'o', statusLabel:'淘汰', statusBg:'#EFEADD', statusColor:'#8C8478', rowBg:'rgba(244,241,234,.45)', bar:'#D8D2C5' };
+    return { qual:'p', statusLabel:'待定', statusBg:'#F5E7C5', statusColor:C.gold, rowBg:'rgba(181,134,46,.06)', bar:C.gold };
+  }
+  function thirdPlaceStatus(row, rows){
+    var allSettled = rows.every(function(r){ return r.P >= 3; });
+    if(allSettled) return thirdPlaceStatusMeta(row.rank <= 8 ? 'q' : 'o');
+
+    // 保守口径：未完赛球队还有积分上限变化；只有已经被 8 支完赛第三名压死,才算必定淘汰。
+    var settledAboveMax = rows.filter(function(r){ return r.name !== row.name && r.P >= 3 && r.Pts > row.maxPts; }).length;
+    if(settledAboveMax >= 8) return thirdPlaceStatusMeta('o');
+
+    // 自身没踢满 3 场时仍可能变成第二、第三或第四,不能提前写出线/淘汰。
+    if(row.P < 3) return thirdPlaceStatusMeta('p');
+
+    var settledAhead = rows.filter(function(r){ return r.name !== row.name && r.P >= 3 && r.rank < row.rank; }).length;
+    if(settledAhead >= 8) return thirdPlaceStatusMeta('o');
+
+    // 若其它未完赛第三名理论最高分仍能追到/超过本队,本队尚未锁定前八。
+    var possibleAhead = rows.filter(function(r){
+      if(r.name === row.name) return false;
+      if(r.P >= 3) return r.rank < row.rank;
+      return r.maxPts >= row.Pts;
+    }).length;
+    return thirdPlaceStatusMeta(possibleAhead <= 7 ? 'q' : 'p');
+  }
+  function bestThirdRows(){
+    if(!DATA || !DATA.schedule) return [];
+    var rows = [];
+    GROUPS.forEach(function(letter){
+      var third = standings(letter)[2];
+      if(!third) return;
+      var remaining = Math.max(0, 3 - third.P);
+      rows.push({
+        group:letter, flag:flag(third.t), name:third.t,
+        P:third.P, W:third.W, D:third.D, L:third.L,
+        GF:third.GF, GA:third.GA, GD:third.GD, GDLabel:gd(third.GD),
+        gdColor:gdColor(third.GD), Pts:third.Pts, remaining:remaining, maxPts:third.Pts + remaining * 3
+      });
+    });
+    rows.sort(function(a,b){
+      return b.Pts-a.Pts || b.GD-a.GD || b.GF-a.GF || a.name.localeCompare(b.name,'zh') || a.group.localeCompare(b.group);
+    });
+    return rows.map(function(r,i){
+      return Object.assign({}, r, { rank:i+1 });
+    }).map(function(r, i, sortedRows){
+      return Object.assign({}, r, thirdPlaceStatus(r, sortedRows));
+    });
+  }
   function fmtMs(ms){
     if(ms<0) return '即将';
     var s=Math.floor(ms/1000), d=Math.floor(s/86400), h=Math.floor(s%86400/3600), mi=Math.floor(s%3600/60), se=s%60;
@@ -3038,7 +3088,7 @@ window.WORLDCUP_PREDICTIONS = [
     var base = {
       ready:false, loading:true, tab:st.tab,
       isBracket:false, isStandings:false, isData:false, isPredict:false,
-      hasBanner:false, banner:[], groups:[], bracket:[], overall:[], stats:[], firepower:[], dailyPL:[],
+      hasBanner:false, banner:[], groups:[], bracket:[], overall:[], thirdPlaceRows:[], stats:[], firepower:[], dailyPL:[],
       predictions:[], todayPred:null, hasTodayPred:false, record:null, hasRecord:false,
       clockStr:'—', lastSyncStr:'—', syncText:'连接中…', syncDot:C.gold, syncTitle:'当前使用页面内联数据',
       spinStyle:'display:inline-block;', xhsUrl:XHS,
@@ -3093,6 +3143,7 @@ window.WORLDCUP_PREDICTIONS = [
       qual: r.gpos<2 ? 'q' : (r.gpos===2 ? 'p' : 'o'),
       rowBg: i%2 ? 'rgba(244,241,234,.5)' : 'transparent'
     }; });
+    var thirdPlaceRows = bestThirdRows();
     // 本届积分排名映射（球队中文名 → 总积分榜名次），供卡片「本届 N」徽章使用
     TRANK = {}; overall.forEach(function(o){ TRANK[o.name] = o.rank; });
 
@@ -3236,7 +3287,7 @@ window.WORLDCUP_PREDICTIONS = [
       brView: st.brView, stView: st.stView, schedule: schedule,
       predictions: preds, todayPred:todayPred, hasTodayPred: !!todayPred,
       record:record, hasRecord: record.settledDays>0,
-      hasBanner: banner.length>0, banner:banner, bannerExpanded: !!(st.exp && st.exp.banner), groups:groups, bracket:bracket, overall:overall, stats:stats, firepower:firepower, dailyPL:dailyPL,
+      hasBanner: banner.length>0, banner:banner, bannerExpanded: !!(st.exp && st.exp.banner), groups:groups, bracket:bracket, overall:overall, thirdPlaceRows:thirdPlaceRows, stats:stats, firepower:firepower, dailyPL:dailyPL,
       liveSources: liveSources, hasLiveSources: liveSources.length>0, oddsCount: ODDS && ODDS.raw ? 1 : 0,
       clockStr: fmtClock(now),
       lastSyncStr: st.lastSync? fmtClock(st.lastSync) : '—',
@@ -3393,6 +3444,7 @@ window.WORLDCUP_PREDICTIONS = [
       ])+
       ( isGroup
         ? '<div style="display:flex;align-items:center;gap:16px;font-size:11.5px;color:#8C8478;flex-wrap:wrap;">'+
+            '<button data-action="third-ranking" data-hover="border-color:#C0613B;color:#C0613B;background:#FBFAF5" style="display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid #E4DECF;background:#FBFAF5;color:#2A2622;border-radius:9px;font-family:inherit;font-size:12px;font-weight:700;cursor:pointer;">小组第三排名 <span style="font-family:\'Spline Sans Mono\',monospace;font-size:10px;color:#C0613B;">前八出线</span></button>'+
             '<span style="display:inline-flex;align-items:center;gap:5px;">'+qualMark('q',9)+'出线</span>'+
             '<span style="display:inline-flex;align-items:center;gap:5px;">'+qualMark('p',9)+'待定</span>'+
             '<span style="display:inline-flex;align-items:center;gap:5px;">'+qualMark('o',9)+'淘汰</span>'+
@@ -4016,6 +4068,54 @@ window.WORLDCUP_PREDICTIONS = [
     var p = (PRED||[]).find(function(x){ return x.date===ymd; });
     return p ? p.url : '';
   }
+  function openThirdRankingModal(){
+    var rows = bestThirdRows();
+    teamModalStack = [];
+    teamModalBox.removeAttribute('data-current-team');
+    var table = rows.length ? each(rows, function(r){
+      return '<div style="display:grid;grid-template-columns:40px minmax(170px,1fr) 44px 38px 38px 38px 38px 44px 44px 52px 52px 82px;gap:0;align-items:center;padding:9px 12px;border-top:1px solid #EFEADD;border-left:3px solid '+r.bar+';background:'+r.rowBg+';min-width:820px;">'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:13px;font-weight:800;color:#2A2622;">'+r.rank+'</span>'+
+        '<span style="display:flex;align-items:center;gap:8px;min-width:0;">'+
+          '<span style="font-size:18px;line-height:1;flex:none;">'+r.flag+'</span>'+teamName(r.name, '14px', '700', '#2A2622')+rankBadge(r.name)+trankBadge(r.name)+
+        '</span>'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:#8C8478;text-align:center;">'+r.group+'组</span>'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:#8C8478;text-align:center;">'+r.P+'</span>'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:#8C8478;text-align:center;">'+r.W+'</span>'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:#8C8478;text-align:center;">'+r.D+'</span>'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:#8C8478;text-align:center;">'+r.L+'</span>'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:'+r.gdColor+';text-align:center;">'+esc(r.GDLabel)+'</span>'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;color:#8C8478;text-align:center;">'+r.GF+'</span>'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:15px;font-weight:800;color:#2A2622;text-align:right;">'+r.Pts+'</span>'+
+        '<span style="font-family:\'Spline Sans Mono\',monospace;font-size:12px;font-weight:800;color:#8C8478;text-align:right;">'+r.maxPts+'</span>'+
+        '<span style="justify-self:end;display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;background:'+r.statusBg+';color:'+r.statusColor+';font-size:11px;font-weight:800;">'+qualMark(r.qual,8)+esc(r.statusLabel)+'</span>'+
+      '</div>';
+    }) : '<div style="padding:24px;color:#8C8478;font-size:13px;">暂无小组第三排名。</div>';
+    teamModalBox.innerHTML =
+      '<div data-team-backdrop style="position:fixed;inset:0;z-index:160;background:rgba(42,38,34,.38);display:flex;align-items:center;justify-content:center;padding:28px;">'+
+        '<section role="dialog" aria-modal="true" aria-label="小组第三排名" style="width:min(960px,calc(100vw - 40px));max-height:calc(100vh - 56px);display:flex;flex-direction:column;background:#FBFAF5;border:1px solid #E4DECF;border-radius:16px;box-shadow:0 22px 70px rgba(42,38,34,.28);overflow:hidden;">'+
+          '<div style="display:flex;align-items:flex-start;gap:14px;padding:18px 20px 15px;border-bottom:1px solid #EFEADD;background:#F4F1EA;">'+
+            '<span style="width:38px;height:38px;border-radius:10px;background:#2A2622;color:#F4F1EA;display:flex;align-items:center;justify-content:center;font-family:\'Source Serif 4\',serif;font-size:20px;font-weight:800;flex:none;">3</span>'+
+            '<div style="min-width:0;flex:1;">'+
+              '<div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;">'+
+                '<h2 style="margin:0;font-family:\'Source Serif 4\',serif;font-size:24px;line-height:1.1;font-weight:700;">小组第三排名</h2>'+
+                '<span style="display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:7px;background:#E4EDE2;color:#3F7A4E;font-size:11px;font-weight:800;">'+qualMark('q',8)+'锁定出线</span>'+
+                '<span style="display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:7px;background:#F5E7C5;color:#B5862E;font-size:11px;font-weight:800;">'+qualMark('p',8)+'待定</span>'+
+                '<span style="display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:7px;background:#EFEADD;color:#8C8478;font-size:11px;font-weight:800;">'+qualMark('o',8)+'必定淘汰</span>'+
+              '</div>'+
+              '<div style="margin-top:6px;font-size:12.5px;color:#8C8478;">前八出线名额 · 仅数学锁定才显示出线/淘汰 · 排序: 积分、净胜球、进球数,再按队名兜底</div>'+
+            '</div>'+
+            '<button data-team-close title="关闭" aria-label="关闭弹窗" style="flex:none;width:34px;height:34px;border-radius:9px;border:1px solid #E4DECF;background:#FBFAF5;color:#8C8478;cursor:pointer;font-size:20px;line-height:1;">×</button>'+
+          '</div>'+
+          '<div style="overflow:auto;background:#FBFAF5;">'+
+            '<div style="display:grid;grid-template-columns:40px minmax(170px,1fr) 44px 38px 38px 38px 38px 44px 44px 52px 52px 82px;gap:0;align-items:center;padding:9px 12px;background:#FFFDF8;color:#8C8478;font-size:10px;font-weight:800;letter-spacing:.4px;border-bottom:1px solid #EFEADD;min-width:820px;">'+
+              '<span>排名</span><span>球队</span><span style="text-align:center;">组</span><span style="text-align:center;">场</span><span style="text-align:center;">胜</span><span style="text-align:center;">平</span><span style="text-align:center;">负</span><span style="text-align:center;">净</span><span style="text-align:center;">进球</span><span style="text-align:right;">积分</span><span style="text-align:right;">最高</span><span style="text-align:right;">状态</span>'+
+            '</div>'+
+            table+
+          '</div>'+
+        '</section>'+
+      '</div>';
+    document.body.style.overflow = 'hidden';
+  }
   function openTeamModal(team){
     if(!DATA || !team) return;
     var opts = arguments[1] || {};
@@ -4134,6 +4234,8 @@ window.WORLDCUP_PREDICTIONS = [
     if(stBtn){ setAppState({ stView:stBtn.getAttribute('data-stview') }); return; }
     var schBtn = e.target.closest('[data-schday]');
     if(schBtn){ setAppState({ schDay:schBtn.getAttribute('data-schday'), brView:'schedule' }); return; }
+    var thirdBtn = e.target.closest('[data-action="third-ranking"]');
+    if(thirdBtn){ openThirdRankingModal(); return; }
     var refresh = e.target.closest('[data-action="refresh"]');
     if(refresh){ sync(true); return; }
     var toggle = e.target.closest('[data-toggle]');
