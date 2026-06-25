@@ -2,6 +2,7 @@
 .DS_Store
 __pycache__/
 *.pyc
+data/live-cache.json
 
 # .claude/skills(分析方法论)随仓库公开；以下本地工具/配置不入库
 .claude/launch.json
